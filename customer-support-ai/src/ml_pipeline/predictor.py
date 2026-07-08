@@ -1,7 +1,4 @@
-"""
-Inference wrapper for the trained DistilBERT category classifier.
-Loads the model + tokenizer on first use, provides predict() and predict_batch().
-"""
+
 import os
 import json
 import threading
@@ -20,11 +17,7 @@ DOCKER_MODEL_DIR = "/app/models/category_classifier"
 MODEL_DIR = DOCKER_MODEL_DIR if os.path.isdir(DOCKER_MODEL_DIR) else DEFAULT_MODEL_DIR
 MAX_LENGTH = 256
 
-# The training dataset (Bitext) is e-commerce/account-ops only — it has no examples
-# of these 6 categories, so the ML model was never trained to recognize them.
-# These are handled by high-precision keyword rules instead, checked BEFORE the
-# model. Order matters: more specific/rare terms first to avoid false positives
-# (e.g. "fraud" before generic "issue").
+=
 RULE_CATEGORIES = [
     ("Security & Fraud", [
         "fraud", "hacked", "hack into", "unauthorized access", "unauthorized transaction",
