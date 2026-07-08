@@ -1,12 +1,4 @@
-"""
-Prepare training data for priority prediction.
 
-Loads raw Bitext data directly (not the category classifier's CSV) to preserve
-the `flags` column. Applies VADER sentiment, MiniLM anchor similarities, text
-ratio features, Bitext linguistic flags, and synthetic tabular context (tier,
-SLA, channel, repeat contacts). Labels are generated from a deterministic
-formula (compute_priority_score) to avoid LLM dependency.
-"""
 import os
 import json
 import random
