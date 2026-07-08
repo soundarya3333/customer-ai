@@ -1,8 +1,4 @@
-"""
-Prepare training data for ticket classification.
-Pulls the Bitext HF dataset, maps categories, strips placeholders,
-deduplicates, and saves a clean CSV for honest model evaluation.
-"""
+
 import os
 import sys
 import json
@@ -22,12 +18,7 @@ TRAINING_DATA_DIR = os.path.join(PROJECT_ROOT, "training_data")
 MODEL_DIR = os.path.join(PROJECT_ROOT, "models", "category_classifier")
 RANDOM_STATE = 42
 
-# NOTE: The Bitext dataset only covers e-commerce/account-ops flows. Its 11 native
-# categories / 27 intents give real signal for the 8 business categories below.
-# The other 6 (Security & Fraud, Sales & Pre-Sales, Compliance & Privacy, Technical
-# Support, Feature Requests, Product Defects) do not exist in this dataset in any
-# form — they are handled by a keyword-rule layer in predictor.py instead, not by
-# this model. Training on them here would just teach the model noise.
+
 ML_CATEGORIES = [
     "Account & Authentication",
     "Billing & Payments",
@@ -51,8 +42,7 @@ RULE_ONLY_CATEGORIES = [
 
 PLACEHOLDER_RE = re.compile(r"\{\{[^}]*\}\}")
 
-# Mapping is by (category, intent) — the HF "category" field alone is too coarse
-# (e.g. CONTACT bundles two intents that mean very different things).
+
 INTENT_TO_BUSINESS_CATEGORY = {
     "create_account": "Account & Authentication",
     "delete_account": "Account & Authentication",
@@ -62,12 +52,7 @@ INTENT_TO_BUSINESS_CATEGORY = {
     "switch_account": "Account & Authentication",
     "check_cancellation_fee": "Returns & Refunds",
     "contact_customer_service": "General Inquiries",
-    # contact_human_agent ("speak to an operator") is lexically indistinguishable
-    # from contact_customer_service ("contact customer service") — both are
-    # generic "let me talk to someone" phrasing. Bundling it into Complaints
-    # caused the model to always guess General Inquiries instead (0% recall on
-    # Complaints in testing). "complaint"/"claim"/"lodge a complaint" has
-    # genuinely distinct vocabulary, so that intent alone is the real signal.
+    
     "contact_human_agent": "General Inquiries",
     "delivery_options": "Orders & Shipping",
     "delivery_period": "Orders & Shipping",
@@ -171,10 +156,7 @@ def main():
     df = df[df["category"].isin(present)].reset_index(drop=True)
     print(f"    Classes with >={min_per_class} samples: {len(present)}")
 
-    # A plain GroupShuffleSplit over the whole df can, by chance, dump every
-    # intent of a category (e.g. one with only 1-2 intents) entirely into train,
-    # leaving that category with zero test examples. Split intents per-category
-    # instead so every category is guaranteed representation on both sides.
+   
     df["split"] = "train"
     for cat in present:
         cat_mask = df["category"] == cat
@@ -190,10 +172,7 @@ def main():
                 test_original_idx = df.loc[cat_mask & (df["intent"] == fallback_intent)].index
             df.loc[test_original_idx, "split"] = "test"
         else:
-            # Only one intent for this category — can't do a group split without
-            # losing the category from one side entirely, so fall back to a
-            # random row-level split (accepts a small amount of near-duplicate
-            # leakage, but that's better than zero test coverage).
+            
             cat_idx = df.loc[cat_mask].sample(frac=0.2, random_state=RANDOM_STATE).index
             df.loc[cat_idx, "split"] = "test"
 
