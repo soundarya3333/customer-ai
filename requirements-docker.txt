@@ -1,0 +1,22 @@
+# Runtime-only requirements for Docker deployment
+# Heavy training-only deps (mlflow, dvc, datasets, scikit-learn) are
+# installed in the local venv for model training, NOT in the API container.
+# pandas + xgboost ARE needed here: priority_predictor.py builds a feature
+# row and runs XGBoost inference at request time, not just at training time.
+# vaderSentiment + sentence-transformers ARE needed too: priority_predictor.py
+# computes VADER sentiment and all-MiniLM-L6-v2 embedding-anchor similarities
+# at request time (no precomputed/cached embeddings), same deterministic
+# feature extraction path as training.
+fastapi>=0.110.0
+uvicorn>=0.28.0
+pydantic-settings>=2.2.0
+sqlalchemy>=2.0.0
+psycopg2-binary>=2.9.0
+prometheus-client>=0.20.0
+transformers>=4.30.0
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch>=2.0.0
+pandas>=2.0.0
+xgboost>=2.0.0
+vaderSentiment>=3.3.2
+sentence-transformers>=2.2.0

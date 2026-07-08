@@ -1,0 +1,10 @@
+# Modelfile
+FROM ./customer_support_model-q8_0.gguf
+
+# Set system prompt matching your fine-tune formatting template
+TEMPLATE """<|im_start|>system
+{{ .System }}<|im_end|>
+<|im_start|>user
+{{ .Prompt }}<|im_end|>
+<|im_start|>assistant
+"""

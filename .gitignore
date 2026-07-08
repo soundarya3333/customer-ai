@@ -1,0 +1,68 @@
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# MLFlow
+mlruns/
+.mlflow
+
+# DVC
+.dvc/
+.dvc.lock
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Training checkpoints (very large; final models are kept separately)
+**/checkpoint-*/
+**/*.safetensors

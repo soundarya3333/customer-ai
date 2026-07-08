@@ -1,0 +1,1001 @@
+text,category,intent,customer_tier,source_channel,sla_hours_remaining,ticket_age_hours,repeat_contact_count,urgency_keyword_score,exclamation_count,all_caps_ratio,customer_sentiment,business_impact,priority
+I have an issue trying to change the delivery address,Orders & Shipping,change_shipping_address,Pro,website,24.0,0.0,0,0,0,0.0,Frustrated,Minor,Medium
+how to check the options for delivery?,Orders & Shipping,delivery_options,Pro,email,24.0,0.0,0,0,0,0.0,Neutral,Minor,Low
+is it possible to see in what cases can I request refunds?,Returns & Refunds,check_refund_policy,Basic,email,15.4,32.6,0,0,0,0.0,Neutral,Minor,Low
+I don't know what I have to do to contact a person,General Inquiries,contact_human_agent,Pro,zendesk,4.7,19.3,2,0,0,0.0,Neutral,Minor,Medium
+their is a problem trying to correct my delivery address,Orders & Shipping,change_shipping_address,Basic,zendesk,39.2,8.8,0,0,0,0.0,Frustrated,Moderate,Medium
+"you are not being helpful, help chatting with a human agent",General Inquiries,contact_human_agent,Basic,website,27.2,20.8,1,0,0,0.0,Frustrated,Moderate,High
+where do I retrieve the key of my user profile?,Account & Authentication,recover_password,Pro,zendesk,7.8,16.2,2,0,0,0.0,Neutral,Minor,Medium
+"I entered a wrong shipping address, can I correct it?",Orders & Shipping,change_shipping_address,Free,website,72.0,0.0,0,0,0,0.0,Neutral,Minor,Medium
+I want herlp to obtain reimbursements of money,Returns & Refunds,get_refund,Pro,website,2.2,21.8,0,0,0,0.0,Neutral,Minor,Medium
+what are your bloody payment methods?,Billing & Payments,check_payment_methods,Pro,salesforce,-0.4,24.4,0,0,0,0.0,Angry,Moderate,High
+I want to leave an opniion for your company,Customer Feedback,review,Basic,freshdesk,48.0,0.0,0,0,0,0.0,Neutral,Minor,Low
+how to restore the key of my profile,Account & Authentication,recover_password,Free,zendesk,-4.3,76.3,0,0,0,0.0,Neutral,Moderate,High
+wanna leave a review about a product how to do it,Customer Feedback,review,Free,email,1.8,70.2,1,0,0,0.0,Neutral,Minor,Low
+I don't know how I can make a customer reclamation,Complaints & Escalations,complaint,Basic,freshdesk,34.4,13.6,0,0,0,0.0,Frustrated,Moderate,Medium
+I need to see in what cases can I request to be refunded,Returns & Refunds,check_refund_policy,Free,freshdesk,20.2,51.8,0,0,0,0.0,Neutral,Minor,Medium
+help to contact a person,General Inquiries,contact_human_agent,Enterprise,zendesk,6.5,1.5,1,0,0,0.0,Neutral,Minor,Low
+"I need to see the payment options, can you help me?",Billing & Payments,check_payment_methods,Free,freshdesk,-17.3,89.3,0,0,0,0.0,Neutral,Minor,Low
+"I want to edit order , will you help me?",Orders & Shipping,change_order,Free,zendesk,19.0,53.0,0,0,0,0.0,Neutral,Minor,Medium
+can you show me in which situations can I ask for refunds?,Returns & Refunds,check_refund_policy,Pro,email,5.2,18.8,1,0,0,0.0,Neutral,Minor,Medium
+I do not know what to do to see the withdrawal penalties,Returns & Refunds,check_cancellation_fee,Free,website,37.3,34.7,0,0,0,0.0,Neutral,Minor,Medium
+lodge customer complaint,Complaints & Escalations,complaint,Free,freshdesk,72.0,0.0,0,0,0,0.0,Frustrated,Moderate,Medium
+is it possible to write a review about ur rpoducts,Customer Feedback,review,Basic,zendesk,-11.3,59.3,0,0,0,0.0,Positive,Minor,Low
+"I have got to lodge a customer complaint, help me",Complaints & Escalations,complaint,Free,salesforce,10.4,61.6,0,0,0,0.0,Frustrated,Moderate,High
+I try to speak to a person,General Inquiries,contact_human_agent,Free,zendesk,19.0,53.0,0,0,0,0.0,Neutral,Minor,Medium
+what is your customer assistance number?,General Inquiries,contact_customer_service,Pro,website,-7.7,31.7,1,0,0,0.0,Neutral,Minor,Low
+"I need to see when will my item arrive, how to do it?",Orders & Shipping,delivery_period,Pro,website,-4.4,28.4,1,0,0,0.0,Neutral,Minor,Medium
+i have got to see ur refund policy can uhelp me,Returns & Refunds,check_refund_policy,Basic,email,-3.3,51.3,0,0,0,0.0,Neutral,Minor,Low
+help me to download my goddamn invoices from,Billing & Payments,get_invoice,Basic,website,-1.3,49.3,0,0,0,0.0,Frustrated,Moderate,High
+"I have got to list the damn payment methods, how to do it?",Billing & Payments,check_payment_methods,Pro,zendesk,13.8,10.2,0,0,0,0.0,Neutral,Minor,Low
+can I list your allowed payment modalities?,Billing & Payments,check_payment_methods,Enterprise,website,-2.1,10.1,2,0,0,0.0,Frustrated,Moderate,High
+want assistance leavingmy feedback for a service,Customer Feedback,review,Basic,email,15.3,32.7,0,0,0,0.0,Neutral,Minor,Medium
+need assistance to sign up to the newsletter,Subscription & Account Management,newsletter_subscription,Free,freshdesk,-20.8,92.8,0,0,0,0.0,Neutral,Minor,Medium
+I do not know how to lodge a customer claim,Complaints & Escalations,complaint,Pro,freshdesk,13.9,10.1,1,0,0,0.0,Neutral,Minor,Low
+I want information about opening platinum accounts,Account & Authentication,create_account,Enterprise,email,2.9,5.1,0,0,0,0.0,Neutral,Minor,Medium
+i want assistance to buy an item,Orders & Shipping,place_order,Basic,freshdesk,5.7,42.3,1,0,0,0.0,Neutral,Minor,Low
+cancelling standard account,Account & Authentication,delete_account,Free,email,5.0,67.0,0,1,0,0.0,Neutral,Minor,Medium
+want assistance editing my personal data,Account & Authentication,edit_account,Free,email,72.0,0.0,0,0,0,0.0,Neutral,Minor,Medium
+i dont know what i have to do to lodge a consumer complaint,Complaints & Escalations,complaint,Free,website,61.9,10.1,1,0,0,0.0,Frustrated,Minor,Medium
+I want to update my address,Orders & Shipping,change_shipping_address,Free,email,72.0,0.0,1,0,0,0.0,Neutral,Minor,Low
+i want assistance opening a account for my dad,Account & Authentication,create_account,Free,zendesk,-7.8,79.8,0,0,0,0.0,Neutral,Minor,Low
+i do not know how i can talk to a human agent,General Inquiries,contact_human_agent,Free,email,36.2,35.8,0,0,0,0.0,Frustrated,Moderate,Medium
+help seeing in what cases can i request to be reimbursed,Returns & Refunds,check_refund_policy,Free,website,-10.5,82.5,0,0,0,0.0,Neutral,Minor,Medium
+updating user profile,Account & Authentication,edit_account,Basic,website,20.2,27.8,0,0,0,0.0,Neutral,Minor,Low
+need to see how soon can i expect the order could uhelp me,Orders & Shipping,delivery_period,Free,email,9.5,62.5,0,0,0,0.0,Neutral,Minor,Low
+can you help me write a comment for your products?,Customer Feedback,review,Pro,website,-2.7,26.7,2,0,0,0.0,Neutral,Moderate,High
+i dont know how tl inform of signup errors,Account & Authentication,registration_problems,Free,website,-29.0,101.0,0,0,0,0.0,Frustrated,Moderate,High
+creating freemium account,Account & Authentication,create_account,Pro,zendesk,24.0,0.0,1,0,0,0.0,Neutral,Minor,Low
+i do not know how to unsubscribe to ur company newsletter,Subscription & Account Management,newsletter_subscription,Pro,email,13.0,11.0,0,0,0,0.0,Neutral,Minor,Low
+i dont know how i can check the eta of my last delivery,Orders & Shipping,track_order,Basic,zendesk,32.7,15.3,0,0,0,0.0,Neutral,Minor,Medium
+i want help to leave a comment about ur services,Customer Feedback,review,Basic,website,17.6,30.4,0,0,0,0.0,Neutral,Minor,Low
+I have got to swap a damn product of order,Orders & Shipping,change_order,Free,zendesk,42.0,30.0,0,0,0,0.0,Frustrated,Moderate,Medium
+help me see in which cases can I ask for an refund,Returns & Refunds,check_refund_policy,Free,zendesk,17.6,54.4,1,0,0,0.0,Neutral,Minor,Low
+I'm trying to se the withdrawal fees,Returns & Refunds,check_cancellation_fee,Free,salesforce,-12.3,84.3,0,0,0,0.0,Neutral,Minor,Low
+where can i see the ETA of the order,Orders & Shipping,track_order,Basic,email,14.5,33.5,0,0,0,0.1111111111111111,Neutral,Minor,Medium
+I am trying to leave feedback for a service,Customer Feedback,review,Basic,website,-8.1,56.1,1,0,0,0.0,Frustrated,Moderate,High
+I have got to edit order,Orders & Shipping,change_order,Basic,email,-10.8,58.8,0,0,0,0.0,Frustrated,Moderate,High
+help to write an opinion for ur company,Customer Feedback,review,Enterprise,email,2.4,5.6,0,0,0,0.0,Neutral,Minor,Medium
+i do not know how i can cancel purchase,Orders & Shipping,cancel_order,Basic,website,-1.6,49.6,1,0,0,0.0,Frustrated,Moderate,High
+I am calling to lodge a complaint against your business,Complaints & Escalations,complaint,Enterprise,email,-0.3,8.3,1,0,0,0.0,Frustrated,Moderate,High
+problem with account cancellations,Account & Authentication,delete_account,Free,email,72.0,0.0,0,0,0,0.0,Frustrated,Moderate,Medium
+"I can't open an account, where do I report a signup issue?",Account & Authentication,registration_problems,Free,email,39.8,32.2,0,0,0,0.0,Frustrated,Moderate,High
+i do not know how to edit my delivery address,Orders & Shipping,change_shipping_address,Enterprise,zendesk,-0.3,8.3,0,0,0,0.0,Frustrated,Moderate,High
+can you help me to make a claim against your company?,Complaints & Escalations,complaint,Free,website,-15.8,87.8,0,0,0,0.0,Frustrated,Moderate,High
+i have got to cancel my newsletter subscription,Subscription & Account Management,newsletter_subscription,Free,salesforce,72.0,0.0,0,1,0,0.0,Neutral,Minor,Low
+help me to cancel the subscription to the company newsletter,Subscription & Account Management,newsletter_subscription,Pro,salesforce,13.2,10.8,1,0,0,0.0,Neutral,Moderate,Medium
+how do i shop an item,Orders & Shipping,place_order,Free,salesforce,-0.7,72.7,0,0,0,0.0,Neutral,Minor,Low
+where do I buy several products?,Orders & Shipping,place_order,Free,website,51.5,20.5,1,0,0,0.0,Neutral,Minor,Low
+is there a section to leave an opinion about a service?,Customer Feedback,review,Free,zendesk,67.4,4.6,0,0,0,0.0,Neutral,Minor,Low
+report issues creating account,Account & Authentication,registration_problems,Free,freshdesk,16.5,55.5,0,0,0,0.0,Frustrated,Moderate,High
+help me to see in what situations can i request a refund,Returns & Refunds,check_refund_policy,Free,zendesk,38.3,33.7,0,0,0,0.0,Neutral,Minor,Medium
+how to see your accepted payment methods?,Billing & Payments,check_payment_methods,Free,email,-47.6,119.6,0,0,0,0.0,Neutral,Minor,Low
+I do not know what I need to do to download bill #12588,Billing & Payments,get_invoice,Pro,freshdesk,3.5,20.5,0,0,0,0.0,Neutral,Moderate,High
+I don't know how to download my invoice #37777,Billing & Payments,get_invoice,Free,website,-6.5,78.5,0,0,0,0.0,Frustrated,Minor,Medium
+I'm trying to get my invoice from,Billing & Payments,get_invoice,Free,website,2.5,69.5,0,0,0,0.0,Neutral,Minor,Low
+I need assistance editing the address,Orders & Shipping,change_shipping_address,Free,zendesk,-42.2,114.2,0,0,0,0.0,Neutral,Moderate,High
+I need help swapping an item of order,Orders & Shipping,change_order,Enterprise,email,-2.0,10.0,1,0,0,0.0,Frustrated,Moderate,High
+find my bills from,Billing & Payments,check_invoice,Free,salesforce,36.2,35.8,0,0,0,0.0,Neutral,Minor,Medium
+how can I see your accepted payment options?,Billing & Payments,check_payment_methods,Free,email,-13.7,85.7,0,0,0,0.0,Neutral,Minor,Low
+I don't know how to demand restitutions of my money,Returns & Refunds,get_refund,Free,email,66.2,5.8,0,0,0,0.0,Neutral,Minor,Medium
+how do i sign up to thhe corporate newsletter,Subscription & Account Management,newsletter_subscription,Free,zendesk,22.0,50.0,0,0,0,0.0,Neutral,Minor,Low
+I need to see your available payment options,Billing & Payments,check_payment_methods,Free,email,40.8,31.2,0,0,0,0.0,Neutral,Minor,Low
+I don't know how to list the payment options,Billing & Payments,check_payment_methods,Basic,salesforce,-16.4,64.4,0,0,0,0.0,Neutral,Minor,Low
+"I need to remove a account, how can I do it?",Account & Authentication,delete_account,Basic,website,-11.6,59.6,0,0,0,0.0,Neutral,Minor,Medium
+need help to see in what cases can I ask for refunds,Returns & Refunds,check_refund_policy,Free,zendesk,-41.5,113.5,0,0,0,0.0,Neutral,Minor,Medium
+i have to see in what cases acn i request my money back,Returns & Refunds,check_refund_policy,Basic,email,36.1,11.9,0,0,0,0.0,Neutral,Minor,Low
+i try to switch several items of order,Orders & Shipping,change_order,Enterprise,email,8.0,0.0,0,0,0,0.0,Frustrated,Moderate,High
+can you tell me more about my newsletter subscription?,Subscription & Account Management,newsletter_subscription,Free,freshdesk,16.2,55.8,0,0,0,0.0,Neutral,Minor,Low
+how can I inform of sign-up issues?,Account & Authentication,registration_problems,Free,salesforce,-36.9,108.9,0,0,0,0.0,Frustrated,Moderate,High
+help to get in touch with customer support,General Inquiries,contact_customer_service,Free,salesforce,56.7,15.3,0,0,0,0.0,Neutral,Minor,Low
+I have to change to the goddamn account,Account & Authentication,switch_account,Free,zendesk,52.6,19.4,0,0,0,0.0,Frustrated,Moderate,High
+i cannot make a payment where do i report an error,Billing & Payments,payment_issue,Free,zendesk,7.4,64.6,1,0,0,0.0,Frustrated,Moderate,High
+I don't know what I have to do to see your refund policy,Returns & Refunds,check_refund_policy,Basic,website,8.2,39.8,0,0,0,0.0,Neutral,Minor,Medium
+i do not know what i have to do to check bill #37777,Billing & Payments,check_invoice,Basic,email,48.0,0.0,0,0,0,0.0,Neutral,Moderate,Medium
+directing to person,General Inquiries,contact_human_agent,Basic,website,-6.6,54.6,0,0,0,0.0,Frustrated,Moderate,High
+I need help to make a complaint against your business,Complaints & Escalations,complaint,Basic,zendesk,13.4,34.6,0,0,0,0.0,Frustrated,Moderate,High
+I want help submitting feedbacki about your services,Customer Feedback,review,Pro,email,2.3,21.7,1,0,0,0.0,Neutral,Minor,Low
+do ya have an e-mail to contact customer support,General Inquiries,contact_customer_service,Basic,website,48.0,0.0,0,0,0,0.0,Neutral,Minor,Low
+I need support changing the delivery address,Orders & Shipping,change_shipping_address,Pro,freshdesk,-5.5,29.5,0,0,0,0.0,Frustrated,Moderate,High
+"I have to contact customer assistance, can I get some help?",General Inquiries,contact_customer_service,Free,freshdesk,-83.5,155.5,0,0,0,0.0,Neutral,Minor,Medium
+I want help cancelling the newsletter subscripotion,Subscription & Account Management,newsletter_subscription,Basic,email,39.6,8.4,0,1,0,0.0,Neutral,Minor,Low
+"I have got to contact customer assistance, I need help",General Inquiries,contact_customer_service,Free,website,67.1,4.9,0,0,0,0.0,Frustrated,Minor,Medium
+information about canceling the newsletter subscription,Subscription & Account Management,newsletter_subscription,Enterprise,salesforce,-3.0,11.0,1,0,0,0.0,Frustrated,Moderate,High
+what do I need to do to see the terminbation fee?,Returns & Refunds,check_cancellation_fee,Enterprise,email,-0.1,8.1,1,0,0,0.0,Frustrated,Moderate,High
+I try to lodge a consumer claim against your organization,Complaints & Escalations,complaint,Basic,website,-24.7,72.7,0,0,0,0.0,Frustrated,Moderate,High
+where tofile a consumer claim against ur company,Complaints & Escalations,complaint,Enterprise,website,4.7,3.3,1,0,0,0.0,Frustrated,Moderate,Medium
+I do not know what to do to speak to an agent,General Inquiries,contact_human_agent,Free,zendesk,30.1,41.9,0,0,0,0.0,Neutral,Minor,Medium
+help me see your accepted payment options,Billing & Payments,check_payment_methods,Enterprise,salesforce,1.7,6.3,0,0,0,0.0,Neutral,Minor,Medium
+i try to leave efedback for ur company,Customer Feedback,review,Basic,email,48.0,0.0,0,0,0,0.0,Positive,Minor,Low
+how to cancel a account?,Account & Authentication,delete_account,Free,email,26.9,45.1,0,0,0,0.0,Neutral,Minor,Medium
+assistance seeing ur available payment options,Billing & Payments,check_payment_methods,Enterprise,salesforce,-4.7,12.7,1,0,0,0.0,Frustrated,Moderate,High
+is there an e-mail to submit a comment for your services?,Customer Feedback,review,Basic,website,37.4,10.6,0,0,0,0.0,Neutral,Minor,Low
+another standard account for father,Account & Authentication,create_account,Free,salesforce,12.5,59.5,0,0,0,0.0,Neutral,Minor,Low
+i have an issue modifying the shipping address,Orders & Shipping,change_shipping_address,Free,website,-26.9,98.9,0,0,0,0.0,Frustrated,Moderate,High
+help to subscribe to ur company newsletter,Subscription & Account Management,newsletter_subscription,Basic,zendesk,48.0,0.0,0,0,0,0.0,Neutral,Minor,Low
+where do I check the accepted payment methods?,Billing & Payments,check_payment_methods,Basic,salesforce,-26.7,74.7,0,0,0,0.0,Neutral,Minor,Low
+information about editing purchase,Orders & Shipping,change_order,Free,email,7.1,64.9,0,0,0,0.0,Neutral,Minor,Medium
+I want assistance to inform of an issue with a signup,Account & Authentication,registration_problems,Enterprise,email,4.7,3.3,0,0,0,0.0,Neutral,Moderate,Medium
+chcek order current status,Orders & Shipping,track_order,Basic,email,48.0,0.0,0,0,0,0.0,Neutral,Minor,Low
+I am looking for shipping periods,Orders & Shipping,delivery_period,Basic,website,43.9,4.1,0,0,0,0.0,Neutral,Minor,Low
+I do not know what I hae to do to close the account,Account & Authentication,delete_account,Basic,email,-40.3,88.3,0,0,0,0.0,Frustrated,Moderate,High
+where could I receive your company newsletter?,Subscription & Account Management,newsletter_subscription,Free,email,-6.0,78.0,0,0,0,0.0,Neutral,Minor,Low
+do you have a free customer assistance phone number?,General Inquiries,contact_customer_service,Free,website,1.8,70.2,0,0,0,0.0,Neutral,Minor,Medium
+I'd like to list the fucking payment methods how do i do it,Billing & Payments,check_payment_methods,Free,website,10.2,61.8,0,0,0,0.0,Frustrated,Moderate,High
+I try to remove some articles from order,Orders & Shipping,change_order,Free,website,-24.4,96.4,0,0,0,0.0,Neutral,Minor,Medium
+i need infrmation about the cancellation of my account,Account & Authentication,delete_account,Free,zendesk,72.0,0.0,0,0,0,0.0,Neutral,Minor,Medium
+where can I check the payment options?,Billing & Payments,check_payment_methods,Free,freshdesk,42.0,30.0,1,0,0,0.0,Neutral,Minor,Low
+can ya help me to leave a review about a esrvice,Customer Feedback,review,Free,website,61.4,10.6,0,0,0,0.0,Neutral,Minor,Low
+help me check the ETA of order,Orders & Shipping,track_order,Basic,website,24.2,23.8,0,0,0,0.14285714285714285,Neutral,Minor,Medium
+where do I see at what time I can contact customer support?,General Inquiries,contact_customer_service,Free,zendesk,66.2,5.8,1,0,0,0.0,Neutral,Minor,Low
+hdlp me to make a consumer complaint against your company,Complaints & Escalations,complaint,Free,website,66.1,5.9,0,0,0,0.0,Frustrated,Moderate,Medium
+"I need to know if there are any news on my rebate, help me",Returns & Refunds,track_refund,Basic,email,29.4,18.6,0,0,0,0.0,Neutral,Moderate,Medium
+can you help me call fucking customer sujpport?,General Inquiries,contact_customer_service,Free,zendesk,72.0,0.0,1,0,0,0.0,Frustrated,Moderate,High
+"I have ordered some item, cancel purchase",Orders & Shipping,cancel_order,Enterprise,email,8.0,0.0,1,0,0,0.0,Frustrated,Moderate,Medium
+do you have a method to submit some feedback?,Customer Feedback,review,Free,email,58.2,13.8,0,0,0,0.0,Neutral,Minor,Low
+I need help to call damn customer support,General Inquiries,contact_customer_service,Free,email,-17.5,89.5,2,0,0,0.0,Frustrated,Moderate,High
+assistance canceling the newsletter subscription,Subscription & Account Management,newsletter_subscription,Free,website,-33.9,105.9,0,0,0,0.0,Neutral,Moderate,Medium
+help me see what payment options ya accept,Billing & Payments,check_payment_methods,Pro,email,-1.0,25.0,0,0,0,0.0,Neutral,Minor,Low
+information about receiving ur newsletter,Subscription & Account Management,newsletter_subscription,Basic,freshdesk,-27.9,75.9,0,0,0,0.0,Neutral,Minor,Low
+I do not know how I can file a claim,Complaints & Escalations,complaint,Free,website,-11.6,83.6,0,0,0,0.0,Frustrated,Moderate,High
+modifying details on account,Account & Authentication,edit_account,Enterprise,email,-4.6,12.6,2,0,0,0.0,Frustrated,Moderate,High
+assistance to talk with bloody customer supprt,General Inquiries,contact_customer_service,Basic,zendesk,-3.7,51.7,0,0,0,0.0,Frustrated,Moderate,High
+i do not know how i can set up the delivery address,Orders & Shipping,set_up_shipping_address,Free,zendesk,-20.2,92.2,0,0,0,0.0,Frustrated,Moderate,High
+"I have to submit the new delivery address, how can I do it?",Orders & Shipping,set_up_shipping_address,Pro,website,17.8,6.2,0,0,0,0.0,Neutral,Minor,Medium
+subscribe to company newsletter,Subscription & Account Management,newsletter_subscription,Free,website,-50.6,122.6,0,0,0,0.0,Neutral,Minor,Low
+I need to file a reclamation against your organization,Complaints & Escalations,complaint,Basic,zendesk,37.9,10.1,0,0,0,0.0,Angry,Severe,High
+I want assistance unsubscribing to the newsletter,Subscription & Account Management,newsletter_subscription,Free,email,6.1,65.9,0,0,0,0.0,Neutral,Minor,Low
+i need assistance acquiring several items,Orders & Shipping,place_order,Basic,website,4.4,43.6,0,0,0,0.0,Neutral,Minor,Medium
+i dont khow how to cancel order,Orders & Shipping,cancel_order,Free,email,38.7,33.3,0,0,0,0.0,Neutral,Minor,Low
+i have problems with a forgotten password,Account & Authentication,recover_password,Enterprise,zendesk,2.3,5.7,2,0,0,0.0,Frustrated,Moderate,Medium
+help to casncel my subscription to your company newsletter,Subscription & Account Management,newsletter_subscription,Pro,website,14.9,9.1,1,0,0,0.0,Neutral,Minor,Low
+where do i take a quick look at the bill #37777,Billing & Payments,check_invoice,Free,salesforce,-25.4,97.4,0,0,0,0.0,Neutral,Minor,Low
+i do not know how to see the cancellation penalty,Returns & Refunds,check_cancellation_fee,Free,website,22.6,49.4,0,0,0,0.0,Neutral,Minor,Low
+I need help to get in touch with customer support,General Inquiries,contact_customer_service,Free,email,-21.0,93.0,0,0,0,0.0,Frustrated,Moderate,High
+check invoice from June,Billing & Payments,check_invoice,Basic,email,11.9,36.1,0,0,0,0.0,Neutral,Minor,Low
+I don't know what to do to talk to someone,General Inquiries,contact_human_agent,Pro,website,10.3,13.7,0,0,0,0.0,Neutral,Minor,Medium
+i have got to see the accepted payment options,Billing & Payments,check_payment_methods,Pro,website,2.7,21.3,2,0,0,0.0,Neutral,Minor,Medium
+see the early exit charges,Returns & Refunds,check_cancellation_fee,Free,website,15.4,56.6,0,0,0,0.0,Frustrated,Minor,Medium
+help me seeing how soon can i expect the product,Orders & Shipping,delivery_period,Free,website,14.5,57.5,0,0,0,0.0,Neutral,Minor,Medium
+I try to check your damn money back guarantee,Returns & Refunds,check_refund_policy,Basic,zendesk,-1.2,49.2,0,0,0,0.0,Frustrated,Moderate,High
+I need assistance to contact somebody,General Inquiries,contact_human_agent,Pro,freshdesk,7.2,16.8,0,0,0,0.0,Neutral,Minor,Low
+how can i file a complaint against ur organization,Complaints & Escalations,complaint,Basic,email,12.3,35.7,0,0,0,0.0,Frustrated,Moderate,High
+remove article from purchase,Orders & Shipping,change_order,Free,salesforce,0.2,71.8,0,0,0,0.0,Neutral,Minor,Low
+subscription to your company newsletter,Subscription & Account Management,newsletter_subscription,Basic,website,41.7,6.3,0,0,0,0.0,Neutral,Minor,Low
+I do not know what I need to do to purchase some products,Orders & Shipping,place_order,Free,email,-23.1,95.1,0,0,0,0.0,Neutral,Minor,Medium
+want help to delete some items from order,Orders & Shipping,change_order,Free,website,31.1,40.9,0,0,0,0.0,Neutral,Minor,Medium
+I'm trying to write a review for ur company,Customer Feedback,review,Basic,website,48.0,0.0,0,0,0,0.0,Neutral,Minor,Low
+is it possible to retrieve my user account password?,Account & Authentication,recover_password,Pro,zendesk,-5.7,29.7,1,0,0,0.0,Frustrated,Moderate,High
+do you have an e-mail to send feedback about your company?,Customer Feedback,review,Basic,zendesk,-7.4,55.4,0,0,0,0.0,Neutral,Minor,Low
+need to notify of an error with sign-up,Account & Authentication,registration_problems,Basic,email,30.2,17.8,0,0,0,0.0,Frustrated,Moderate,High
+error setting a new shipping address up,Orders & Shipping,set_up_shipping_address,Enterprise,salesforce,8.0,0.0,1,0,0,0.0,Frustrated,Moderate,High
+I don't know how to contact an asgent,General Inquiries,contact_human_agent,Basic,website,13.6,34.4,0,0,0,0.0,Neutral,Minor,Low
+i try to send feedback about ur services,Customer Feedback,review,Free,zendesk,-16.3,88.3,0,0,0,0.0,Frustrated,Moderate,Medium
+what do i need to do to switch to the premium account,Account & Authentication,switch_account,Free,freshdesk,-21.7,93.7,0,0,0,0.0,Neutral,Moderate,Medium
+I can't speak with a live agent,General Inquiries,contact_human_agent,Basic,email,6.7,41.3,0,0,0,0.0,Frustrated,Moderate,Medium
+reporting issues with payment,Billing & Payments,payment_issue,Basic,email,15.5,32.5,0,0,0,0.0,Frustrated,Moderate,High
+can I see the withdrawal charges?,Returns & Refunds,check_cancellation_fee,Free,website,-61.9,133.9,0,0,0,0.0,Neutral,Minor,Low
+help me lodge a complaint against ur business,Complaints & Escalations,complaint,Free,email,-14.7,86.7,0,0,0,0.0,Angry,Severe,High
+i cannot make a payment help me inform of fucking issues,Billing & Payments,payment_issue,Basic,freshdesk,39.3,8.7,0,0,0,0.0,Frustrated,Moderate,High
+want help filing a customer claim against ur organization,Complaints & Escalations,complaint,Free,email,15.9,56.1,0,0,0,0.0,Frustrated,Moderate,High
+I want to locate purchase,Orders & Shipping,track_order,Free,website,16.9,55.1,0,0,0,0.0,Neutral,Minor,Medium
+assistance to see the withdrawal fees,Returns & Refunds,check_cancellation_fee,Basic,email,4.7,43.3,1,0,0,0.0,Neutral,Minor,Low
+check the accepted payment modalities,Billing & Payments,check_payment_methods,Enterprise,website,4.5,3.5,2,0,0,0.0,Neutral,Minor,Medium
+how can I check your payment methods?,Billing & Payments,check_payment_methods,Pro,email,10.2,13.8,0,0,0,0.0,Neutral,Minor,Medium
+can you help me to use the profile?,Account & Authentication,switch_account,Pro,website,-17.3,41.3,1,0,0,0.0,Frustrated,Moderate,High
+clsoe premium account,Account & Authentication,delete_account,Pro,zendesk,24.0,0.0,0,0,0,0.0,Frustrated,Moderate,Medium
+do you have an e-mail to leave my feedback?,Customer Feedback,review,Basic,email,-2.8,50.8,0,0,0,0.0,Neutral,Minor,Low
+show me in which cases can I ask for my money back,Returns & Refunds,check_refund_policy,Pro,salesforce,8.5,15.5,2,0,0,0.0,Neutral,Minor,Medium
+I have got to check what payment methods are available,Billing & Payments,check_payment_methods,Free,email,60.7,11.3,0,0,0,0.0,Neutral,Minor,Low
+can you help me to speak with customer support?,General Inquiries,contact_customer_service,Free,email,-14.8,86.8,0,0,0,0.0,Frustrated,Moderate,High
+i try to see in which situations can i ask for refunds,Returns & Refunds,check_refund_policy,Pro,website,8.0,16.0,0,0,0,0.0,Neutral,Minor,Medium
+how do I list the accepted payment options?,Billing & Payments,check_payment_methods,Free,website,56.2,15.8,1,0,0,0.0,Neutral,Minor,Low
+i want help checking in what cases can i ask for a refund,Returns & Refunds,check_refund_policy,Pro,zendesk,21.1,2.9,1,0,0,0.0,Neutral,Minor,Medium
+in which cases can i ask to be reimbursed,Returns & Refunds,check_refund_policy,Basic,zendesk,24.3,23.7,0,0,0,0.0,Neutral,Minor,Medium
+want assistance cancelling my subscription to ur newsletter,Subscription & Account Management,newsletter_subscription,Basic,email,29.8,18.2,1,1,0,0.0,Neutral,Minor,Low
+can i see in what situations can i ask for reimbursements,Returns & Refunds,check_refund_policy,Enterprise,freshdesk,-0.1,8.1,1,0,0,0.0,Neutral,Minor,Medium
+need assistance purchasing some of ur article,Orders & Shipping,place_order,Free,website,-11.4,83.4,1,0,0,0.0,Frustrated,Moderate,High
+I want assistance to leave a comment about your company,Customer Feedback,review,Pro,freshdesk,9.4,14.6,1,0,0,0.0,Neutral,Minor,Low
+I have got to cancel the newsletter subscription,Subscription & Account Management,newsletter_subscription,Enterprise,email,3.1,4.9,1,0,0,0.0,Frustrated,Moderate,High
+I'm trying to see in what cases can i ask for my money back,Returns & Refunds,check_refund_policy,Enterprise,website,5.0,3.0,0,0,0,0.0,Neutral,Minor,Medium
+i have to sue the profile how can i do it,Account & Authentication,switch_account,Free,website,-3.8,75.8,0,0,0,0.0,Frustrated,Moderate,High
+show cancellation charges,Returns & Refunds,check_cancellation_fee,Pro,salesforce,11.1,12.9,0,0,0,0.0,Neutral,Minor,Medium
+I want assistance to get my invoices from,Billing & Payments,get_invoice,Basic,zendesk,46.3,1.7,0,0,0,0.0,Neutral,Minor,Medium
+transferring to agent,General Inquiries,contact_human_agent,Free,freshdesk,41.2,30.8,0,0,0,0.0,Neutral,Minor,Medium
+how can I acquire several of your article?,Orders & Shipping,place_order,Enterprise,email,-0.8,8.8,2,0,0,0.0,Frustrated,Moderate,Medium
+I don't know what I have to do to file a customer complaint,Complaints & Escalations,complaint,Basic,email,7.4,40.6,0,0,0,0.0,Frustrated,Minor,Medium
+i want help to write a opinion for ur products,Customer Feedback,review,Enterprise,zendesk,6.7,1.3,1,0,0,0.0,Neutral,Minor,Medium
+I want help lodging an claim,Complaints & Escalations,complaint,Enterprise,email,-2.8,10.8,0,0,0,0.0,Frustrated,Severe,High
+can I check the withdrawal penalty?,Returns & Refunds,check_cancellation_fee,Enterprise,website,-2.4,10.4,1,0,0,0.0,Frustrated,Moderate,High
+I need help to subscribe to your newsletter,Subscription & Account Management,newsletter_subscription,Basic,website,-10.0,58.0,0,0,0,0.0,Neutral,Minor,Medium
+I am trying to find information about a gold account removal,Account & Authentication,delete_account,Free,website,39.4,32.6,0,0,0,0.0,Neutral,Moderate,Medium
+can ya help me see in which situations can i ask for refunds,Returns & Refunds,check_refund_policy,Enterprise,email,-6.7,14.7,1,0,0,0.0,Frustrated,Moderate,High
+open gold account,Account & Authentication,create_account,Free,email,-10.7,82.7,0,0,0,0.0,Frustrated,Moderate,High
+"I have got to see how long refunds take, will you help me?",Returns & Refunds,check_refund_policy,Free,freshdesk,59.3,12.7,0,0,0,0.0,Neutral,Minor,Medium
+i try to demand a reimbursement of my money,Returns & Refunds,get_refund,Free,email,36.6,35.4,0,0,0,0.0,Angry,Moderate,High
+"I expect a fucking ocmpensation of , was it processed",Returns & Refunds,track_refund,Free,email,69.8,2.2,0,0,0,0.0,Angry,Severe,High
+remove premium account,Account & Authentication,delete_account,Free,website,72.0,0.0,0,0,0,0.0,Frustrated,Minor,Medium
+swap an item of order,Orders & Shipping,change_order,Pro,zendesk,-2.1,26.1,0,0,0,0.0,Neutral,Minor,Medium
+I'm trying tochange order,Orders & Shipping,change_order,Free,salesforce,-33.7,105.7,0,0,0,0.0,Frustrated,Moderate,Medium
+my experience with ur brand was awful make a claim,Complaints & Escalations,complaint,Pro,freshdesk,24.0,0.0,1,0,0,0.0,Angry,Moderate,High
+how do i see at what time i can recah customer service,General Inquiries,contact_customer_service,Free,website,72.0,0.0,1,0,0,0.0,Neutral,Minor,Medium
+I want to check at what time I can contact customer support,General Inquiries,contact_customer_service,Basic,email,34.0,14.0,1,0,0,0.0,Neutral,Minor,Low
+I have to report problems with payment,Billing & Payments,payment_issue,Free,website,-14.4,86.4,0,0,0,0.0,Frustrated,Moderate,High
+question about opening a account,Account & Authentication,create_account,Basic,freshdesk,30.7,17.3,0,0,0,0.0,Neutral,Minor,Low
+report issue with payment,Billing & Payments,payment_issue,Pro,freshdesk,17.3,6.7,0,0,0,0.0,Frustrated,Moderate,Medium
+I want assistance checking the early exit fee,Returns & Refunds,check_cancellation_fee,Basic,freshdesk,14.6,33.4,0,0,0,0.0,Neutral,Minor,Medium
+I can't speak iwth an operator,General Inquiries,contact_human_agent,Basic,freshdesk,-18.4,66.4,0,0,0,0.0,Frustrated,Moderate,High
+wanna see ur refund policy how to do it,Returns & Refunds,check_refund_policy,Free,email,72.0,0.0,0,0,0,0.0,Neutral,Minor,Low
+I need assistance earning several of your product,Orders & Shipping,place_order,Free,salesforce,-19.4,91.4,0,0,0,0.0,Frustrated,Moderate,High
+where do i check the status of order,Orders & Shipping,track_order,Pro,salesforce,-5.5,29.5,1,0,0,0.0,Neutral,Minor,Medium
+see the allowed payment options,Billing & Payments,check_payment_methods,Basic,email,13.5,34.5,1,0,0,0.0,Neutral,Minor,Low
+where could I inform of issues with a signup?,Account & Authentication,registration_problems,Free,salesforce,-26.9,98.9,1,0,0,0.0,Frustrated,Moderate,High
+where do i file a consumer reclamation against ur business,Complaints & Escalations,complaint,Enterprise,zendesk,6.7,1.3,1,0,0,0.0,Frustrated,Moderate,High
+i dont know how i can reset the pass of my account,Account & Authentication,recover_password,Basic,email,-22.0,70.0,0,0,0,0.0,Frustrated,Minor,Medium
+how to purchase several items?,Orders & Shipping,place_order,Pro,email,9.2,14.8,0,0,0,0.0,Neutral,Minor,Low
+i need assistance to speak with a live agent,General Inquiries,contact_human_agent,Basic,email,-15.2,63.2,0,0,0,0.0,Frustrated,Moderate,Medium
+"I need to speak to customer support, can you help me?",General Inquiries,contact_customer_service,Basic,email,-46.7,94.7,0,0,0,0.0,Neutral,Minor,Low
+check if there is anything wrong with my damn restitution,Returns & Refunds,track_refund,Basic,freshdesk,-28.4,76.4,0,0,0,0.0,Frustrated,Moderate,High
+i do not know what to do to modify my address,Orders & Shipping,change_shipping_address,Pro,email,-26.9,50.9,0,0,0,0.0,Neutral,Moderate,Medium
+I don't know how to receive the company newsletter,Subscription & Account Management,newsletter_subscription,Pro,email,-7.6,31.6,1,0,0,0.0,Neutral,Minor,Medium
+i dont know what to doto check ur money back policy,Returns & Refunds,check_refund_policy,Basic,website,13.4,34.6,0,0,0,0.0,Neutral,Minor,Medium
+where do I reset my user key?,Account & Authentication,recover_password,Free,website,-10.8,82.8,1,0,0,0.0,Frustrated,Moderate,High
+need help seeing in what situations can i ask to be refunded,Returns & Refunds,check_refund_policy,Pro,email,-0.5,24.5,1,0,0,0.0,Neutral,Minor,Medium
+I do not know how to talk to damn customer support,General Inquiries,contact_customer_service,Pro,freshdesk,9.2,14.8,0,0,0,0.0,Frustrated,Minor,Medium
+help me seeing what shipment methods are available,Orders & Shipping,delivery_options,Pro,website,-16.6,40.6,0,0,0,0.0,Neutral,Minor,Low
+"I have to receive your corporate newsletter, help me",Subscription & Account Management,newsletter_subscription,Basic,salesforce,18.7,29.3,0,0,0,0.0,Neutral,Minor,Low
+inform of ikssue with online payment,Billing & Payments,payment_issue,Enterprise,website,6.5,1.5,2,0,0,0.0,Frustrated,Moderate,High
+"the experience with you has been bad, I try to file a claim",Complaints & Escalations,complaint,Pro,email,8.6,15.4,1,0,0,0.0,Frustrated,Moderate,High
+I am trying to get reimbursements of my money,Returns & Refunds,get_refund,Free,website,-64.8,136.8,0,0,0,0.0,Frustrated,Moderate,High
+I don't know what to do to notify of an sisue with sign-up,Account & Authentication,registration_problems,Basic,email,48.0,0.0,0,0,0,0.0,Neutral,Moderate,Medium
+i cannot switch a product of purchase,Orders & Shipping,change_order,Enterprise,website,-0.6,8.6,0,0,0,0.0,Frustrated,Severe,High
+I need assistance to list the allowed payment methods,Billing & Payments,check_payment_methods,Basic,website,-16.4,64.4,0,0,0,0.0,Neutral,Minor,Low
+i do not know what i have to do to get my bill #37777,Billing & Payments,get_invoice,Free,website,72.0,0.0,0,0,0,0.0,Frustrated,Moderate,Medium
+can you tell me about correcting the address?,Orders & Shipping,change_shipping_address,Enterprise,website,-0.3,8.3,1,0,0,0.0,Frustrated,Moderate,Medium
+can you help me speaking with someone?,General Inquiries,contact_human_agent,Free,freshdesk,-8.4,80.4,2,0,0,0.0,Frustrated,Moderate,Medium
+can i see the status of my subscription to ur newsletter,Subscription & Account Management,newsletter_subscription,Free,zendesk,47.7,24.3,0,0,0,0.0,Neutral,Minor,Low
+I don't knolw what I have to do to shop some of your product,Orders & Shipping,place_order,Free,email,51.2,20.8,0,0,0,0.0,Neutral,Minor,Medium
+I have to swap some products of purchase,Orders & Shipping,change_order,Basic,zendesk,36.9,11.1,0,0,0,0.0,Neutral,Minor,Medium
+I want assistance closing the freemium account,Account & Authentication,delete_account,Basic,salesforce,-27.8,75.8,0,0,0,0.0,Frustrated,Moderate,High
+i do not use my cacount i want help removing it,Account & Authentication,delete_account,Enterprise,website,5.7,2.3,0,0,0,0.0,Neutral,Minor,Low
+"I no longer need my account, I want to cancel it",Account & Authentication,delete_account,Pro,zendesk,-14.0,38.0,1,0,0,0.0,Frustrated,Moderate,Medium
+can you help me giving a quick look at my invoice #12588?,Billing & Payments,check_invoice,Pro,website,-13.5,37.5,0,0,0,0.0,Neutral,Minor,Medium
+help to locate my bills from,Billing & Payments,check_invoice,Free,email,54.8,17.2,0,0,0,0.0,Neutral,Minor,Medium
+check in which situations can i request an refund,Returns & Refunds,check_refund_policy,Pro,freshdesk,-0.4,24.4,0,0,0,0.0,Neutral,Minor,Medium
+"I cannot sign up, I need to notify of registration issues",Account & Authentication,registration_problems,Basic,freshdesk,28.7,19.3,0,0,0,0.0,Frustrated,Moderate,High
+"I want to modify purchase , I need assistance",Orders & Shipping,change_order,Enterprise,website,1.1,6.9,4,0,0,0.0,Frustrated,Moderate,High
+is it possible to create a account?,Account & Authentication,create_account,Free,zendesk,66.9,5.1,0,0,0,0.0,Neutral,Minor,Medium
+I have to buy some of yout item,Orders & Shipping,place_order,Free,website,72.0,0.0,0,0,0,0.0,Neutral,Minor,Low
+uare not being helpful help me speak to an operator,General Inquiries,contact_human_agent,Pro,website,10.4,13.6,1,0,0,0.0,Frustrated,Moderate,High
+problem with acount deletions,Account & Authentication,delete_account,Enterprise,zendesk,6.3,1.7,2,0,0,0.0,Frustrated,Moderate,High
+i haqve to see at what time i can contact customer service,General Inquiries,contact_customer_service,Basic,zendesk,21.3,26.7,1,0,0,0.0,Neutral,Minor,Medium
+buy several articles,Orders & Shipping,place_order,Enterprise,website,-2.7,10.7,1,0,0,0.0,Frustrated,Moderate,High
+wherecan I check the termination charge?,Returns & Refunds,check_cancellation_fee,Free,freshdesk,-12.1,84.1,0,0,0,0.0,Frustrated,Moderate,High
+I do not know how I can close a standard account,Account & Authentication,delete_account,Pro,email,16.1,7.9,1,0,0,0.0,Frustrated,Minor,Medium
+could I get my bill from ?,Billing & Payments,get_invoice,Enterprise,email,-3.4,11.4,1,0,0,0.0,Frustrated,Moderate,High
+"I want to receive the fucking corporate newsletter, help me",Subscription & Account Management,newsletter_subscription,Pro,email,-3.4,27.4,1,0,0,0.0,Frustrated,Moderate,High
+I can't find anything about the cancellation charge,Returns & Refunds,check_cancellation_fee,Pro,zendesk,5.1,18.9,0,0,0,0.0,Neutral,Minor,Medium
+I have got to see your money back policy,Returns & Refunds,check_refund_policy,Free,email,-8.0,80.0,0,0,0,0.0,Neutral,Moderate,Medium
+how do I talk with somebody?,General Inquiries,contact_human_agent,Basic,salesforce,31.9,16.1,0,0,0,0.0,Neutral,Minor,Low
+is there anaddress to send feedback for a service,Customer Feedback,review,Free,email,-27.8,99.8,0,0,0,0.0,Neutral,Minor,Low
+"the experience with you has been bad, make a reclamation",Complaints & Escalations,complaint,Basic,salesforce,-0.6,48.6,0,0,0,0.0,Angry,Severe,High
+opening freemium account,Account & Authentication,create_account,Free,email,72.0,0.0,0,0,0,0.0,Neutral,Minor,Low
+what do i need to do to create a account,Account & Authentication,create_account,Basic,website,1.6,46.4,0,0,0,0.0,Neutral,Minor,Low
+can you help me speaking with a human agent?,General Inquiries,contact_human_agent,Pro,email,-2.1,26.1,0,0,0,0.0,Frustrated,Moderate,High
+"I want to see your payment methods, how to do it?",Billing & Payments,check_payment_methods,Enterprise,email,-1.1,9.1,1,0,0,0.0,Frustrated,Moderate,High
+help me check the eta of the order,Orders & Shipping,track_order,Free,website,-6.4,78.4,0,0,0,0.0,Neutral,Minor,Low
+help me to check in which cases can I request refunds,Returns & Refunds,check_refund_policy,Basic,zendesk,9.4,38.6,1,0,0,0.0,Neutral,Minor,Medium
+help me see in which cases can i ask to be refunded,Returns & Refunds,check_refund_policy,Pro,zendesk,14.3,9.7,1,0,0,0.0,Neutral,Minor,Medium
+"I want to modify order , how to do it?",Orders & Shipping,change_order,Basic,zendesk,19.5,28.5,0,0,0,0.0,Neutral,Minor,Medium
+i do not know what i need to do to speak to customer service,General Inquiries,contact_customer_service,Basic,website,-8.8,56.8,2,0,0,0.0,Frustrated,Minor,Medium
+could I see in what situations can I request my money back?,Returns & Refunds,check_refund_policy,Free,website,-9.4,81.4,0,0,0,0.0,Neutral,Minor,Medium
+where could I get information about account deletions?,Account & Authentication,delete_account,Enterprise,salesforce,-2.7,10.7,1,0,0,0.0,Frustrated,Moderate,Medium
+see in which cases can I request my money back,Returns & Refunds,check_refund_policy,Basic,salesforce,47.7,0.3,0,0,0,0.0,Neutral,Minor,Medium
+have a problem with the termination of a account,Account & Authentication,delete_account,Basic,salesforce,34.9,13.1,0,0,0,0.0,Frustrated,Moderate,Medium
+need to see in what cases can i request to be reimbursed,Returns & Refunds,check_refund_policy,Free,website,72.0,0.0,1,0,0,0.0,Neutral,Minor,Low
+can you help me seeing your available payment options?,Billing & Payments,check_payment_methods,Free,email,33.4,38.6,0,0,0,0.0,Neutral,Minor,Medium
+send service review,Customer Feedback,review,Pro,website,16.0,8.0,1,0,0,0.0,Frustrated,Moderate,Medium
+is there a section to send an opinion for a service,Customer Feedback,review,Basic,website,27.0,21.0,0,0,0,0.0,Neutral,Minor,Medium
+i need help changing some articles of order,Orders & Shipping,change_order,Basic,email,-7.1,55.1,0,0,0,0.0,Neutral,Minor,Low
+i want assistance sending some feedback for a product,Customer Feedback,review,Free,email,-1.8,73.8,0,0,0,0.0,Neutral,Moderate,High
+I don't know what to do to remove a aaccount,Account & Authentication,delete_account,Basic,website,-25.9,73.9,0,0,0,0.0,Frustrated,Moderate,High
+question about cancellung purchase,Orders & Shipping,cancel_order,Free,salesforce,23.4,48.6,1,0,0,0.0,Frustrated,Moderate,Medium
+I want assistance checking how long refunds uaually take,Returns & Refunds,check_refund_policy,Free,salesforce,5.2,66.8,0,0,0,0.0,Neutral,Minor,Low
+need to swap several items of purchase,Orders & Shipping,change_order,Free,email,72.0,0.0,0,0,0,0.0,Neutral,Minor,Medium
+assistance adding some items to purchase,Orders & Shipping,change_order,Pro,website,12.3,11.7,0,0,0,0.0,Neutral,Minor,Medium
+need to purchase some of ur product,Orders & Shipping,place_order,Enterprise,freshdesk,8.0,0.0,2,0,0,0.0,Neutral,Minor,Medium
+could i check ur accepted payment modalities,Billing & Payments,check_payment_methods,Enterprise,email,0.9,7.1,1,0,0,0.0,Neutral,Minor,Medium
+"I have to edit order , how do I do it?",Orders & Shipping,change_order,Basic,freshdesk,16.8,31.2,0,0,0,0.0,Neutral,Minor,Medium
+I have to cancel my company newsletter subscription,Subscription & Account Management,newsletter_subscription,Pro,website,15.0,9.0,0,1,0,0.0,Neutral,Minor,Medium
+where to sign up to the newsleter,Subscription & Account Management,newsletter_subscription,Pro,zendesk,-11.7,35.7,0,0,0,0.0,Neutral,Minor,Low
+do you have an e-mail address to contact customer support?,General Inquiries,contact_customer_service,Basic,email,48.0,0.0,0,0,0,0.0,Neutral,Minor,Low
+can you help me to submit feedback about a product?,Customer Feedback,review,Basic,freshdesk,-16.9,64.9,1,0,0,0.0,Frustrated,Moderate,High
+i call to submit feedback about ur services,Customer Feedback,review,Enterprise,freshdesk,7.8,0.2,0,0,0,0.0,Frustrated,Moderate,Medium
+i dont know how i can retrieve the access key olf my account,Account & Authentication,recover_password,Pro,zendesk,9.9,14.1,1,0,0,0.0,Frustrated,Moderate,High
+can you help me to sign up to the corporate newsletter?,Subscription & Account Management,newsletter_subscription,Enterprise,email,-0.5,8.5,2,0,0,0.0,Frustrated,Moderate,High
+check in which situations can I ask for refunds,Returns & Refunds,check_refund_policy,Pro,email,9.7,14.3,0,0,0,0.0,Neutral,Minor,Medium
+want help seeing in which situations can I ask for a refund,Returns & Refunds,check_refund_policy,Basic,freshdesk,-4.7,52.7,0,0,0,0.0,Neutral,Minor,Medium
+I want assistance to see the cancellation penalties,Returns & Refunds,check_cancellation_fee,Free,website,72.0,0.0,0,0,0,0.0,Neutral,Minor,Medium
+modifying data on freemium account,Account & Authentication,edit_account,Pro,freshdesk,19.7,4.3,1,0,0,0.0,Frustrated,Moderate,High
+have problems with the removal of my gold account,Account & Authentication,delete_account,Free,website,23.3,48.7,0,0,0,0.0,Frustrated,Moderate,High
+i need help sending some feedback about a service,Customer Feedback,review,Free,email,-6.4,78.4,0,0,0,0.0,Neutral,Minor,Low
+help to earn several of your item,Orders & Shipping,place_order,Basic,email,-18.0,66.0,2,0,0,0.0,Frustrated,Moderate,Medium
+I want to cancel my subscription to your newsletter,Subscription & Account Management,newsletter_subscription,Free,website,-18.6,90.6,0,1,0,0.0,Neutral,Minor,Low
+can i get in touch with customer support,General Inquiries,contact_customer_service,Pro,zendesk,13.5,10.5,1,0,0,0.0,Neutral,Minor,Low
+"I expect a refund of , has it been processed already?",Returns & Refunds,track_refund,Basic,website,48.0,0.0,0,0,0,0.0,Frustrated,Moderate,Medium
+I have to file a consumer claim,Complaints & Escalations,complaint,Basic,email,33.7,14.3,0,0,0,0.0,Neutral,Moderate,Medium
+want assistance restoring my profile PIN,Account & Authentication,recover_password,Free,email,15.7,56.3,0,0,0,0.16666666666666666,Frustrated,Minor,Medium
+i dont know what to do to chat with a human agent,General Inquiries,contact_human_agent,Free,freshdesk,48.1,23.9,0,0,0,0.0,Frustrated,Minor,Medium
+how can i contact a operator,General Inquiries,contact_human_agent,Pro,salesforce,16.8,7.2,0,0,0,0.0,Neutral,Minor,Low
+i dont know what i need to do to cancel my standard account,Account & Authentication,delete_account,Pro,freshdesk,-2.8,26.8,0,1,0,0.0,Frustrated,Moderate,High
+assistance to check when will my package arrive,Orders & Shipping,delivery_period,Free,zendesk,-22.6,94.6,0,0,0,0.0,Frustrated,Moderate,High
+help switching an article of order,Orders & Shipping,change_order,Enterprise,zendesk,6.4,1.6,1,0,0,0.0,Frustrated,Moderate,High
+"I have to check the shipping options, will you help me?",Orders & Shipping,delivery_options,Basic,email,15.5,32.5,0,0,0,0.0,Neutral,Minor,Low
+speak with human agent,General Inquiries,contact_human_agent,Basic,email,18.4,29.6,0,0,0,0.0,Neutral,Minor,Medium
+need to purchase several of ur article,Orders & Shipping,place_order,Free,zendesk,-31.6,103.6,0,0,0,0.0,Frustrated,Moderate,High
+I need help to cancel my newsletter subscription,Subscription & Account Management,newsletter_subscription,Enterprise,email,-1.0,9.0,3,1,0,0.0,Frustrated,Moderate,High
+i have to speak ot customer support how could i do it,General Inquiries,contact_customer_service,Free,website,18.8,53.2,0,0,0,0.0,Neutral,Minor,Low
+I do not know how I can send my feedback about your products,Customer Feedback,review,Free,salesforce,10.4,61.6,0,0,0,0.0,Neutral,Minor,Medium
+I call to check how soon can I expect my product,Orders & Shipping,delivery_period,Free,email,7.4,64.6,0,0,0,0.0,Neutral,Minor,Low
+I am calling to write a review for a service,Customer Feedback,review,Basic,salesforce,33.3,14.7,0,0,0,0.0,Neutral,Minor,Medium
+what do I need to do to track order ?,Orders & Shipping,track_order,Free,email,30.2,41.8,1,0,0,0.0,Neutral,Minor,Medium
+help to leave a comment for your services,Customer Feedback,review,Pro,email,3.4,20.6,1,0,0,0.0,Neutral,Minor,Low
+need to add several products to purchase,Orders & Shipping,change_order,Pro,freshdesk,11.1,12.9,1,0,0,0.0,Neutral,Moderate,High
+help me reset my PIN,Account & Authentication,recover_password,Free,freshdesk,-99.0,171.0,1,0,0,0.2,Frustrated,Moderate,High
+i cant hcat with somebody,General Inquiries,contact_human_agent,Free,freshdesk,-2.2,74.2,0,0,0,0.0,Frustrated,Moderate,Medium
+can you tell me at what time I can call customer assistance?,General Inquiries,contact_customer_service,Basic,salesforce,-33.9,81.9,0,0,0,0.0,Neutral,Minor,Medium
+i want help demanding reimbursements of my money,Returns & Refunds,get_refund,Free,email,45.1,26.9,0,0,0,0.0,Frustrated,Moderate,High
+can I check how soon can I expect my package?,Orders & Shipping,delivery_period,Free,website,-4.7,76.7,0,0,0,0.0,Neutral,Minor,Medium
+help seeing your reimbursement policy,Returns & Refunds,check_refund_policy,Pro,email,-0.6,24.6,0,0,0,0.0,Neutral,Moderate,Medium
+I don't know what I need to do to report a payment problem,Billing & Payments,payment_issue,Free,email,-23.3,95.3,2,0,0,0.0,Frustrated,Moderate,High
+where to lodge a complaint against your business?,Complaints & Escalations,complaint,Pro,freshdesk,18.8,5.2,1,0,0,0.0,Frustrated,Moderate,Medium
+show me under what circumstances can I ask for my money back,Returns & Refunds,check_refund_policy,Basic,zendesk,-9.0,57.0,0,0,0,0.0,Neutral,Minor,Low
+help me see under what circumstances can I request a refund,Returns & Refunds,check_refund_policy,Basic,email,-18.3,66.3,0,0,0,0.0,Neutral,Minor,Medium
+where could I get information about the delivery methods?,Orders & Shipping,delivery_options,Free,zendesk,43.4,28.6,0,0,0,0.0,Neutral,Minor,Low
+how can I unsubscribe from the corporate newsletter?,Subscription & Account Management,newsletter_subscription,Free,freshdesk,-18.6,90.6,0,0,0,0.0,Frustrated,Moderate,Medium
+help to lodge a claim against your organization,Complaints & Escalations,complaint,Enterprise,salesforce,-1.6,9.6,1,0,0,0.0,Frustrated,Severe,High
+help checking what hours I can call customer assistance,General Inquiries,contact_customer_service,Free,zendesk,-2.3,74.3,0,0,0,0.0,Neutral,Minor,Low
+want help to make a complaint against your business,Complaints & Escalations,complaint,Free,zendesk,40.1,31.9,0,0,0,0.0,Frustrated,Moderate,High
+can ya help me purchase several items,Orders & Shipping,place_order,Pro,email,6.7,17.3,2,0,0,0.0,Frustrated,Moderate,Medium
+where could i leave a fucking comment for a service,Customer Feedback,review,Basic,website,7.3,40.7,0,0,0,0.0,Frustrated,Moderate,Medium
+question about the cancellation of a account,Account & Authentication,delete_account,Free,email,36.7,35.3,1,0,0,0.0,Frustrated,Moderate,Medium
+can ya help me speaking to someone,General Inquiries,contact_human_agent,Pro,salesforce,19.0,5.0,3,0,0,0.0,Neutral,Minor,Medium
+need help to leave feedback for ur products,Customer Feedback,review,Basic,website,9.9,38.1,0,0,0,0.0,Neutral,Minor,Low
+"I cannot open a profile, can I report bloody signup errors?",Account & Authentication,registration_problems,Pro,website,-17.0,41.0,0,0,0,0.0,Frustrated,Severe,High
+need assistance to talk to someone,General Inquiries,contact_human_agent,Basic,website,48.0,0.0,0,0,0,0.0,Neutral,Minor,Low
+i want assistance solving issues with online payments,Billing & Payments,payment_issue,Enterprise,email,5.7,2.3,0,0,0,0.0,Frustrated,Moderate,High
+how can I call customer service?,General Inquiries,contact_customer_service,Free,email,-17.0,89.0,0,0,0,0.0,Neutral,Minor,Low
+seeing order current status,Orders & Shipping,track_order,Enterprise,email,-1.7,9.7,0,0,0,0.0,Frustrated,Moderate,High
+I want to check in what cases can I request to be reimbursed,Returns & Refunds,check_refund_policy,Pro,zendesk,-0.6,24.6,0,0,0,0.0,Neutral,Minor,Medium
+I don't know how I can check my bill #37777,Billing & Payments,check_invoice,Free,email,23.5,48.5,0,0,0,0.0,Neutral,Minor,Medium
+how can I leave some feedback about your products?,Customer Feedback,review,Free,website,17.5,54.5,0,0,0,0.0,Positive,Minor,Low
+how could i leave a goddamn erview about a service,Customer Feedback,review,Pro,email,-0.2,24.2,0,0,0,0.0,Angry,Severe,High
+i need assistance seeing the termination fees,Returns & Refunds,check_cancellation_fee,Pro,website,3.8,20.2,0,0,0,0.0,Neutral,Minor,Medium
+I have an issue editing the address,Orders & Shipping,change_shipping_address,Free,email,72.0,0.0,0,0,0,0.0,Neutral,Minor,Medium
+wannma speak to customer service how can i do it,General Inquiries,contact_customer_service,Basic,website,-3.1,51.1,0,0,0,0.0,Neutral,Minor,Low
+how could I inform of a sign-up issue?,Account & Authentication,registration_problems,Pro,website,1.4,22.6,0,0,0,0.0,Frustrated,Moderate,Medium
+i do not know what i need to do to switch to the account,Account & Authentication,switch_account,Basic,zendesk,3.3,44.7,0,0,0,0.0,Neutral,Minor,Medium
+I need assistance leaving a review about a service,Customer Feedback,review,Free,email,64.6,7.4,0,0,0,0.0,Neutral,Minor,Medium
+I cannotcancel my subscription to your corporate newsletter,Subscription & Account Management,newsletter_subscription,Free,email,30.7,41.3,0,1,0,0.0,Frustrated,Moderate,High
+can you show me what payment methods are allowed ?,Billing & Payments,check_payment_methods,Free,email,43.4,28.6,0,0,0,0.0,Neutral,Minor,Low
+wanna submit feedback for ur services help me,Customer Feedback,review,Pro,salesforce,5.1,18.9,0,0,0,0.0,Neutral,Minor,Low
+i do not know how to call customer assistance,General Inquiries,contact_customer_service,Basic,zendesk,-3.6,51.6,0,0,0,0.0,Neutral,Minor,Medium
+"I can't remember the PIN of my account, how do I reset it?",Account & Authentication,recover_password,Basic,website,-12.6,60.6,0,0,0,0.07142857142857142,Neutral,Minor,Medium
+is it possible to check your paymet modalities?,Billing & Payments,check_payment_methods,Basic,website,10.3,37.7,0,0,0,0.0,Neutral,Minor,Medium
+"I have bought some items, cancel order",Orders & Shipping,cancel_order,Basic,freshdesk,3.7,44.3,0,0,0,0.0,Frustrated,Minor,Medium
+wanna inform of registration issues,Account & Authentication,registration_problems,Basic,salesforce,7.6,40.4,0,0,0,0.0,Neutral,Moderate,Medium
+can you help me to notify of an error with payment?,Billing & Payments,payment_issue,Basic,email,-27.0,75.0,0,0,0,0.0,Frustrated,Moderate,High
+new premium account,Account & Authentication,create_account,Basic,email,38.9,9.1,0,0,0,0.0,Neutral,Moderate,Medium
+issue updating address,Orders & Shipping,change_shipping_address,Pro,email,-7.5,31.5,0,0,0,0.0,Frustrated,Moderate,High
+have problems with creating my standard account,Account & Authentication,create_account,Free,freshdesk,-0.6,72.6,0,0,0,0.0,Frustrated,Moderate,Medium
+"I have got to earn a product, I need help",Orders & Shipping,place_order,Free,email,29.1,42.9,0,0,0,0.0,Frustrated,Minor,Medium
+I have got to see what hours I can call customer service,General Inquiries,contact_customer_service,Basic,freshdesk,-32.5,80.5,0,0,0,0.0,Neutral,Minor,Low
+where to report issues with a sign-up?,Account & Authentication,registration_problems,Pro,zendesk,15.2,8.8,2,0,0,0.0,Frustrated,Moderate,High
+I want to know more about the subscription to the newsletter,Subscription & Account Management,newsletter_subscription,Free,salesforce,0.3,71.7,1,0,0,0.0,Neutral,Minor,Low
+wanna check ur payment methods,Billing & Payments,check_payment_methods,Basic,zendesk,-0.4,48.4,0,0,0,0.0,Neutral,Minor,Low
+i dont know what to do to remove the account,Account & Authentication,delete_account,Basic,freshdesk,11.4,36.6,0,0,0,0.0,Frustrated,Moderate,High
+I don't know what to do to remove the standard account,Account & Authentication,delete_account,Free,salesforce,-21.4,93.4,0,0,0,0.0,Frustrated,Moderate,High
+I want help to check your accepted payment options,Billing & Payments,check_payment_methods,Free,email,72.0,0.0,0,0,0,0.0,Neutral,Minor,Low
+I missed some products in order,Orders & Shipping,change_order,Pro,website,-10.6,34.6,0,0,0,0.0,Frustrated,Severe,High
+how can I swap a product of order ?,Orders & Shipping,change_order,Basic,email,19.5,28.5,0,0,0,0.0,Neutral,Minor,Medium
+I want to know if there are any news on my refund,Returns & Refunds,track_refund,Basic,website,-0.2,48.2,0,0,0,0.0,Frustrated,Moderate,High
+I want help unsubscribing to your company newsletter,Subscription & Account Management,newsletter_subscription,Enterprise,email,-0.7,8.7,3,0,0,0.0,Frustrated,Moderate,High
+"I want to sign up to your corporate newsletter, help me",Subscription & Account Management,newsletter_subscription,Basic,freshdesk,21.2,26.8,0,0,0,0.0,Neutral,Minor,Low
+"I need to shop several of ypur article, can I get some help?",Orders & Shipping,place_order,Pro,website,24.0,0.0,1,0,0,0.0,Neutral,Minor,Medium
+help me to make a consumer complaint against your business,Complaints & Escalations,complaint,Enterprise,email,3.1,4.9,0,0,0,0.0,Angry,Severe,High
+can uhelp me unsubscribing from the company newsletter,Subscription & Account Management,newsletter_subscription,Free,freshdesk,29.9,42.1,1,0,0,0.0,Neutral,Minor,Low
+i need assistance to check the status of purchase,Orders & Shipping,track_order,Pro,website,7.6,16.4,0,0,0,0.0,Neutral,Moderate,Medium
+want assistance to report problems with online payment,Billing & Payments,payment_issue,Pro,zendesk,24.0,0.0,0,0,0,0.0,Frustrated,Moderate,High
+I have to reporta trouble with payment,Billing & Payments,payment_issue,Pro,freshdesk,23.6,0.4,0,0,0,0.0,Frustrated,Moderate,High
+"my shipping address changed, can you update it?",Orders & Shipping,change_shipping_address,Free,email,-20.4,92.4,0,0,0,0.0,Neutral,Minor,Medium
+can i take a quick look at my invoicr #00108,Billing & Payments,check_invoice,Free,website,72.0,0.0,0,0,0,0.0,Neutral,Minor,Low
+is it possible to shop an item,Orders & Shipping,place_order,Free,email,-29.2,101.2,1,0,0,0.0,Frustrated,Moderate,High
+i try to demand a restitution of my money,Returns & Refunds,get_refund,Basic,freshdesk,-5.4,53.4,0,0,0,0.0,Frustrated,Moderate,High
+assistance lodging a customer reclamation against ur copany,Complaints & Escalations,complaint,Pro,zendesk,10.9,13.1,1,0,0,0.0,Frustrated,Moderate,High
+I want to create a account for my daughter,Account & Authentication,create_account,Enterprise,email,-0.4,8.4,0,0,0,0.0,Neutral,Minor,Medium
+I'm trying to check what hours i can call customer support,General Inquiries,contact_customer_service,Free,email,6.8,65.2,0,0,0,0.0,Neutral,Minor,Low
+how can I talk to customer assistance?,General Inquiries,contact_customer_service,Free,email,33.5,38.5,0,0,0,0.0,Neutral,Minor,Low
+"the shipping address changed, is it possible to update it?",Orders & Shipping,change_shipping_address,Free,freshdesk,35.0,37.0,1,0,0,0.0,Neutral,Minor,Medium
+I don't know what I need to do to speak to a live agent,General Inquiries,contact_human_agent,Basic,email,-13.0,61.0,0,0,0,0.0,Frustrated,Minor,Medium
+i try to send feedback about ur services,Customer Feedback,review,Free,salesforce,30.0,42.0,0,0,0,0.0,Neutral,Minor,Medium
+I need assistance to unsubscribe to the corporate newsletter,Subscription & Account Management,newsletter_subscription,Basic,freshdesk,27.5,20.5,0,0,0,0.0,Neutral,Minor,Low
+need help to check in which cases can i ask to be refunded,Returns & Refunds,check_refund_policy,Pro,freshdesk,-1.1,25.1,0,0,0,0.0,Neutral,Minor,Medium
+"I have got to earn several of your item, can you help me?",Orders & Shipping,place_order,Pro,website,0.0,24.0,1,0,0,0.0,Neutral,Moderate,Medium
+want help ot check the withdrawal charge,Returns & Refunds,check_cancellation_fee,Basic,email,44.5,3.5,0,0,0,0.0,Neutral,Minor,Low
+can uhelp me swap something ofpurchase,Orders & Shipping,change_order,Basic,freshdesk,23.6,24.4,0,0,0,0.0,Neutral,Minor,Medium
+"I want to sign up to your newsletter, how do I do it?",Subscription & Account Management,newsletter_subscription,Free,freshdesk,41.6,30.4,0,0,0,0.0,Neutral,Minor,Low
+help me seeing your accepted payment modalities,Billing & Payments,check_payment_methods,Free,email,5.4,66.6,2,0,0,0.0,Neutral,Minor,Medium
+I am trying to notify of registration issues,Account & Authentication,registration_problems,Free,zendesk,-26.2,98.2,0,0,0,0.0,Frustrated,Moderate,High
+I would like to obtain my money back,Returns & Refunds,get_refund,Enterprise,email,-0.6,8.6,0,0,0,0.0,Frustrated,Moderate,High
+could you help me create a account for my daughter?,Account & Authentication,create_account,Enterprise,website,6.5,1.5,0,0,0,0.0,Neutral,Minor,Low
+I don't know how to see the bloody withdrawal penalty,Returns & Refunds,check_cancellation_fee,Free,salesforce,-18.2,90.2,0,0,0,0.0,Neutral,Minor,Medium
+i dfo not know what i have to do to create a account,Account & Authentication,create_account,Free,website,-6.5,78.5,0,0,0,0.0,Neutral,Minor,Medium
+can i lodge a customer claim against ur business,Complaints & Escalations,complaint,Basic,website,-0.6,48.6,0,0,0,0.0,Frustrated,Moderate,High
+create user,Account & Authentication,create_account,Pro,freshdesk,0.9,23.1,0,0,0,0.0,Neutral,Minor,Medium
+I need information about my access key retrieval,Account & Authentication,recover_password,Enterprise,website,2.5,5.5,0,0,0,0.0,Neutral,Minor,Medium
+i have got to notify of ah issue with a registration,Account & Authentication,registration_problems,Pro,email,2.3,21.7,0,0,0,0.0,Neutral,Minor,Medium
+i do not know what i need to do to receive the newsletter,Subscription & Account Management,newsletter_subscription,Basic,email,-2.6,50.6,1,0,0,0.0,Neutral,Moderate,Medium
+"I have got to check your money back guarantee, how to do it?",Returns & Refunds,check_refund_policy,Free,email,-12.6,84.6,0,0,0,0.0,Neutral,Minor,Medium
+I need assistance to earn an item,Orders & Shipping,place_order,Basic,zendesk,41.6,6.4,0,0,0,0.0,Neutral,Minor,Medium
+how acn I chat with somebody?,General Inquiries,contact_human_agent,Enterprise,email,-1.3,9.3,0,0,0,0.0,Frustrated,Moderate,High
+I want to make a consumer claim against your organization,Complaints & Escalations,complaint,Free,email,63.2,8.8,1,0,0,0.0,Frustrated,Moderate,High
+can yahelp me contacting customer support,General Inquiries,contact_customer_service,Enterprise,email,-2.7,10.7,0,0,0,0.0,Frustrated,Minor,Medium
+help me to check the withdrawal fees,Returns & Refunds,check_cancellation_fee,Free,zendesk,31.8,40.2,0,0,0,0.0,Neutral,Minor,Low
+I need help to create a account,Account & Authentication,create_account,Basic,email,48.0,0.0,0,0,0,0.0,Neutral,Minor,Medium
+assistance giving aquick look at invoice #85632,Billing & Payments,check_invoice,Basic,email,5.8,42.2,1,0,0,0.0,Neutral,Minor,Low
+could you help me see my rebate status?,Returns & Refunds,track_refund,Free,freshdesk,64.3,7.7,0,0,0,0.0,Neutral,Minor,Medium
+could I make a goddamn reclamation?,Complaints & Escalations,complaint,Enterprise,zendesk,-4.0,12.0,0,0,0,0.0,Frustrated,Severe,High
+could utell me more abouut creating a account,Account & Authentication,create_account,Free,freshdesk,-12.4,84.4,1,0,0,0.0,Neutral,Minor,Low
+i want assistance to edit order,Orders & Shipping,change_order,Basic,email,-24.6,72.6,0,0,0,0.0,Neutral,Moderate,High
+I need assistance to lodge a complaint against your company,Complaints & Escalations,complaint,Pro,freshdesk,19.0,5.0,0,0,0,0.0,Frustrated,Moderate,High
+wanna see ur available payment metods i need assistance,Billing & Payments,check_payment_methods,Pro,email,14.3,9.7,0,0,0,0.0,Neutral,Minor,Low
+"I am not registered, help me open a gold account with you",Account & Authentication,create_account,Free,email,29.7,42.3,0,0,0,0.0,Neutral,Minor,Medium
+want help switching some damn products of purchase,Orders & Shipping,change_order,Basic,website,14.0,34.0,0,0,0,0.0,Frustrated,Moderate,Medium
+I want to cancel my subscription to your newsletter,Subscription & Account Management,newsletter_subscription,Basic,salesforce,12.2,35.8,0,1,0,0.0,Neutral,Minor,Low
+I would like to cancel the subscription to the newsletter,Subscription & Account Management,newsletter_subscription,Free,freshdesk,26.6,45.4,1,0,0,0.0,Neutral,Minor,Low
+I have an issue correcting my damn delivery address,Orders & Shipping,change_shipping_address,Free,zendesk,72.0,0.0,0,0,0,0.0,Frustrated,Moderate,High
+help to subscribe to your newsletter,Subscription & Account Management,newsletter_subscription,Pro,salesforce,13.4,10.6,0,0,0,0.0,Neutral,Minor,Low
+i expect an rebate of,Returns & Refunds,track_refund,Basic,zendesk,35.4,12.6,0,0,0,0.0,Frustrated,Moderate,Medium
+how to se your available payment modalities?,Billing & Payments,check_payment_methods,Free,zendesk,72.0,0.0,0,0,0,0.0,Neutral,Minor,Low
+I need assistance submitting the new shipping address,Orders & Shipping,set_up_shipping_address,Enterprise,email,3.7,4.3,1,0,0,0.0,Frustrated,Moderate,High
+wanna lodge a complaint,Complaints & Escalations,complaint,Free,website,-20.4,92.4,1,0,0,0.0,Frustrated,Moderate,High
+need assistance to earn several of u article,Orders & Shipping,place_order,Basic,website,-35.0,83.0,1,0,0,0.0,Frustrated,Moderate,Medium
+"I ordered some article, cancel purchase",Orders & Shipping,cancel_order,Basic,email,48.0,0.0,2,0,0,0.0,Frustrated,Moderate,High
+assistance to leave a comment for a service,Customer Feedback,review,Free,website,-24.4,96.4,0,0,0,0.0,Frustrated,Minor,Medium
+can i write a review about ur products,Customer Feedback,review,Enterprise,salesforce,8.0,0.0,0,0,0,0.0,Neutral,Minor,Low
+how do I subscribe to the corporate newsletter?,Subscription & Account Management,newsletter_subscription,Free,email,8.5,63.5,0,0,0,0.0,Neutral,Minor,Low
+"the experience with your service was bad, file a reclamation",Complaints & Escalations,complaint,Pro,website,-11.0,35.0,0,0,0,0.0,Angry,Severe,High
+i have got ti see in which cases can i ask for a refund,Returns & Refunds,check_refund_policy,Basic,email,-3.6,51.6,0,0,0,0.0,Neutral,Minor,Medium
+help me to send my feedback,Customer Feedback,review,Free,website,41.0,31.0,1,0,0,0.0,Neutral,Minor,Low
+help seeing at what time I can reach customer service,General Inquiries,contact_customer_service,Basic,website,-5.9,53.9,0,0,0,0.0,Neutral,Minor,Medium
+wanna use the premium account,Account & Authentication,switch_account,Free,zendesk,-16.7,88.7,0,0,0,0.0,Neutral,Minor,Medium
+"I cannot remember my account PIN, I would like to recover it",Account & Authentication,recover_password,Basic,zendesk,48.0,0.0,0,0,0,0.08333333333333333,Neutral,Minor,Medium
+remove product from purchase,Orders & Shipping,change_order,Basic,email,-5.3,53.3,1,0,0,0.0,Frustrated,Moderate,High
+can uhelp me swap some articles of purchase,Orders & Shipping,change_order,Free,email,72.0,0.0,0,0,0,0.0,Neutral,Minor,Medium
+help me canceling my subscription to ur corporate newsletter,Subscription & Account Management,newsletter_subscription,Pro,website,9.1,14.9,3,0,0,0.0,Frustrated,Moderate,Medium
+is it possible to check the cancellation penalty?,Returns & Refunds,check_cancellation_fee,Pro,freshdesk,4.0,20.0,0,0,0,0.0,Neutral,Minor,Medium
+help me listing the available payment options,Billing & Payments,check_payment_methods,Basic,salesforce,48.0,0.0,1,0,0,0.0,Neutral,Minor,Medium
+help me checking in what cases can I ask for reimbursements,Returns & Refunds,check_refund_policy,Free,email,27.2,44.8,0,0,0,0.0,Neutral,Minor,Medium
+I want help unsubscribing to your company newsletter,Subscription & Account Management,newsletter_subscription,Basic,freshdesk,3.6,44.4,1,0,0,0.0,Frustrated,Minor,Medium
+i want help acquiring a few of ur item,Orders & Shipping,place_order,Pro,email,5.5,18.5,0,0,0,0.0,Neutral,Minor,Medium
+i want assistance obtaining a compensation of money,Returns & Refunds,get_refund,Basic,zendesk,30.0,18.0,0,0,0,0.0,Frustrated,Moderate,Medium
+I do not know what to do to talk to customer service,General Inquiries,contact_customer_service,Free,email,49.8,22.2,0,0,0,0.0,Neutral,Minor,Medium
+help checking at what time I can call customer support,General Inquiries,contact_customer_service,Free,website,-4.9,76.9,0,0,0,0.0,Neutral,Minor,Low
+I do not know what I need to do to make a consumer claim,Complaints & Escalations,complaint,Basic,freshdesk,-59.4,107.4,0,0,0,0.0,Frustrated,Moderate,High
+need to see at what time customer assistance avaialble is,General Inquiries,contact_customer_service,Enterprise,email,0.8,7.2,1,0,0,0.0,Neutral,Minor,Medium
+help canceling purchase,Orders & Shipping,cancel_order,Basic,email,-13.5,61.5,0,0,0,0.0,Frustrated,Moderate,High
+want help to file a customer claim,Complaints & Escalations,complaint,Basic,freshdesk,-6.0,54.0,1,0,0,0.0,Frustrated,Moderate,High
+I cannot find the early termination charge,Returns & Refunds,check_cancellation_fee,Pro,email,-6.1,30.1,1,0,0,0.0,Frustrated,Moderate,High
+I want help to see in what cases can I ask to be refunded,Returns & Refunds,check_refund_policy,Free,website,62.4,9.6,0,0,0,0.0,Neutral,Minor,Medium
+can you help me write a comment about your products?,Customer Feedback,review,Free,email,-2.3,74.3,0,0,0,0.0,Neutral,Minor,Low
+where to write an review about ur services,Customer Feedback,review,Basic,email,13.8,34.2,0,0,0,0.0,Neutral,Minor,Low
+how do i lodge a consumer complaint,Complaints & Escalations,complaint,Enterprise,freshdesk,8.0,0.0,2,0,0,0.0,Neutral,Moderate,Medium
+can I delete an item from purchase ?,Orders & Shipping,change_order,Basic,salesforce,12.6,35.4,0,0,0,0.0,Neutral,Minor,Medium
+i do not know what i need to do to download my bill #00108,Billing & Payments,get_invoice,Free,website,10.6,61.4,1,0,0,0.0,Frustrated,Minor,Medium
+is there an address to submit an opinion for a service?,Customer Feedback,review,Free,salesforce,-43.1,115.1,0,0,0,0.0,Neutral,Minor,Medium
+I need assistance to shop a few of your item,Orders & Shipping,place_order,Pro,salesforce,17.2,6.8,0,0,0,0.0,Neutral,Minor,Low
+need assistance to acquire a product,Orders & Shipping,place_order,Pro,website,-0.9,24.9,0,0,0,0.0,Frustrated,Moderate,High
+how can I receive your newsletter?,Subscription & Account Management,newsletter_subscription,Basic,salesforce,-15.7,63.7,1,0,0,0.0,Neutral,Minor,Medium
+help me file a customer complaint,Complaints & Escalations,complaint,Free,email,-7.4,79.4,0,0,0,0.0,Frustrated,Moderate,High
+could you tell me more about opening platinum accounts?,Account & Authentication,create_account,Free,freshdesk,-8.8,80.8,1,0,0,0.0,Frustrated,Moderate,High
+I want to unsubscribe from the newsletter,Subscription & Account Management,newsletter_subscription,Basic,freshdesk,6.4,41.6,0,0,0,0.0,Neutral,Minor,Low
+can i see what payment payment modalities are available,Billing & Payments,check_payment_methods,Free,email,72.0,0.0,0,0,0,0.0,Neutral,Minor,Low
+registration issues,Account & Authentication,registration_problems,Free,zendesk,20.7,51.3,0,0,0,0.0,Frustrated,Moderate,High
+i donbt know what i need to do to close my pro account,Account & Authentication,delete_account,Basic,website,-37.6,85.6,0,0,0,0.0,Frustrated,Moderate,Medium
+could you help me change the shipping address?,Orders & Shipping,change_shipping_address,Basic,salesforce,48.0,0.0,0,0,0,0.0,Neutral,Minor,Medium
+show me your allowed payment options,Billing & Payments,check_payment_methods,Basic,salesforce,48.0,0.0,0,0,0,0.0,Neutral,Minor,Low
+i haqve to see at what time i can contact customer service,General Inquiries,contact_customer_service,Free,freshdesk,-2.7,74.7,1,0,0,0.0,Neutral,Minor,Medium
+i want help writing a review aboutg ur products,Customer Feedback,review,Pro,email,11.6,12.4,0,0,0,0.0,Neutral,Minor,Low
+do you have a section to submit an opinion for your company?,Customer Feedback,review,Enterprise,website,5.0,3.0,0,0,0,0.0,Neutral,Minor,Medium
+eta of order,Orders & Shipping,track_order,Pro,website,11.0,13.0,1,0,0,0.0,Neutral,Minor,Medium
+help me purchase some of your item,Orders & Shipping,place_order,Basic,salesforce,19.8,28.2,0,0,0,0.0,Neutral,Minor,Low
+issues with payment,Billing & Payments,payment_issue,Free,email,32.4,39.6,0,0,0,0.0,Frustrated,Moderate,High
+I want to know more about creating a standard account,Account & Authentication,create_account,Basic,website,-6.6,54.6,0,0,0,0.0,Neutral,Minor,Low
+i do not know what i need to do to download invoice #00108,Billing & Payments,get_invoice,Free,website,29.0,43.0,0,0,0,0.0,Neutral,Minor,Low
+could I speak to a live agent?,General Inquiries,contact_human_agent,Pro,website,-3.0,27.0,1,0,0,0.0,Frustrated,Moderate,High
+i neee help solving problems with payments,Billing & Payments,payment_issue,Free,website,10.4,61.6,1,0,0,0.0,Frustrated,Moderate,High
+"I would like to make a bloody complaint, could you help me?",Complaints & Escalations,complaint,Free,website,1.3,70.7,1,0,0,0.0,Frustrated,Moderate,High
+need assistance to lodge a customer claim against ur company,Complaints & Escalations,complaint,Free,website,-6.5,78.5,1,0,0,0.0,Frustrated,Severe,High
+can you help me speaking to an assistant?,General Inquiries,contact_human_agent,Pro,email,-5.7,29.7,0,0,0,0.0,Frustrated,Moderate,High
+how can I look for the invoice #85632?,Billing & Payments,check_invoice,Free,website,11.2,60.8,2,0,0,0.0,Neutral,Minor,Medium
+can you help me create a freemium account?,Account & Authentication,create_account,Basic,website,-41.4,89.4,0,0,0,0.0,Neutral,Minor,Medium
+I have problems with the termination of a account,Account & Authentication,delete_account,Enterprise,website,8.0,0.0,2,0,0,0.0,Frustrated,Moderate,High
+i dont know what to do to look for the invoice #37777,Billing & Payments,check_invoice,Free,freshdesk,58.1,13.9,0,0,0,0.0,Neutral,Minor,Medium
+i have to request a rebate of my money,Returns & Refunds,get_refund,Basic,website,8.3,39.7,0,0,0,0.0,Frustrated,Moderate,Medium
+i want help ordering something,Orders & Shipping,place_order,Free,zendesk,52.5,19.5,0,0,0,0.0,Neutral,Minor,Low
+is there a way to send an opinion for ur products,Customer Feedback,review,Free,salesforce,0.6,71.4,0,0,0,0.0,Neutral,Minor,Medium
+want help to lodge a reclamation against your company,Complaints & Escalations,complaint,Free,zendesk,30.1,41.9,0,0,0,0.0,Frustrated,Moderate,High
+"I need to talk with customer service, how could I do it?",General Inquiries,contact_customer_service,Basic,website,-12.6,60.6,0,0,0,0.0,Neutral,Minor,Low
+help me speaking with customer assistance,General Inquiries,contact_customer_service,Basic,email,-19.0,67.0,0,0,0,0.0,Neutral,Minor,Low
+I cannot change some products of pirchase,Orders & Shipping,change_order,Basic,email,-4.6,52.6,1,0,0,0.0,Frustrated,Moderate,Medium
+"the experience with you has been bad, I try to file a claim",Complaints & Escalations,complaint,Pro,freshdesk,-2.9,26.9,0,0,0,0.0,Frustrated,Moderate,High
+is it possible tomodify order,Orders & Shipping,change_order,Pro,zendesk,3.9,20.1,0,0,0,0.0,Neutral,Moderate,Medium
+help me cancelling the account,Account & Authentication,delete_account,Enterprise,email,5.6,2.4,0,1,0,0.0,Frustrated,Moderate,High
+can you help me checking the early exit fee?,Returns & Refunds,check_cancellation_fee,Pro,salesforce,13.7,10.3,0,0,0,0.0,Neutral,Moderate,Medium
+help me to create a account,Account & Authentication,create_account,Enterprise,website,-0.3,8.3,0,0,0,0.0,Neutral,Minor,Medium
+can i lodge a customer claim againmst ur company,Complaints & Escalations,complaint,Basic,email,48.0,0.0,0,0,0,0.0,Frustrated,Moderate,Medium
+need to check the rebate curent status how to do it,Returns & Refunds,track_refund,Basic,zendesk,39.0,9.0,0,0,0,0.0,Neutral,Minor,Low
+I don't know how to close my account,Account & Authentication,delete_account,Basic,zendesk,-4.2,52.2,0,0,0,0.0,Neutral,Minor,Medium
+"I have got to order some items, can you help me?",Orders & Shipping,place_order,Enterprise,salesforce,-3.1,11.1,1,0,0,0.0,Neutral,Moderate,Medium
+what is ur customer support mail,General Inquiries,contact_customer_service,Pro,website,3.1,20.9,0,0,0,0.0,Neutral,Minor,Low
+what is order current status?,Orders & Shipping,track_order,Free,email,72.0,0.0,0,0,0,0.0,Neutral,Minor,Low
+want help ordering a few ofur article,Orders & Shipping,place_order,Pro,zendesk,-21.7,45.7,0,0,0,0.0,Neutral,Minor,Medium
+where can i check what hours i can reach customer assistance,General Inquiries,contact_customer_service,Free,website,-27.5,99.5,1,0,0,0.0,Neutral,Minor,Low
+there is an issue setting up the secondary delivery address,Orders & Shipping,set_up_shipping_address,Free,website,42.1,29.9,0,0,0,0.0,Neutral,Minor,Medium
+want assistance to report an issue with sign-up,Account & Authentication,registration_problems,Free,website,64.2,7.8,0,0,0,0.0,Neutral,Minor,Medium
+I want help to swap several products of purchase,Orders & Shipping,change_order,Pro,website,-11.0,35.0,1,0,0,0.0,Frustrated,Moderate,High
+"I have got to report a payment problem, will you help me?",Billing & Payments,payment_issue,Enterprise,salesforce,8.0,0.0,0,0,0,0.0,Frustrated,Moderate,High
+wanna see at what time i can reach customer support,General Inquiries,contact_customer_service,Basic,freshdesk,13.9,34.1,0,0,0,0.0,Neutral,Minor,Low
+"I need to talk to customer support, how can I do it?",General Inquiries,contact_customer_service,Basic,email,33.8,14.2,0,0,0,0.0,Neutral,Minor,Low
+do youhave an e-mail address to contact customer service?,General Inquiries,contact_customer_service,Pro,freshdesk,21.3,2.7,0,0,0,0.0,Neutral,Minor,Low
+what do I have to do to get the invoice from ?,Billing & Payments,get_invoice,Free,email,-23.9,95.9,1,0,0,0.0,Frustrated,Moderate,High
+what do i have to do to make a consumer claim,Complaints & Escalations,complaint,Basic,salesforce,-18.4,66.4,1,0,0,0.0,Frustrated,Moderate,Medium
+help me sending some feedback for a product,Customer Feedback,review,Free,website,19.2,52.8,0,0,0,0.0,Neutral,Minor,Low
+i need help to unsubscribe to the corporate newsletter,Subscription & Account Management,newsletter_subscription,Free,zendesk,20.5,51.5,1,0,0,0.0,Neutral,Minor,Low
+help me list your accepted payment methods,Billing & Payments,check_payment_methods,Pro,zendesk,-5.5,29.5,3,0,0,0.0,Neutral,Minor,Medium
+how do i see the termination penalty,Returns & Refunds,check_cancellation_fee,Basic,zendesk,48.0,0.0,0,0,0,0.0,Neutral,Minor,Medium
+how do I check what payment payment modalities are accepted?,Billing & Payments,check_payment_methods,Free,website,19.4,52.6,0,0,0,0.0,Neutral,Minor,Low
+assistance to see at what time I can reach customer support,General Inquiries,contact_customer_service,Free,website,67.8,4.2,1,0,0,0.0,Neutral,Minor,Low
+I don't knwo what I have to do to cancel a premium account,Account & Authentication,delete_account,Basic,salesforce,21.5,26.5,0,0,0,0.0,Frustrated,Moderate,High
+I want help notifying of an issue with payments,Billing & Payments,payment_issue,Enterprise,zendesk,7.6,0.4,0,0,0,0.0,Neutral,Moderate,Medium
+want assistance lodging a consumer claim against yur company,Complaints & Escalations,complaint,Enterprise,freshdesk,-0.5,8.5,1,0,0,0.0,Frustrated,Moderate,High
+"I ain't registered yet, I need to create a damn pro account",Account & Authentication,create_account,Basic,email,-4.4,52.4,0,0,0,0.0,Frustrated,Moderate,High
+is there a section to send feedback about ur products,Customer Feedback,review,Free,email,22.2,49.8,0,0,0,0.0,Neutral,Minor,Low
+there are troubles submitting a new delivery address,Orders & Shipping,set_up_shipping_address,Basic,zendesk,-9.3,57.3,0,0,0,0.0,Frustrated,Moderate,High
+I'm trying to notify of errors with signup,Account & Authentication,registration_problems,Free,zendesk,72.0,0.0,0,0,0,0.0,Frustrated,Moderate,High
+where to cancel the subscription to your newsletter?,Subscription & Account Management,newsletter_subscription,Free,zendesk,2.7,69.3,0,0,0,0.0,Neutral,Minor,Low
+assistance to talk to somebody,General Inquiries,contact_human_agent,Pro,zendesk,14.5,9.5,0,0,0,0.0,Neutral,Minor,Medium
+help checking what hours customer service available is,General Inquiries,contact_customer_service,Basic,website,3.9,44.1,0,0,0,0.0,Neutral,Minor,Low
+where to cancel the newsletter subscription ?,Subscription & Account Management,newsletter_subscription,Pro,zendesk,20.3,3.7,0,0,0,0.0,Neutral,Minor,Medium
+I need to see the fucking bill from,Billing & Payments,check_invoice,Free,email,8.4,63.6,0,0,0,0.0,Frustrated,Moderate,High
+"I have got to file a bloody reclamation, will you help me?",Complaints & Escalations,complaint,Free,email,72.0,0.0,0,0,0,0.0,Frustrated,Moderate,High
+help editing purchase,Orders & Shipping,change_order,Free,freshdesk,-69.0,141.0,0,0,0,0.0,Frustrated,Moderate,High
+is it possible to cancel the subscription to the newsletter?,Subscription & Account Management,newsletter_subscription,Pro,freshdesk,-0.6,24.6,1,0,0,0.0,Neutral,Minor,Medium
+I have got to acquire several of your article,Orders & Shipping,place_order,Basic,freshdesk,17.0,31.0,0,0,0,0.0,Neutral,Minor,Medium
+help checking how soon can I expect the shipment,Orders & Shipping,delivery_period,Free,website,-32.6,104.6,0,0,0,0.0,Frustrated,Moderate,Medium
+help me to check ur available payment modalities,Billing & Payments,check_payment_methods,Pro,zendesk,21.2,2.8,2,0,0,0.0,Neutral,Minor,Medium
+help talking with someone,General Inquiries,contact_human_agent,Enterprise,zendesk,8.0,0.0,0,0,0,0.0,Neutral,Minor,Medium
+I want help to subscribe to the corporate newsletter,Subscription & Account Management,newsletter_subscription,Enterprise,freshdesk,-2.4,10.4,0,0,0,0.0,Neutral,Minor,Low
+I need assistance to use the premium profile,Account & Authentication,switch_account,Free,website,-11.4,83.4,0,0,0,0.0,Neutral,Moderate,High
+I need to check if there are any news on my restitution,Returns & Refunds,track_refund,Basic,email,14.6,33.4,1,0,0,0.0,Frustrated,Moderate,Medium
+assistance shopping a few of ur product,Orders & Shipping,place_order,Basic,freshdesk,10.2,37.8,0,0,0,0.0,Neutral,Minor,Low
+I don't know how to unsubscribe from the goddamn newsletter,Subscription & Account Management,newsletter_subscription,Enterprise,email,4.9,3.1,2,0,0,0.0,Frustrated,Moderate,High
+cancel pro acount,Account & Authentication,delete_account,Basic,website,31.9,16.1,0,0,0,0.0,Frustrated,Moderate,High
+want help to subscribe to your company newsletter,Subscription & Account Management,newsletter_subscription,Pro,zendesk,24.0,0.0,1,0,0,0.0,Neutral,Minor,Medium
+can I see at what time I can reach customer support ?,General Inquiries,contact_customer_service,Free,email,33.0,39.0,0,0,0,0.0,Neutral,Minor,Low
+I cannot speak to a perso,General Inquiries,contact_human_agent,Free,website,12.9,59.1,1,0,0,0.0,Neutral,Minor,Medium
+help me to use the freemium profile,Account & Authentication,switch_account,Free,email,72.0,0.0,1,0,0,0.0,Neutral,Minor,Low
+how can i find information about my standard account removal,Account & Authentication,delete_account,Free,website,-26.2,98.2,1,0,0,0.0,Frustrated,Moderate,High
+what do I have to do to notify of a damn payment problem?,Billing & Payments,payment_issue,Basic,email,-3.5,51.5,0,0,0,0.0,Frustrated,Moderate,High
+assistance to cancel purchase,Orders & Shipping,cancel_order,Basic,email,1.1,46.9,0,0,0,0.0,Frustrated,Moderate,High
+what do I need to do to buy an item?,Orders & Shipping,place_order,Basic,website,-22.6,70.6,1,0,0,0.0,Neutral,Minor,Medium
+I don't know how I can shop several articles,Orders & Shipping,place_order,Free,freshdesk,-1.4,73.4,0,0,0,0.0,Neutral,Moderate,Medium
+how could I see your bloody accepted payment modalities?,Billing & Payments,check_payment_methods,Free,website,55.9,16.1,0,0,0,0.0,Frustrated,Moderate,High
+I don't know what to do to call customer service,General Inquiries,contact_customer_service,Free,zendesk,37.2,34.8,0,0,0,0.0,Neutral,Minor,Medium
+is it possible to see how soon can I expect my product?,Orders & Shipping,delivery_period,Basic,email,48.0,0.0,0,0,0,0.0,Neutral,Minor,Medium
+"I haven't signed up yet, help me to create a pro account",Account & Authentication,create_account,Pro,email,22.9,1.1,0,0,0,0.0,Neutral,Moderate,Medium
+track purchase,Orders & Shipping,track_order,Enterprise,email,-5.6,13.6,0,0,0,0.0,Frustrated,Moderate,High
+can ya help me contactsomebody,General Inquiries,contact_human_agent,Basic,email,-7.4,55.4,0,0,0,0.0,Neutral,Minor,Low
+i do not know how i could obtaain compensations,Returns & Refunds,get_refund,Basic,freshdesk,3.9,44.1,0,0,0,0.0,Frustrated,Moderate,High
+want help informing of an issue with online payments,Billing & Payments,payment_issue,Pro,salesforce,14.1,9.9,2,0,0,0.0,Frustrated,Moderate,High
+i do notuse the bloody account i try to delete it,Account & Authentication,delete_account,Basic,website,47.6,0.4,1,0,0,0.0,Frustrated,Minor,Medium
+I don't know what to do to cancel the standard account,Account & Authentication,delete_account,Basic,salesforce,-5.0,53.0,0,0,0,0.0,Neutral,Minor,Medium
+I need information about a account cancellation,Account & Authentication,delete_account,Free,zendesk,18.0,54.0,0,0,0,0.0,Neutral,Minor,Medium
+"I have to speak with customer support, how to do it?",General Inquiries,contact_customer_service,Free,salesforce,72.0,0.0,0,0,0,0.0,Neutral,Minor,Low
+can ya help me cancel my corporate newsletter subscription,Subscription & Account Management,newsletter_subscription,Basic,zendesk,8.0,40.0,0,1,0,0.0,Neutral,Minor,Low
+i cannot subscribe to the newsletter,Subscription & Account Management,newsletter_subscription,Free,website,13.8,58.2,1,0,0,0.0,Frustrated,Minor,Medium
+what do I have to do to submit the goddamn shipping address?,Orders & Shipping,set_up_shipping_address,Basic,email,22.1,25.9,0,0,0,0.0,Frustrated,Moderate,High
+I want to inform of an issue with online payments,Billing & Payments,payment_issue,Basic,zendesk,48.0,0.0,0,0,0,0.0,Frustrated,Moderate,High
+I want help making a ucstomer claim against your company,Complaints & Escalations,complaint,Free,zendesk,-49.5,121.5,0,0,0,0.0,Frustrated,Moderate,High
+when am i getting a reimbursement,Returns & Refunds,get_refund,Pro,salesforce,-1.4,25.4,0,0,0,0.0,Frustrated,Moderate,High
+i dont know how i can notify of a trouble with payments,Billing & Payments,payment_issue,Basic,freshdesk,5.8,42.2,0,0,0,0.0,Frustrated,Moderate,High
+can uhelp me canceling my subscription to ur newsletter,Subscription & Account Management,newsletter_subscription,Free,freshdesk,51.8,20.2,0,0,0,0.0,Neutral,Minor,Low
+i cannot unsubscribe from urnewsletter,Subscription & Account Management,newsletter_subscription,Pro,zendesk,0.2,23.8,0,0,0,0.0,Frustrated,Moderate,High
+I want to make a customer claim against your business,Complaints & Escalations,complaint,Free,website,48.6,23.4,0,0,0,0.0,Frustrated,Moderate,High
+help me to check how soon can I expect my article,Orders & Shipping,delivery_period,Basic,salesforce,48.0,0.0,0,0,0,0.0,Neutral,Minor,Low
+"I need to check your reimbursement policy, will you help me?",Returns & Refunds,check_refund_policy,Enterprise,email,4.9,3.1,0,0,0,0.0,Neutral,Minor,Medium
+I don't know how I can write a comment for a product,Customer Feedback,review,Enterprise,website,0.5,7.5,0,0,0,0.0,Neutral,Minor,Medium
+what do i need to do to reset my user cacount pwd,Account & Authentication,recover_password,Free,email,-51.3,123.3,1,0,0,0.0,Neutral,Minor,Medium
+I do not know what I have to do to talk to customer suppory,General Inquiries,contact_customer_service,Free,email,-58.9,130.9,0,0,0,0.0,Frustrated,Moderate,High
+could you help me signing up to the corporate newsletter?,Subscription & Account Management,newsletter_subscription,Free,email,-6.6,78.6,0,0,0,0.0,Neutral,Minor,Medium
+"I have got to talk to someone, can you help me?",General Inquiries,contact_human_agent,Enterprise,email,-2.8,10.8,1,0,0,0.0,Frustrated,Moderate,High
+I want a account,Account & Authentication,create_account,Basic,zendesk,-60.7,108.7,1,0,0,0.0,Neutral,Minor,Medium
+can you help me restoring myPIN code?,Account & Authentication,recover_password,Basic,zendesk,-5.4,53.4,0,0,0,0.0,Frustrated,Moderate,High
+where to buy an item,Orders & Shipping,place_order,Enterprise,email,-7.7,15.7,1,0,0,0.0,Frustrated,Moderate,High
+help to check in which cases can i erquest my money back,Returns & Refunds,check_refund_policy,Basic,website,-7.6,55.6,1,0,0,0.0,Frustrated,Moderate,Medium
+i try to check the cancellation fee,Returns & Refunds,check_cancellation_fee,Free,website,-6.6,78.6,0,0,0,0.0,Neutral,Moderate,Medium
+wanna see ur accepted payment options can ya help me,Billing & Payments,check_payment_methods,Pro,salesforce,12.6,11.4,2,0,0,0.0,Neutral,Minor,Low
+i have got to see at what time customer support available is,General Inquiries,contact_customer_service,Free,zendesk,-18.1,90.1,0,0,0,0.0,Neutral,Minor,Low
+could you help me to solve payment errors?,Billing & Payments,payment_issue,Free,email,8.5,63.5,0,0,0,0.0,Frustrated,Moderate,High
+i want assistance removing my account,Account & Authentication,delete_account,Basic,website,27.2,20.8,0,0,0,0.0,Frustrated,Moderate,High
+assistance to talk to customer support,General Inquiries,contact_customer_service,Enterprise,salesforce,8.0,0.0,1,0,0,0.0,Neutral,Minor,Medium
+I call to send my feedback about your services,Customer Feedback,review,Basic,salesforce,45.5,2.5,0,0,0,0.0,Neutral,Minor,Medium
+where can I list your accepted payment optiions?,Billing & Payments,check_payment_methods,Free,salesforce,2.9,69.1,0,0,0,0.0,Neutral,Minor,Low
+want help to add an article to purchase,Orders & Shipping,change_order,Pro,email,-0.1,24.1,0,0,0,0.0,Neutral,Minor,Medium
+modify pro account,Account & Authentication,edit_account,Pro,website,22.8,1.2,0,0,0,0.0,Neutral,Moderate,Medium
+wanna know about unsubscribimg from ur newsletter,Subscription & Account Management,newsletter_subscription,Pro,website,23.2,0.8,2,0,0,0.0,Neutral,Minor,Medium
+is it possible to cancel the subscription to the newsletter?,Subscription & Account Management,newsletter_subscription,Pro,freshdesk,-2.1,26.1,0,0,0,0.0,Neutral,Minor,Low
+i have got to change the details on my user i need help,Account & Authentication,edit_account,Enterprise,freshdesk,-3.7,11.7,1,0,0,0.0,Neutral,Minor,Medium
+I have got to make a customer claim against your business,Complaints & Escalations,complaint,Free,email,65.3,6.7,0,0,0,0.0,Angry,Severe,High
+what do i have to do to remove my account,Account & Authentication,delete_account,Pro,zendesk,6.9,17.1,0,0,0,0.0,Frustrated,Moderate,High
+need help to cancel a standard account,Account & Authentication,delete_account,Enterprise,salesforce,7.1,0.9,0,0,0,0.0,Neutral,Minor,Medium
+"I need to receive your company newsletter, how to do it?",Subscription & Account Management,newsletter_subscription,Basic,email,35.8,12.2,0,0,0,0.0,Neutral,Minor,Low
+"I want to leave my feedback about a product, help me",Customer Feedback,review,Basic,zendesk,-28.2,76.2,0,0,0,0.0,Neutral,Minor,Low
+where to check your available payment options?,Billing & Payments,check_payment_methods,Free,salesforce,-16.3,88.3,1,0,0,0.0,Neutral,Minor,Low
+lodging consumer claim against your company,Complaints & Escalations,complaint,Free,zendesk,13.6,58.4,1,0,0,0.0,Frustrated,Moderate,High
+help to enter a different shipping address,Orders & Shipping,set_up_shipping_address,Free,website,51.0,21.0,0,0,0,0.0,Neutral,Minor,Medium
+can ya help me to see ur allowed payment methods,Billing & Payments,check_payment_methods,Free,website,51.0,21.0,0,0,0,0.0,Neutral,Minor,Low
+need help to check in which case can i ask to be refunded,Returns & Refunds,check_refund_policy,Pro,salesforce,15.5,8.5,1,0,0,0.0,Neutral,Minor,Medium
+help me check how long it takes for my package to arrive,Orders & Shipping,delivery_period,Basic,zendesk,5.1,42.9,1,0,0,0.0,Neutral,Minor,Low
+"I have to list the payment options, I need assistance",Billing & Payments,check_payment_methods,Free,email,65.0,7.0,1,0,0,0.0,Neutral,Minor,Low
+I have got to contact customer assistance,General Inquiries,contact_customer_service,Free,freshdesk,28.1,43.9,0,0,0,0.0,Neutral,Minor,Medium
+"I need to cancel my subscription to your newsletter, help me",Subscription & Account Management,newsletter_subscription,Free,email,-15.3,87.3,1,1,0,0.0,Neutral,Minor,Low
+opening new standard account for daughter,Account & Authentication,create_account,Pro,website,-15.1,39.1,0,0,0,0.0,Neutral,Minor,Low
+is it possible to give a quick look at the bill #12588?,Billing & Payments,check_invoice,Basic,freshdesk,32.7,15.3,0,0,0,0.0,Neutral,Minor,Low
+I do not know how to recover the PIN code of my user account,Account & Authentication,recover_password,Basic,website,-4.9,52.9,0,0,0,0.07142857142857142,Frustrated,Moderate,High
+help to check at what time I can call customer support,General Inquiries,contact_customer_service,Free,website,-5.1,77.1,0,0,0,0.0,Neutral,Minor,Low
+wanna locate my invoice from how do i do it,Billing & Payments,check_invoice,Pro,website,-11.6,35.6,1,0,0,0.0,Neutral,Minor,Medium
+"I need to speak with customer support, help me",General Inquiries,contact_customer_service,Free,email,0.1,71.9,0,0,0,0.0,Neutral,Minor,Low
+can you help me submit feedback for a product?,Customer Feedback,review,Free,email,72.0,0.0,0,0,0,0.0,Neutral,Minor,Low
+need assistance seeing the payment methods,Billing & Payments,check_payment_methods,Free,zendesk,-31.9,103.9,0,0,0,0.0,Frustrated,Moderate,Medium
+can I swap an item of order ?,Orders & Shipping,change_order,Free,email,-22.6,94.6,1,0,0,0.0,Frustrated,Moderate,Medium
+I want assistance notifying of issues with payment,Billing & Payments,payment_issue,Free,freshdesk,-37.3,109.3,0,0,0,0.0,Frustrated,Moderate,High
+want assistance sending some feedback about a product,Customer Feedback,review,Enterprise,freshdesk,6.8,1.2,0,0,0,0.0,Neutral,Minor,Low
+can I talk with a bloody agent?,General Inquiries,contact_human_agent,Free,zendesk,-1.2,73.2,0,0,0,0.0,Frustrated,Moderate,High
+want assistance writing a comment about a service,Customer Feedback,review,Enterprise,website,4.5,3.5,0,0,0,0.0,Neutral,Minor,Low
+i made a mistake i wanna change purchase,Orders & Shipping,change_order,Basic,website,-3.4,51.4,0,0,0,0.0,Frustrated,Moderate,High
+can uhelp me swappping a product of purchase,Orders & Shipping,change_order,Basic,zendesk,-1.8,49.8,0,0,0,0.0,Neutral,Minor,Medium
+want help to report an error with payments,Billing & Payments,payment_issue,Free,website,49.3,22.7,0,0,0,0.0,Frustrated,Moderate,High
+"I want to see when my shipment is going to arrive, help me",Orders & Shipping,delivery_period,Pro,freshdesk,-11.7,35.7,1,0,0,0.0,Frustrated,Moderate,High
+want help deleting something from order,Orders & Shipping,change_order,Basic,freshdesk,24.4,23.6,0,0,0,0.0,Neutral,Minor,Medium
+i cannot check the refund current status,Returns & Refunds,track_refund,Pro,freshdesk,18.2,5.8,0,0,0,0.0,Frustrated,Moderate,Medium
+could you help me notify of payment problems?,Billing & Payments,payment_issue,Free,email,17.6,54.4,0,0,0,0.0,Frustrated,Moderate,High
+do ya have an e-mail to submit some feedback for a product,Customer Feedback,review,Pro,zendesk,17.4,6.6,0,0,0,0.0,Neutral,Minor,Low
+show me in which situations can I ask to be reimbursed,Returns & Refunds,check_refund_policy,Free,website,49.1,22.9,0,0,0,0.0,Neutral,Minor,Medium
+I cannot talk to an operator,General Inquiries,contact_human_agent,Free,email,-10.7,82.7,0,0,0,0.0,Frustrated,Severe,High
+need help to receive your company newsletter,Subscription & Account Management,newsletter_subscription,Basic,zendesk,-28.8,76.8,0,0,0,0.0,Neutral,Minor,Medium
+i dont know how i can purchase a product,Orders & Shipping,place_order,Pro,email,-6.0,30.0,0,0,0,0.0,Neutral,Minor,Medium
+"I do not need the account, can I close it?",Account & Authentication,delete_account,Basic,website,-18.5,66.5,0,0,0,0.0,Neutral,Minor,Medium
+where tofile a consumer claim against ur company,Complaints & Escalations,complaint,Free,website,24.8,47.2,0,0,0,0.0,Frustrated,Moderate,Medium
+i dont know what i have to do to get my bill #85632,Billing & Payments,get_invoice,Free,zendesk,35.8,36.2,0,0,0,0.0,Frustrated,Moderate,High
+need assistance to notify of errors with a registration,Account & Authentication,registration_problems,Free,zendesk,-31.8,103.8,0,0,0,0.0,Frustrated,Moderate,High
+want help seeing how long refunds take,Returns & Refunds,check_refund_policy,Basic,email,43.0,5.0,2,0,0,0.0,Neutral,Minor,Medium
+assistance seeing in what cases can I ask to be reimbursed,Returns & Refunds,check_refund_policy,Free,email,65.2,6.8,0,0,0,0.0,Neutral,Minor,Medium
+need to update my user information how can i do it,Account & Authentication,edit_account,Enterprise,salesforce,0.6,7.4,2,0,0,0.0,Neutral,Minor,Low
+help to file a consumer complaint against your organization,Complaints & Escalations,complaint,Basic,freshdesk,-10.1,58.1,0,0,0,0.0,Frustrated,Moderate,High
+see in which situations can i request to be reimbursed,Returns & Refunds,check_refund_policy,Basic,email,29.4,18.6,0,0,0,0.0,Neutral,Minor,Low
+tell me about canceling the subscription to the newsletter,Subscription & Account Management,newsletter_subscription,Free,email,34.3,37.7,0,0,0,0.0,Neutral,Minor,Low
+I need to swap a product of order,Orders & Shipping,change_order,Free,freshdesk,15.4,56.6,0,0,0,0.0,Neutral,Minor,Medium
+I don't know how I can speak with a goddamn person,General Inquiries,contact_human_agent,Free,website,67.9,4.1,0,0,0,0.0,Frustrated,Moderate,High
+could uhelp me to contact an assistant,General Inquiries,contact_human_agent,Free,salesforce,-16.8,88.8,0,0,0,0.0,Neutral,Minor,Medium
+I don't know how I can file a claim against your business,Complaints & Escalations,complaint,Basic,email,-24.1,72.1,1,0,0,0.0,Frustrated,Moderate,High
+speak to an assistant,General Inquiries,contact_human_agent,Pro,zendesk,22.2,1.8,0,0,0,0.0,Neutral,Minor,Low
+where to sign up to your newsletter?,Subscription & Account Management,newsletter_subscription,Free,email,26.4,45.6,0,0,0,0.0,Neutral,Minor,Low
+ya have a free of charge number to reach customer service,General Inquiries,contact_customer_service,Free,zendesk,-2.1,74.1,0,0,0,0.0,Neutral,Minor,Medium
+"I never use my goddamn account, assistance removing it",Account & Authentication,delete_account,Free,website,-9.0,81.0,0,0,0,0.0,Angry,Moderate,High
+i need help to contact an agent,General Inquiries,contact_human_agent,Free,email,34.6,37.4,0,0,0,0.0,Neutral,Minor,Medium
+"I want to add something to purchase , help me",Orders & Shipping,change_order,Basic,website,-6.2,54.2,0,0,0,0.0,Neutral,Minor,Medium
+how can i shop a few of ur article,Orders & Shipping,place_order,Free,salesforce,72.0,0.0,1,0,0,0.0,Neutral,Minor,Low
+I need help checking the early exit charge,Returns & Refunds,check_cancellation_fee,Free,website,-4.0,76.0,1,0,0,0.0,Frustrated,Moderate,High
+"I need to earn several bloody items, how could I do it?",Orders & Shipping,place_order,Free,freshdesk,66.8,5.2,0,0,0,0.0,Frustrated,Moderate,Medium
+assistance making a custolmer claim,Complaints & Escalations,complaint,Free,freshdesk,-26.1,98.1,0,0,0,0.0,Frustrated,Moderate,High
+I am calling to submit feedback for an service,Customer Feedback,review,Free,website,15.5,56.5,0,0,0,0.0,Neutral,Minor,Low
+I would like information about a account removal,Account & Authentication,delete_account,Enterprise,freshdesk,7.7,0.3,1,0,0,0.0,Frustrated,Moderate,Medium
+help me shop some of your item,Orders & Shipping,place_order,Pro,email,11.5,12.5,1,0,0,0.0,Neutral,Minor,Low
+I don't know what I have to do to cancel the account,Account & Authentication,delete_account,Enterprise,website,-1.6,9.6,0,0,0,0.0,Frustrated,Moderate,High
+I don't know how I could list your payment modalities,Billing & Payments,check_payment_methods,Basic,website,-7.2,55.2,0,0,0,0.0,Frustrated,Minor,Medium
+"I need to see your available payment methods, how to do it?",Billing & Payments,check_payment_methods,Free,website,18.6,53.4,0,0,0,0.0,Neutral,Minor,Low
+I do not know how to cancel the fucking standard account,Account & Authentication,delete_account,Free,website,33.0,39.0,0,0,0,0.0,Frustrated,Moderate,High
+need help to notify of an issue with payments,Billing & Payments,payment_issue,Basic,zendesk,-17.2,65.2,0,0,0,0.0,Frustrated,Moderate,High
+i call to write a comment for ur products,Customer Feedback,review,Free,email,-29.9,101.9,0,0,0,0.0,Neutral,None,Low
+need help lodging a reclamation against ur business,Complaints & Escalations,complaint,Free,freshdesk,36.5,35.5,0,0,0,0.0,Frustrated,Moderate,High
+I don't know how I could track the compensation,Returns & Refunds,track_refund,Free,freshdesk,33.8,38.2,0,0,0,0.0,Neutral,Moderate,Medium
+I have got to retrieve my user profile password,Account & Authentication,recover_password,Basic,website,16.6,31.4,0,0,0,0.0,Neutral,Minor,Low
+check invoice from last purchase,Billing & Payments,check_invoice,Pro,website,15.4,8.6,1,0,0,0.0,Neutral,Minor,Medium
+i do not know how to unsubscribe to ur corporate newslegter,Subscription & Account Management,newsletter_subscription,Basic,website,44.5,3.5,1,0,0,0.0,Frustrated,Minor,Medium
+correcting infornation on account,Account & Authentication,edit_account,Basic,website,36.1,11.9,0,0,0,0.0,Neutral,Minor,Medium
+where to ask for reimbursements of money ?,Returns & Refunds,get_refund,Enterprise,website,-2.6,10.6,1,0,0,0.0,Frustrated,Moderate,High
+i do not know what to do to file a complaint,Complaints & Escalations,complaint,Pro,email,-0.6,24.6,1,0,0,0.0,Frustrated,Minor,Medium
+i need help to look for the bills from,Billing & Payments,check_invoice,Basic,zendesk,15.7,32.3,0,0,0,0.0,Neutral,Minor,Medium
+I don't know what I need to do to check the early exit fee,Returns & Refunds,check_cancellation_fee,Pro,zendesk,17.3,6.7,0,0,0,0.0,Neutral,Minor,Medium
+cancel premium account,Account & Authentication,delete_account,Pro,email,-6.0,30.0,0,0,0,0.0,Frustrated,Moderate,High
+I try to inform of an issue with online payments,Billing & Payments,payment_issue,Pro,email,10.2,13.8,1,0,0,0.0,Frustrated,Moderate,High
+help me order some of your product,Orders & Shipping,place_order,Free,email,-11.3,83.3,0,0,0,0.0,Frustrated,Moderate,High
+can i chat with a person,General Inquiries,contact_human_agent,Free,email,61.4,10.6,0,0,0,0.0,Neutral,Minor,Medium
+I try to inform of registration issues,Account & Authentication,registration_problems,Basic,salesforce,17.4,30.6,0,0,0,0.0,Neutral,Minor,Medium
+what do I have to do to file a customer complaint?,Complaints & Escalations,complaint,Basic,freshdesk,-7.8,55.8,0,0,0,0.0,Neutral,Moderate,Medium
+i need help to create a platinum account,Account & Authentication,create_account,Free,email,21.0,51.0,0,0,0,0.0,Neutral,Minor,Medium
+can you help me calling customer service?,General Inquiries,contact_customer_service,Free,zendesk,-2.5,74.5,0,0,0,0.0,Neutral,Minor,Medium
+i do not know what to do to get invoice #85632,Billing & Payments,get_invoice,Enterprise,freshdesk,-2.2,10.2,0,0,0,0.0,Frustrated,Moderate,High
+help leaving a comment about your services,Customer Feedback,review,Free,zendesk,-23.6,95.6,0,0,0,0.0,Neutral,Minor,High
+i want help canceling purchase,Orders & Shipping,cancel_order,Pro,zendesk,7.3,16.7,0,0,0,0.0,Frustrated,Moderate,High
+"I do not need the account, can I cancel it?",Account & Authentication,delete_account,Free,zendesk,63.2,8.8,0,0,0,0.0,Neutral,Minor,Low
+update info on gold account,Account & Authentication,edit_account,Basic,freshdesk,5.2,42.8,1,0,0,0.0,Neutral,Minor,Low
+how can I check the termination charge?,Returns & Refunds,check_cancellation_fee,Basic,website,48.0,0.0,0,0,0,0.0,Neutral,Minor,Medium
+I cannot create a freemium accounmt for my daughter,Account & Authentication,create_account,Free,zendesk,31.1,40.9,0,0,0,0.0,Frustrated,Moderate,Medium
+can youshow me what hours I can contact customer support?,General Inquiries,contact_customer_service,Basic,zendesk,-12.0,60.0,0,0,0,0.0,Neutral,Minor,Low
+can you help me earning several products?,Orders & Shipping,place_order,Basic,salesforce,12.6,35.4,0,0,0,0.0,Neutral,Moderate,Medium
+locating order,Orders & Shipping,track_order,Free,zendesk,26.2,45.8,1,0,0,0.0,Neutral,Minor,Medium
+I want assistance to see your allowed payment modalties,Billing & Payments,check_payment_methods,Free,zendesk,-19.2,91.2,0,0,0,0.0,Neutral,Minor,Low
+i do not know how to open a standard account,Account & Authentication,create_account,Free,freshdesk,72.0,0.0,1,0,0,0.0,Neutral,Minor,Medium
+assistance to ujnsubscribe to ur newsletter,Subscription & Account Management,newsletter_subscription,Free,email,38.7,33.3,0,0,0,0.0,Neutral,Minor,Medium
+want help to switch several items of purchase,Orders & Shipping,change_order,Basic,salesforce,22.4,25.6,0,0,0,0.0,Neutral,Moderate,Medium
+I'd like to see ur money back guarantee how to do it,Returns & Refunds,check_refund_policy,Free,website,4.0,68.0,0,0,0,0.0,Neutral,Minor,Medium
+where can I list your available payment modalities?,Billing & Payments,check_payment_methods,Basic,website,48.0,0.0,1,0,0,0.0,Neutral,Minor,Low
+i want assistance to see how soon can i expect the item,Orders & Shipping,delivery_period,Free,website,42.9,29.1,0,0,0,0.0,Neutral,Minor,Medium
+"I don't have a account, help me opening one",Account & Authentication,create_account,Pro,freshdesk,-13.0,37.0,0,0,0,0.0,Neutral,Minor,Medium
+help me contact customer assistance,General Inquiries,contact_customer_service,Pro,website,24.0,0.0,1,0,0,0.0,Neutral,Minor,Medium
+register,Account & Authentication,create_account,Pro,zendesk,12.1,11.9,2,0,0,0.0,Neutral,Minor,Medium
+I have problems with account removal,Account & Authentication,delete_account,Free,website,72.0,0.0,0,0,0,0.0,Frustrated,Moderate,Medium
+i dont know how i could inform of a problem with a sign-up,Account & Authentication,registration_problems,Free,email,-53.7,125.7,0,0,0,0.0,Frustrated,Moderate,High
+"I don't understand you, help talking to a goddamn person",General Inquiries,contact_human_agent,Basic,freshdesk,45.5,2.5,0,0,0,0.0,Frustrated,Moderate,Medium
+could uhelp me to write a goddamn opinion about a product,Customer Feedback,review,Free,email,67.4,4.6,0,0,0,0.0,Frustrated,Minor,Medium
+I am trying to talk with customer support,General Inquiries,contact_customer_service,Pro,freshdesk,4.2,19.8,0,0,0,0.0,Neutral,Minor,Medium
+i expect a compensation of was it processed,Returns & Refunds,track_refund,Pro,salesforce,3.8,20.2,1,0,0,0.0,Frustrated,Moderate,Medium
+I do not know what to do to see the cancellation charges,Returns & Refunds,check_cancellation_fee,Pro,salesforce,20.5,3.5,1,0,0,0.0,Frustrated,Moderate,High
+I'm waiting for an goddamn restitution of dollars,Returns & Refunds,track_refund,Free,email,19.1,52.9,0,0,0,0.0,Frustrated,Moderate,High
+help seeing what hours I can contact customer assistance,General Inquiries,contact_customer_service,Free,website,-10.7,82.7,0,0,0,0.0,Neutral,Minor,Low
+can you help me to earn several products?,Orders & Shipping,place_order,Basic,freshdesk,-3.1,51.1,0,0,0,0.0,Neutral,Moderate,Medium
+can I cancel my subscription to your corporate newsletter?,Subscription & Account Management,newsletter_subscription,Pro,zendesk,24.0,0.0,0,1,0,0.0,Neutral,Minor,Low
+can uhelp me unsubscribe to the company newsletter,Subscription & Account Management,newsletter_subscription,Free,website,27.8,44.2,0,0,0,0.0,Neutral,Minor,Low
+I have got to receive the corporate newsletter,Subscription & Account Management,newsletter_subscription,Enterprise,zendesk,0.7,7.3,2,0,0,0.0,Neutral,Minor,Medium
+i have to speak with a bloody human agent,General Inquiries,contact_human_agent,Free,freshdesk,-27.9,99.9,0,0,0,0.0,Frustrated,Moderate,High
+help seeing how soon can I expect my product,Orders & Shipping,delivery_period,Enterprise,zendesk,0.5,7.5,1,0,0,0.0,Frustrated,Moderate,High
+see at what time I can get in touch with customer support,General Inquiries,contact_customer_service,Pro,freshdesk,-15.1,39.1,0,0,0,0.0,Neutral,Minor,Low
+how can i find information about editing order,Orders & Shipping,change_order,Free,freshdesk,2.6,69.4,0,0,0,0.0,Neutral,Minor,Low
+I don't kmow how I can make a claim,Complaints & Escalations,complaint,Enterprise,website,3.9,4.1,0,0,0,0.0,Neutral,Minor,Medium
+i have to contact customer assistance how to do it,General Inquiries,contact_customer_service,Basic,website,48.0,0.0,0,0,0,0.0,Neutral,Minor,Low
+can you help me give a quick look at bill #00108?,Billing & Payments,check_invoice,Basic,salesforce,33.6,14.4,0,0,0,0.0,Neutral,Minor,Low
+wqnna notify of an error with payments,Billing & Payments,payment_issue,Basic,website,-3.8,51.8,0,0,0,0.0,Frustrated,Moderate,High
+there are problems trying to update my shipping address,Orders & Shipping,change_shipping_address,Basic,website,15.8,32.2,0,0,0,0.0,Frustrated,Minor,Medium
+need to receive the damn newsletter will uhelp me,Subscription & Account Management,newsletter_subscription,Pro,freshdesk,-9.2,33.2,0,0,0,0.0,Frustrated,Moderate,High
+need assistance with opening a account,Account & Authentication,create_account,Basic,salesforce,-5.5,53.5,0,0,0,0.0,Neutral,Minor,Medium
+can i check i which situations can i ask to be reimbursed,Returns & Refunds,check_refund_policy,Free,zendesk,35.5,36.5,0,0,0,0.0,Neutral,Minor,Medium
+want assistance updating the address,Orders & Shipping,change_shipping_address,Free,email,72.0,0.0,0,0,0,0.0,Neutral,Minor,Low
+"I have to subscribe to the newsletter, I need help",Subscription & Account Management,newsletter_subscription,Free,website,68.4,3.6,0,0,0,0.0,Neutral,Minor,Low
+where to subscribe to the newsletter ?,Subscription & Account Management,newsletter_subscription,Pro,zendesk,11.0,13.0,2,0,0,0.0,Neutral,Minor,Low
+can you help me check the status of my compensation?,Returns & Refunds,track_refund,Basic,website,39.8,8.2,0,0,0,0.0,Neutral,Minor,Medium
+need help to see ur available payment methods,Billing & Payments,check_payment_methods,Enterprise,zendesk,4.4,3.6,0,0,0,0.0,Neutral,Minor,Medium
+i dont know what i need to do to make a claim,Complaints & Escalations,complaint,Free,zendesk,11.0,61.0,1,0,0,0.0,Frustrated,Moderate,Medium
+how do I check when my package is going to arrive?,Orders & Shipping,delivery_period,Basic,zendesk,-8.7,56.7,0,0,0,0.0,Neutral,Minor,Low
+new bloody account for father,Account & Authentication,create_account,Free,website,24.7,47.3,0,0,0,0.0,Neutral,Minor,Medium
+I do not know how to open a account for my daughter,Account & Authentication,create_account,Basic,salesforce,42.1,5.9,0,0,0,0.0,Neutral,Minor,Medium
+I'd like to talk to an operatro,General Inquiries,contact_human_agent,Pro,email,12.2,11.8,1,0,0,0.0,Neutral,Minor,Medium
+canya help me canceling my subscription to the newsletter,Subscription & Account Management,newsletter_subscription,Free,freshdesk,11.1,60.9,0,0,0,0.0,Neutral,Minor,Low
+where can i leave my feedback about ur products,Customer Feedback,review,Basic,email,20.9,27.1,1,0,0,0.0,Neutral,Minor,Medium
+I do not know what I have to do to make a customer lcaim,Complaints & Escalations,complaint,Pro,email,17.1,6.9,1,0,0,0.0,Frustrated,Moderate,Medium
+I have to notify of issues with a signup,Account & Authentication,registration_problems,Pro,email,20.9,3.1,0,0,0,0.0,Frustrated,Moderate,High
+I have errors setting up my new delivery address,Orders & Shipping,set_up_shipping_address,Free,email,52.1,19.9,0,0,0,0.0,Frustrated,Moderate,Medium
+"I have to correct my personal data, how do I do it?",Account & Authentication,edit_account,Basic,website,32.2,15.8,0,0,0,0.0,Neutral,Minor,Low
+assistance seeing the early termination charges,Returns & Refunds,check_cancellation_fee,Free,website,-1.4,73.4,0,0,0,0.0,Frustrated,Moderate,High
+can you tell me more about correcting my delivery address?,Orders & Shipping,change_shipping_address,Free,website,32.0,40.0,1,0,0,0.0,Neutral,Minor,Low
+I want help to make a customer complaint,Complaints & Escalations,complaint,Basic,zendesk,48.0,0.0,0,0,0,0.0,Frustrated,Moderate,Medium
+i do not know how to leave a review about ur services,Customer Feedback,review,Free,website,5.3,66.7,0,0,0,0.0,Neutral,Minor,Low
+I'm dissatisfied with ur services help to file a reclamation,Complaints & Escalations,complaint,Free,website,8.1,63.9,0,0,0,0.0,Frustrated,Moderate,High
+see my restitution current status,Returns & Refunds,track_refund,Free,email,72.0,0.0,0,0,0,0.0,Neutral,Minor,Medium
+where to inform of a sign-up problem?,Account & Authentication,registration_problems,Free,email,-3.8,75.8,0,0,0,0.0,Frustrated,Moderate,High
+where to see the damn termination charges?,Returns & Refunds,check_cancellation_fee,Free,zendesk,56.1,15.9,1,0,0,0.0,Frustrated,Moderate,High
+help to leave a comment for your services,Customer Feedback,review,Pro,website,22.2,1.8,0,0,0,0.0,Neutral,Minor,Low
+"I have to send my feedback about your company, help me",Customer Feedback,review,Pro,email,24.0,0.0,1,0,0,0.0,Neutral,Minor,Low
+"I can't pay, assistance reporting troubles with payment",Billing & Payments,payment_issue,Basic,zendesk,10.3,37.7,0,0,0,0.0,Frustrated,Moderate,High
+assistance to request a reimbursement of my money,Returns & Refunds,get_refund,Basic,email,48.0,0.0,1,0,0,0.0,Neutral,Minor,Medium
+i try to open a standard account,Account & Authentication,create_account,Basic,website,48.0,0.0,0,0,0,0.0,Neutral,Minor,Low
+what do I need todo to speak with somebody?,General Inquiries,contact_human_agent,Enterprise,freshdesk,2.4,5.6,0,0,0,0.0,Neutral,Minor,Medium
+I don't know how to call bloody customer support,General Inquiries,contact_customer_service,Basic,website,18.0,30.0,0,0,0,0.0,Frustrated,Minor,Medium
+need help seeing at what time I can call customer assistance,General Inquiries,contact_customer_service,Pro,email,11.7,12.3,0,0,0,0.0,Neutral,Minor,Medium
+i want assistance deleting the account,Account & Authentication,delete_account,Pro,zendesk,-15.4,39.4,0,0,0,0.0,Frustrated,Moderate,High
+i want help reporting an issue with online payments,Billing & Payments,payment_issue,Free,email,14.6,57.4,0,0,0,0.0,Frustrated,Moderate,High
+where can I report problems with payments?,Billing & Payments,payment_issue,Basic,website,13.8,34.2,0,0,0,0.0,Neutral,Minor,Medium
+how do I order an article?,Orders & Shipping,place_order,Basic,email,-26.6,74.6,0,0,0,0.0,Neutral,Minor,Low
+"I have to order some of your article, how can I do it?",Orders & Shipping,place_order,Basic,zendesk,18.8,29.2,0,0,0,0.0,Neutral,Minor,Medium
+I don't know what I have to do to remove a account,Account & Authentication,delete_account,Free,salesforce,-51.2,123.2,0,0,0,0.0,Frustrated,Moderate,High
+"I need to earn some articles, how can I do it?",Orders & Shipping,place_order,Basic,salesforce,-33.2,81.2,0,0,0,0.0,Neutral,Minor,Medium
+lodging claim,Complaints & Escalations,complaint,Pro,website,-0.9,24.9,0,0,0,0.0,Frustrated,Moderate,High
+i do not know what to do to modify the user info,Account & Authentication,edit_account,Free,email,6.1,65.9,0,0,0,0.0,Neutral,Minor,Medium
+I cannot receive your corporate newsletter,Subscription & Account Management,newsletter_subscription,Basic,zendesk,48.0,0.0,1,0,0,0.0,Frustrated,Moderate,Medium
+I have got to check in which cases can I ask for refunds,Returns & Refunds,check_refund_policy,Free,email,11.5,60.5,0,0,0,0.0,Neutral,Minor,Low
+see invoices from,Billing & Payments,check_invoice,Free,zendesk,4.7,67.3,0,0,0,0.0,Neutral,Minor,Low
+I don't know what to do to chat with an assistant,General Inquiries,contact_human_agent,Basic,salesforce,40.5,7.5,1,0,0,0.0,Neutral,Minor,Medium
+I don'tknow what to do to check your payment options,Billing & Payments,check_payment_methods,Free,freshdesk,6.9,65.1,0,0,0,0.0,Neutral,Minor,Low
+where to cancel the subscription to your newsletter?,Subscription & Account Management,newsletter_subscription,Enterprise,website,6.5,1.5,0,0,0,0.0,Neutral,Minor,Medium
+how to submit the secondary delivery address?,Orders & Shipping,set_up_shipping_address,Free,website,-7.4,79.4,0,0,0,0.0,Neutral,Minor,Low
+assistance lodging a reclamation against your organization,Complaints & Escalations,complaint,Free,email,-22.0,94.0,0,0,0,0.0,Frustrated,Moderate,High
+wanna send some fedeback for ur services i need help,Customer Feedback,review,Basic,salesforce,12.1,35.9,0,0,0,0.0,Neutral,Minor,Low
+"I need to subscribe to the company newsletter, how to do it?",Subscription & Account Management,newsletter_subscription,Pro,website,1.1,22.9,1,0,0,0.0,Neutral,Minor,Low
+ohw to cancel order,Orders & Shipping,cancel_order,Free,zendesk,44.5,27.5,0,0,0,0.0,Neutral,Minor,Medium
+help me to file a claim,Complaints & Escalations,complaint,Basic,zendesk,39.6,8.4,0,0,0,0.0,Frustrated,Moderate,Medium
+i have to check how long refunds take how can i do it,Returns & Refunds,check_refund_policy,Basic,salesforce,1.3,46.7,0,0,0,0.0,Neutral,Minor,Low
+i cannot check if there are any news on the compensation,Returns & Refunds,track_refund,Basic,email,24.1,23.9,0,0,0,0.0,Neutral,Minor,Medium
+"I want to see what shipment options I have, how can I do it?",Orders & Shipping,delivery_options,Free,email,-11.6,83.6,0,0,0,0.0,Neutral,Minor,Low
+assistance ordering a few ofur article,Orders & Shipping,place_order,Free,email,48.8,23.2,0,0,0,0.0,Neutral,Minor,Low
+"I need to leave a review about a product, how to do it?",Customer Feedback,review,Free,zendesk,21.5,50.5,0,0,0,0.0,Neutral,Minor,Low
+i have to speak to a eprson,General Inquiries,contact_human_agent,Free,freshdesk,72.0,0.0,0,0,0,0.0,Frustrated,Moderate,High
+can I notify of an error with registrations?,Account & Authentication,registration_problems,Basic,website,48.0,0.0,0,0,0,0.0,Neutral,Moderate,Medium
+want assistance to retrieve my profile pin,Account & Authentication,recover_password,Pro,freshdesk,4.3,19.7,0,0,0,0.0,Neutral,Minor,Medium
+i need assistance to cancel my account,Account & Authentication,delete_account,Basic,website,43.1,4.9,0,1,0,0.0,Frustrated,Moderate,High
+in what cases can I request reimbursements?,Returns & Refunds,check_refund_policy,Pro,website,-7.5,31.5,1,0,0,0.0,Neutral,Minor,Medium
+where to check your payment modalities?,Billing & Payments,check_payment_methods,Free,freshdesk,48.7,23.3,0,0,0,0.0,Neutral,Minor,Low
+subscribing to newsletter,Subscription & Account Management,newsletter_subscription,Free,website,-4.0,76.0,0,0,0,0.0,Neutral,Minor,Low
+need to lodge a reclamation,Complaints & Escalations,complaint,Basic,email,48.0,0.0,0,0,0,0.0,Frustrated,Moderate,Medium
+would you give me information about my account removal?,Account & Authentication,delete_account,Free,freshdesk,43.0,29.0,0,0,0,0.0,Neutral,Minor,Medium
+can you help me chatting with a person?,General Inquiries,contact_human_agent,Basic,email,-13.2,61.2,0,0,0,0.0,Neutral,Minor,Medium
+i have problems with opening a account,Account & Authentication,create_account,Free,freshdesk,3.8,68.2,0,0,0,0.0,Frustrated,Moderate,High
+can uhelp me to sign up to the newsletter,Subscription & Account Management,newsletter_subscription,Basic,email,19.6,28.4,0,0,0,0.0,Neutral,Minor,Low
+how do i create a pro account,Account & Authentication,create_account,Basic,email,48.0,0.0,1,0,0,0.0,Neutral,Minor,Medium
+help me to see at what time I can contact customer support,General Inquiries,contact_customer_service,Free,website,-15.3,87.3,0,0,0,0.0,Neutral,Minor,Medium
+need help filing a reclamation,Complaints & Escalations,complaint,Basic,email,8.8,39.2,1,0,0,0.0,Frustrated,Moderate,Medium
+i need help to cancel a freemium account,Account & Authentication,delete_account,Basic,zendesk,15.6,32.4,0,0,0,0.0,Neutral,Minor,Low
+help me to take a quick look at my bill from,Billing & Payments,check_invoice,Free,zendesk,-4.8,76.8,0,0,0,0.0,Frustrated,Moderate,High
+wanna know about cancel the subscription to ur newsletter,Subscription & Account Management,newsletter_subscription,Enterprise,website,8.0,0.0,0,0,0,0.0,Neutral,Minor,Medium
+wanna shop a few of ur article,Orders & Shipping,place_order,Free,zendesk,28.8,43.2,0,0,0,0.0,Neutral,Minor,Low
+I want informatoin about the cancellation of my account,Account & Authentication,delete_account,Basic,zendesk,-13.8,61.8,0,0,0,0.0,Frustrated,Moderate,High
+I want help leaving my feedback for your products,Customer Feedback,review,Basic,website,-9.6,57.6,0,0,0,0.0,Neutral,Minor,Low
+can you help me opening a pro account?,Account & Authentication,create_account,Free,email,23.2,48.8,0,0,0,0.0,Neutral,Minor,Medium
+I do not know what to do to chat with a live agent,General Inquiries,contact_human_agent,Pro,email,7.5,16.5,0,0,0,0.0,Neutral,Minor,Medium
+help me checking what hours i can reach customer assistance,General Inquiries,contact_customer_service,Basic,email,-14.0,62.0,1,0,0,0.0,Frustrated,Moderate,High
+where to make a consumer claim against your organization?,Complaints & Escalations,complaint,Free,email,-4.5,76.5,0,0,0,0.0,Frustrated,Moderate,High
+i can no longer afford order could i cancel it,Orders & Shipping,cancel_order,Free,zendesk,8.3,63.7,0,0,0,0.0,Frustrated,Moderate,High
+help me to check in which cases can I request reimbursements,Returns & Refunds,check_refund_policy,Pro,email,-2.0,26.0,1,0,0,0.0,Neutral,Minor,Medium
+how do i check order current status,Orders & Shipping,track_order,Basic,salesforce,-0.4,48.4,0,0,0,0.0,Neutral,Minor,Low
+I need help lodging an reclamation against your company,Complaints & Escalations,complaint,Pro,zendesk,22.5,1.5,1,0,0,0.0,Frustrated,Moderate,High
+I want assistance to modify the shipping addresxs,Orders & Shipping,change_shipping_address,Basic,zendesk,15.5,32.5,0,0,0,0.0,Neutral,Minor,Medium
+help me to restore the key of my user,Account & Authentication,recover_password,Free,salesforce,43.4,28.6,1,0,0,0.0,Neutral,Moderate,Medium
+i dont know what i need to do to cancel a platinum account,Account & Authentication,delete_account,Pro,website,10.4,13.6,0,0,0,0.0,Frustrated,Moderate,High
+information about canceling the newsletter subscription,Subscription & Account Management,newsletter_subscription,Enterprise,zendesk,-1.3,9.3,0,0,0,0.0,Neutral,Minor,Medium
+i have got to see in which situations can i request a refund,Returns & Refunds,check_refund_policy,Basic,email,-17.3,65.3,1,0,0,0.0,Neutral,Minor,Medium
+I need assistance to remove my standard account,Account & Authentication,delete_account,Pro,salesforce,22.6,1.4,1,0,0,0.0,Frustrated,Moderate,High
+is it possible to see the cancellation fees?,Returns & Refunds,check_cancellation_fee,Free,website,61.8,10.2,0,0,0,0.0,Neutral,Minor,Medium
+how can i speakto customer assistance,General Inquiries,contact_customer_service,Free,salesforce,29.8,42.2,0,0,0,0.0,Neutral,Minor,Low
+I don't know how to unsubscribe from the goddamn newsletter,Subscription & Account Management,newsletter_subscription,Free,freshdesk,-8.1,80.1,1,0,0,0.0,Frustrated,Moderate,High
+help to check the available payment methods,Billing & Payments,check_payment_methods,Pro,email,-3.5,27.5,1,0,0,0.0,Neutral,Minor,Medium
+ya are not helpful could i speak with a fucking human agent,General Inquiries,contact_human_agent,Basic,email,25.4,22.6,0,0,0,0.0,Frustrated,Moderate,High
+"I have to check the early exit charge, I need help",Returns & Refunds,check_cancellation_fee,Free,zendesk,38.7,33.3,0,0,0,0.0,Frustrated,Moderate,Medium
+I do not know how I can subscribe to your company newsletter,Subscription & Account Management,newsletter_subscription,Basic,freshdesk,-15.7,63.7,2,0,0,0.0,Frustrated,Minor,Medium
+what do I need to do to subscribe to the newsletter?,Subscription & Account Management,newsletter_subscription,Free,freshdesk,55.7,16.3,0,0,0,0.0,Neutral,Minor,Low
+can I see what payment methods are available?,Billing & Payments,check_payment_methods,Pro,website,-1.3,25.3,3,0,0,0.0,Neutral,Minor,Low
+i have to see how long refunds take how do i do it,Returns & Refunds,check_refund_policy,Free,email,47.3,24.7,1,0,0,0.0,Neutral,Minor,Medium
+is there an e-mail to send an opinion about your products?,Customer Feedback,review,Free,zendesk,34.8,37.2,0,0,0,0.0,Neutral,Minor,Low
+"I need to leave a review about a product, how to do it?",Customer Feedback,review,Basic,website,-49.2,97.2,0,0,0,0.0,Neutral,Minor,Low
+need assistance speaking to a hujan agent,General Inquiries,contact_human_agent,Free,freshdesk,48.1,23.9,0,0,0,0.0,Neutral,Minor,Low
+I need to talk with bloody customer support,General Inquiries,contact_customer_service,Free,zendesk,-29.6,101.6,0,0,0,0.0,Frustrated,Moderate,Medium
+I want to cancel my subscription to the newsletter,Subscription & Account Management,newsletter_subscription,Free,freshdesk,36.0,36.0,0,1,0,0.0,Neutral,Minor,Low
+want assistance checking the cancellation fees,Returns & Refunds,check_cancellation_fee,Free,email,48.8,23.2,0,0,0,0.0,Neutral,Minor,Low
+I want help to see what bloody payment options are accepted,Billing & Payments,check_payment_methods,Basic,freshdesk,-2.3,50.3,0,0,0,0.0,Frustrated,Moderate,High
+how to inform of an sign-up error,Account & Authentication,registration_problems,Free,email,72.0,0.0,0,0,0,0.0,Neutral,Moderate,Medium
+need help checking whay hours I can reach customer support,General Inquiries,contact_customer_service,Free,email,-14.1,86.1,0,0,0,0.0,Frustrated,Minor,Medium
+I have to subscribe to your newsletter,Subscription & Account Management,newsletter_subscription,Free,freshdesk,-13.2,85.2,0,0,0,0.0,Neutral,Minor,Low
+help me cancel the subscription to ur newsletter,Subscription & Account Management,newsletter_subscription,Basic,freshdesk,48.0,0.0,0,0,0,0.0,Neutral,Minor,Low
+switch to another user,Account & Authentication,switch_account,Pro,zendesk,11.6,12.4,1,0,0,0.0,Neutral,Minor,Medium
+need help shopping a few of ur item,Orders & Shipping,place_order,Free,email,-4.1,76.1,0,0,0,0.0,Neutral,Minor,Low
+I want a pro account,Account & Authentication,create_account,Free,freshdesk,36.3,35.7,0,0,0,0.0,Neutral,Moderate,Medium
+see at what time i can call customer support,General Inquiries,contact_customer_service,Pro,zendesk,22.0,2.0,0,0,0,0.0,Neutral,Minor,Low
+could i unsubscribe from the newsletter,Subscription & Account Management,newsletter_subscription,Free,email,4.5,67.5,0,0,0,0.0,Neutral,Minor,Low
+want help to check what hours i cancall customer service,General Inquiries,contact_customer_service,Pro,freshdesk,15.2,8.8,1,0,0,0.0,Neutral,Minor,Low
+what do i need to do to leave some feedback,Customer Feedback,review,Pro,salesforce,8.2,15.8,0,0,0,0.0,Positive,Minor,Low
+how can i get information about my pass reset,Account & Authentication,recover_password,Pro,email,-6.8,30.8,0,0,0,0.0,Frustrated,Moderate,Medium
+i have to list ur accepted payment options how to do it,Billing & Payments,check_payment_methods,Basic,website,-7.0,55.0,0,0,0,0.0,Neutral,Minor,Low
+there is an error trying to update my address,Orders & Shipping,change_shipping_address,Basic,email,-1.1,49.1,0,0,0,0.0,Frustrated,Moderate,High
+I don't know how to call bloody customer support,General Inquiries,contact_customer_service,Basic,website,10.7,37.3,1,0,0,0.0,Frustrated,Minor,Low
+help me canceling the newsletter subscription,Subscription & Account Management,newsletter_subscription,Basic,freshdesk,5.8,42.2,0,0,0,0.0,Neutral,Minor,Low
+can you help me leaving my feedback for a product?,Customer Feedback,review,Pro,email,3.8,20.2,0,0,0,0.0,Neutral,Minor,Low
+I don't know how I could chat with a goddamn human agent,General Inquiries,contact_human_agent,Pro,salesforce,24.0,0.0,0,0,0,0.0,Frustrated,Moderate,Medium
+can you help me leave a comment about a service?,Customer Feedback,review,Basic,freshdesk,1.5,46.5,0,0,0,0.0,Neutral,Minor,Low
+in what cases can I ask to be reimbursed?,Returns & Refunds,check_refund_policy,Basic,email,40.2,7.8,0,0,0,0.0,Neutral,Minor,Medium
+i cannot find the early termination fees,Returns & Refunds,check_cancellation_fee,Free,website,-6.1,78.1,1,0,0,0.0,Frustrated,Moderate,High
+i do not knowhow i can list the payment options,Billing & Payments,check_payment_methods,Pro,website,-8.5,32.5,0,0,0,0.0,Neutral,Minor,Medium
+information about canceling the newsletter subscription,Subscription & Account Management,newsletter_subscription,Basic,zendesk,48.0,0.0,0,0,0,0.0,Neutral,Minor,Low
+tell me at what time customer service available is,General Inquiries,contact_customer_service,Basic,email,19.9,28.1,0,0,0,0.0,Neutral,Minor,Low
+want assistance lodging a reclamation,Complaints & Escalations,complaint,Free,freshdesk,60.2,11.8,0,0,0,0.0,Frustrated,Moderate,Medium
+I do not know what to do to talk to customer service,General Inquiries,contact_customer_service,Free,zendesk,40.8,31.2,0,0,0,0.0,Neutral,Minor,Medium
+i want assistance checking what paytment methods ya accept,Billing & Payments,check_payment_methods,Free,email,43.7,28.3,0,0,0,0.0,Neutral,Minor,Low
+help to check what hours I can call customer support,General Inquiries,contact_customer_service,Free,zendesk,35.0,37.0,1,0,0,0.0,Neutral,Minor,Low
+I need to see how soon can I expect my purchase,Orders & Shipping,delivery_period,Pro,freshdesk,10.6,13.4,0,0,0,0.0,Neutral,Minor,Medium
+"I want to see my reimbursement current status, help me",Returns & Refunds,track_refund,Basic,email,24.0,24.0,0,0,0,0.0,Neutral,Minor,Low
+I try to check what hours I can call customer support,General Inquiries,contact_customer_service,Free,email,-18.2,90.2,0,0,0,0.0,Neutral,Minor,Low
+help to acquire some products,Orders & Shipping,place_order,Pro,website,11.6,12.4,1,0,0,0.0,Neutral,Minor,Medium
+i do not know what to do to contact an assistant,General Inquiries,contact_human_agent,Free,website,-4.1,76.1,0,0,0,0.0,Neutral,Minor,Low
+help me check at what time i can contact cuswtomer support,General Inquiries,contact_customer_service,Pro,zendesk,-5.7,29.7,0,0,0,0.0,Neutral,Minor,Medium
+help me checking what hours I can call customer support,General Inquiries,contact_customer_service,Free,freshdesk,35.2,36.8,0,0,0,0.0,Neutral,Minor,Low
+I don't know how I could leave a comment about a service,Customer Feedback,review,Basic,salesforce,-12.7,60.7,0,0,0,0.0,Frustrated,Minor,Medium
+can i check how long it takes for my delivery to arrive,Orders & Shipping,delivery_period,Basic,email,-18.4,66.4,0,0,0,0.0,Neutral,Minor,Medium
+i need information about the cancellation of a gold acocunt,Account & Authentication,delete_account,Free,email,16.4,55.6,1,0,0,0.0,Neutral,Moderate,Medium
+what do I need to do to download my invoice #37777?,Billing & Payments,get_invoice,Pro,website,-8.1,32.1,1,0,0,0.0,Frustrated,Moderate,High
+how do i unsubscribe fromur corporate newsletter,Subscription & Account Management,newsletter_subscription,Basic,zendesk,-3.1,51.1,0,0,0,0.0,Neutral,Minor,Medium
+i wnt help swapping several items of order,Orders & Shipping,change_order,Free,email,27.6,44.4,0,0,0,0.0,Neutral,Minor,Medium
+I need help to restore my user key,Account & Authentication,recover_password,Basic,freshdesk,-18.3,66.3,0,0,0,0.0,Frustrated,Moderate,High
+"I haven't signed up, I need to create a account",Account & Authentication,create_account,Basic,email,24.6,23.4,0,0,0,0.0,Neutral,Minor,Low
+i have lost my pass what do i need to do to recover it,Account & Authentication,recover_password,Free,email,-20.0,92.0,1,0,0,0.0,Frustrated,Moderate,High
+need assistance to talk with an agent,General Inquiries,contact_human_agent,Pro,website,-6.5,30.5,1,0,0,0.0,Frustrated,Moderate,High
+help me seeing what hours customer service available is,General Inquiries,contact_customer_service,Free,salesforce,-27.8,99.8,1,0,0,0.0,Neutral,Minor,Low
+i lost the pass of my user how do i recover it,Account & Authentication,recover_password,Free,email,7.3,64.7,0,0,0,0.0,Neutral,Minor,Medium
+what do i have to do to see ur money back guarantee,Returns & Refunds,check_refund_policy,Enterprise,email,1.0,7.0,0,0,0,0.0,Neutral,Moderate,Medium
+can uhelp me requesting reimbursements of my money,Returns & Refunds,get_refund,Basic,email,-19.5,67.5,0,0,0,0.0,Frustrated,Moderate,High
+I want help to make a customer claim against your busines,Complaints & Escalations,complaint,Pro,freshdesk,17.7,6.3,2,0,0,0.0,Frustrated,Moderate,High
+can you help me check in which cases can I request a refund?,Returns & Refunds,check_refund_policy,Basic,freshdesk,3.8,44.2,1,0,0,0.0,Neutral,Minor,Medium
+is it possible to reset my user account key?,Account & Authentication,recover_password,Basic,zendesk,-11.0,59.0,0,0,0,0.0,Neutral,Minor,Low
+"I want to write a comment, I need assistance",Customer Feedback,review,Pro,zendesk,-3.5,27.5,0,0,0,0.0,Neutral,Minor,Medium
+what do I have to do to make a customer complaint?,Complaints & Escalations,complaint,Free,email,38.9,33.1,0,0,0,0.0,Frustrated,Minor,Medium
+I want assistance to make an customer reclamation,Complaints & Escalations,complaint,Free,website,56.4,15.6,0,0,0,0.0,Frustrated,Moderate,High
+i try to purchase some of ur product,Orders & Shipping,place_order,Pro,freshdesk,24.0,0.0,1,0,0,0.0,Frustrated,Moderate,High
+what do I have to do to notify of registration issues?,Account & Authentication,registration_problems,Free,salesforce,7.8,64.2,1,0,0,0.0,Frustrated,Moderate,High
+help me see ur money back guarantee,Returns & Refunds,check_refund_policy,Free,salesforce,-1.5,73.5,0,0,0,0.0,Frustrated,Moderate,Medium
+"I have got to talk with customer support, I need assistance",General Inquiries,contact_customer_service,Basic,zendesk,22.0,26.0,0,0,0,0.0,Neutral,Minor,Medium
+can ya help me speak toan agent,General Inquiries,contact_human_agent,Basic,website,-4.3,52.3,0,0,0,0.0,Neutral,Minor,High
+i do not know how to recover the pin of my user profile,Account & Authentication,recover_password,Basic,website,33.0,15.0,0,0,0,0.0,Neutral,Minor,Medium
+help me to lodge a complaint against your business,Complaints & Escalations,complaint,Basic,website,9.4,38.6,1,0,0,0.0,Angry,Moderate,High
+"I don't want my account, how could I close it?",Account & Authentication,delete_account,Basic,website,25.3,22.7,0,0,0,0.0,Neutral,Minor,Medium
+is it possible to shop a few of your item?,Orders & Shipping,place_order,Free,salesforce,72.0,0.0,0,0,0,0.0,Neutral,Minor,Low
+I need to check the withdrawal penalties,Returns & Refunds,check_cancellation_fee,Pro,email,4.2,19.8,1,0,0,0.0,Neutral,Minor,Medium
+I have got to notify of troubles with payments,Billing & Payments,payment_issue,Basic,website,48.0,0.0,0,0,0,0.0,Frustrated,Moderate,High
+I need help to change to the account,Account & Authentication,switch_account,Pro,email,-10.3,34.3,0,0,0,0.0,Frustrated,Moderate,High
+I am trying to see what hours I can reach customer service,General Inquiries,contact_customer_service,Free,email,72.0,0.0,1,0,0,0.0,Neutral,Minor,Low
+I try to delete a fucking standard account,Account & Authentication,delete_account,Free,website,17.9,54.1,0,0,0,0.0,Angry,Moderate,High
+I am trying to see how soon can I expect the shipment,Orders & Shipping,delivery_period,Basic,website,-1.6,49.6,0,0,0,0.0,Frustrated,Moderate,High
+I am trying to submit feedback about a product,Customer Feedback,review,Basic,freshdesk,12.7,35.3,0,0,0,0.0,Neutral,Minor,Low
+wanna cancel my subscription to the company newsletter,Subscription & Account Management,newsletter_subscription,Pro,email,12.6,11.4,0,1,0,0.0,Neutral,Minor,Low
+is it possible to crewate a gold account,Account & Authentication,create_account,Basic,website,12.1,35.9,1,0,0,0.0,Frustrated,Moderate,Medium
+I need assistance checking the status of the restitution,Returns & Refunds,track_refund,Pro,zendesk,24.0,0.0,1,0,0,0.0,Neutral,Minor,Medium
+how do I order somearticles?,Orders & Shipping,place_order,Free,zendesk,38.4,33.6,1,0,0,0.0,Neutral,Minor,Low
+I have a question about the removal of a premium account,Account & Authentication,delete_account,Enterprise,website,8.0,0.0,0,0,0,0.0,Neutral,Moderate,Medium
+how can I open a platinum account?,Account & Authentication,create_account,Free,zendesk,-6.2,78.2,0,0,0,0.0,Neutral,Moderate,Medium
+how can i notify of an issue with a signup,Account & Authentication,registration_problems,Free,zendesk,72.0,0.0,0,0,0,0.0,Neutral,Minor,Medium
+help me contact customer assistance,General Inquiries,contact_customer_service,Enterprise,website,-0.4,8.4,0,0,0,0.0,Frustrated,Moderate,High
+"I am not happy with your work, lodge a consumer reclamation",Complaints & Escalations,complaint,Enterprise,email,8.0,0.0,0,0,0,0.0,Angry,Severe,High
+what do I need to do to download the bill #00108?,Billing & Payments,get_invoice,Free,email,59.8,12.2,1,0,0,0.0,Neutral,Minor,Medium
+i cnt cancel my company newsletter subscription,Subscription & Account Management,newsletter_subscription,Basic,freshdesk,45.8,2.2,0,1,0,0.0,Frustrated,Moderate,High
+assistance updating the info included on my user account,Account & Authentication,edit_account,Free,website,-4.7,76.7,0,0,0,0.0,Neutral,Minor,Low
+I want to acquire several of your product,Orders & Shipping,place_order,Free,freshdesk,-2.9,74.9,0,0,0,0.0,Frustrated,Moderate,High
+how can I check how long it takes for my parcel to arrive?,Orders & Shipping,delivery_period,Free,website,-6.2,78.2,0,0,0,0.0,Neutral,Minor,Low
+I want help to submit feedback for your company,Customer Feedback,review,Free,freshdesk,11.0,61.0,2,0,0,0.0,Neutral,Minor,Low
+need to see what hours customer assistance available is,General Inquiries,contact_customer_service,Free,website,-26.6,98.6,1,0,0,0.0,Neutral,Minor,Low
+i cannot pay i have to report goddamn payment issues,Billing & Payments,payment_issue,Free,freshdesk,60.1,11.9,0,0,0,0.0,Angry,Severe,Urgent
+is it possible to send some feedback about your company?,Customer Feedback,review,Free,email,17.1,54.9,0,0,0,0.0,Neutral,Minor,Low
+"I want to check the available payment methods, help me",Billing & Payments,check_payment_methods,Pro,email,-1.0,25.0,0,0,0,0.0,Neutral,Minor,Low
+could you help me use the gold profile?,Account & Authentication,switch_account,Free,freshdesk,43.4,28.6,0,0,0,0.0,Neutral,Minor,Medium
+I want help to file a reclamation against your company,Complaints & Escalations,complaint,Free,website,-2.9,74.9,0,0,0,0.0,Frustrated,Severe,High
+I try to cancel the subscription to your newsletter,Subscription & Account Management,newsletter_subscription,Pro,email,20.5,3.5,1,0,0,0.0,Frustrated,Moderate,Medium
+I need assistance to create a standard account,Account & Authentication,create_account,Free,freshdesk,43.7,28.3,0,0,0,0.0,Neutral,Minor,Low
+can you help me cancelling my newsletter subscription?,Subscription & Account Management,newsletter_subscription,Free,zendesk,72.0,0.0,0,1,0,0.0,Neutral,Minor,Low
+help me to check the sxtatus of my reimbursement,Returns & Refunds,track_refund,Free,email,34.4,37.6,0,0,0,0.0,Neutral,Minor,Low
+"I want to see the payment methods, help me",Billing & Payments,check_payment_methods,Basic,email,33.0,15.0,0,0,0,0.0,Neutral,Minor,Low
+help to get in touch with customer support,General Inquiries,contact_customer_service,Free,website,41.2,30.8,1,0,0,0.0,Neutral,Minor,Low
+I do not know how I could leave a comment for your sevrices,Customer Feedback,review,Enterprise,salesforce,-1.9,9.9,1,0,0,0.0,Frustrated,Minor,High
+correcting information on freemium account,Account & Authentication,edit_account,Basic,zendesk,-42.6,90.6,1,0,0,0.0,Frustrated,Moderate,High
+i try to speak to customer service,General Inquiries,contact_customer_service,Basic,email,40.1,7.9,1,0,0,0.0,Neutral,Minor,Medium
+I'm trying to cancel the account,Account & Authentication,delete_account,Free,website,-9.9,81.9,0,0,0,0.0,Frustrated,Moderate,High
+assistance to add a damn article to order,Orders & Shipping,change_order,Basic,email,-2.4,50.4,0,0,0,0.0,Frustrated,Moderate,High
+i need assistance talking to a person,General Inquiries,contact_human_agent,Free,salesforce,-33.7,105.7,2,0,0,0.0,Frustrated,Moderate,High
+open a premium acount for my dad,Account & Authentication,create_account,Free,website,21.6,50.4,0,0,0,0.0,Neutral,Moderate,Medium
+i try to edit the data on my user account,Account & Authentication,edit_account,Basic,email,4.1,43.9,0,0,0,0.0,Neutral,Minor,Medium
+need to notify of an issue with registrations,Account & Authentication,registration_problems,Free,freshdesk,-30.5,102.5,0,0,0,0.0,Frustrated,Moderate,High
+I try to submit some feedback for your company,Customer Feedback,review,Pro,email,22.3,1.7,1,0,0,0.0,Neutral,Minor,Low
+help me chat with someone,General Inquiries,contact_human_agent,Free,website,-17.1,89.1,0,0,0,0.0,Frustrated,Minor,Medium
+"I have got to shop some of your article, how do I do it?",Orders & Shipping,place_order,Pro,website,11.4,12.6,0,0,0,0.0,Neutral,Minor,Medium
+is there a section to leave a comment for a product?,Customer Feedback,review,Pro,freshdesk,-4.0,28.0,1,0,0,0.0,Neutral,Minor,Low
+could you help me leaving an opinion about a product?,Customer Feedback,review,Basic,email,-13.6,61.6,0,0,0,0.0,Neutral,Minor,Low
+i dont knwo how i can cancel purchase,Orders & Shipping,cancel_order,Free,website,2.2,69.8,0,0,0,0.0,Frustrated,Moderate,High
+can you help me obtaining refunds?,Returns & Refunds,get_refund,Basic,website,-18.8,66.8,0,0,0,0.0,Frustrated,Moderate,High
+wanna know more about cancelling the newsletter sjbscription,Subscription & Account Management,newsletter_subscription,Basic,salesforce,48.0,0.0,1,1,0,0.0,Neutral,Minor,Medium
+i have troubles entering my delivery address,Orders & Shipping,set_up_shipping_address,Free,salesforce,34.6,37.4,0,0,0,0.0,Frustrated,Moderate,High
+i dont know what i have to do to obtain a compensation,Returns & Refunds,get_refund,Pro,website,-10.9,34.9,0,0,0,0.0,Frustrated,Moderate,High
+i want help towrite a comment for ur services,Customer Feedback,review,Free,email,-23.9,95.9,1,0,0,0.0,Neutral,Minor,Low

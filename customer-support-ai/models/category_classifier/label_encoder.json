@@ -1,0 +1,32 @@
+{
+  "labels": [
+    "Account & Authentication",
+    "Billing & Payments",
+    "Complaints & Escalations",
+    "Customer Feedback",
+    "General Inquiries",
+    "Orders & Shipping",
+    "Returns & Refunds",
+    "Subscription & Account Management"
+  ],
+  "label2id": {
+    "Account & Authentication": 0,
+    "Billing & Payments": 1,
+    "Complaints & Escalations": 2,
+    "Customer Feedback": 3,
+    "General Inquiries": 4,
+    "Orders & Shipping": 5,
+    "Returns & Refunds": 6,
+    "Subscription & Account Management": 7
+  },
+  "id2label": {
+    "0": "Account & Authentication",
+    "1": "Billing & Payments",
+    "2": "Complaints & Escalations",
+    "3": "Customer Feedback",
+    "4": "General Inquiries",
+    "5": "Orders & Shipping",
+    "6": "Returns & Refunds",
+    "7": "Subscription & Account Management"
+  }
+}

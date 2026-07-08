@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Category Classification Review</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f7fa;
+            padding: 20px;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { color: #2c3e50; margin-bottom: 20px; }
+
+        .nav-bar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+            padding: 12px 20px;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 20px;
+        }
+        .nav-bar a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+        .nav-bar a:hover { text-decoration: underline; }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .stat-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .stat-number { font-size: 2.5em; font-weight: bold; color: #3498db; }
+        .stat-label { color: #7f8c8d; margin-top: 5px; font-size: 0.9em; }
+
+        .tickets { display: grid; gap: 15px; }
+        .ticket {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .ticket-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        .ticket-id { font-weight: bold; color: #2c3e50; }
+        .source {
+            display: inline-block;
+            padding: 4px 8px;
+            background: #ecf0f1;
+            border-radius: 3px;
+            font-size: 0.85em;
+            color: #7f8c8d;
+        }
+        .ticket-subject { font-size: 1.1em; font-weight: 500; color: #2c3e50; margin-bottom: 8px; }
+        .ticket-message { color: #7f8c8d; font-size: 0.95em; line-height: 1.4; margin-bottom: 12px; }
+
+        .prediction {
+            background: #ecf7fe;
+            border-left: 3px solid #3498db;
+            padding: 12px;
+            margin: 12px 0;
+            border-radius: 4px;
+        }
+        .prediction-label { color: #7f8c8d; font-size: 0.85em; }
+        .prediction-value {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #3498db;
+            margin: 5px 0;
+        }
+        .confidence { color: #7f8c8d; font-size: 0.85em; }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        button {
+            padding: 10px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 0.9em;
+            transition: all 0.3s;
+        }
+        .approve {
+            background: #27ae60;
+            color: white;
+        }
+        .approve:hover { background: #229954; }
+
+        .edit {
+            background: #f39c12;
+            color: white;
+        }
+        .edit:hover { background: #d68910; }
+
+        .loading { text-align: center; padding: 40px; color: #7f8c8d; }
+
+        .section-title {
+            color: #2c3e50;
+            margin: 40px 0 20px 0;
+            padding-top: 20px;
+            border-top: 1px solid #dfe4ea;
+        }
+        .section-title:first-of-type { margin-top: 0; padding-top: 0; border-top: none; }
+
+        .priority-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: 600;
+            color: white;
+        }
+        .priority-Low { background: #95a5a6; }
+        .priority-Medium { background: #3498db; }
+        .priority-High { background: #f39c12; }
+        .priority-Urgent { background: #e74c3c; }
+
+        .success {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #27ae60;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 4px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            animation: slideIn 0.3s ease;
+        }
+        @keyframes slideIn {
+            from { transform: translateX(400px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-bar">
+            <a href="#category-section">Category Review</a>
+            <a href="#priority-section">Priority Review</a>
+        </div>
+
+        <h1 class="section-title" id="category-section">Category Classification Review</h1>
+
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-number" id="pending-count">-</div>
+                <div class="stat-label">Pending Review</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number" id="approved-count">-</div>
+                <div class="stat-label">Approved</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number" id="corrected-count">-</div>
+                <div class="stat-label">Corrected</div>
+            </div>
+        </div>
+
+        <div id="content" class="loading">Loading tickets...</div>
+
+        <h1 class="section-title" id="priority-section">Priority Prediction Review</h1>
+
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-number" id="priority-pending-count">-</div>
+                <div class="stat-label">Pending Review</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number" id="priority-approved-count">-</div>
+                <div class="stat-label">Approved</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number" id="priority-corrected-count">-</div>
+                <div class="stat-label">Corrected</div>
+            </div>
+        </div>
+
+        <div id="priority-content" class="loading">Loading tickets...</div>
+    </div>
+
+    <script>
+        const CATEGORIES = [
+            "Account & Authentication",
+            "Billing & Payments",
+            "Orders & Shipping",
+            "Returns & Refunds",
+            "Product Defects & Quality Issues",
+            "Technical Support",
+            "Subscription & Account Management",
+            "Security & Fraud",
+            "Feature Requests",
+            "Customer Feedback",
+            "Complaints & Escalations",
+            "Sales & Pre-Sales Inquiries",
+            "General Inquiries",
+            "Compliance & Privacy Requests"
+        ];
+
+        async function loadStats() {
+            try {
+                const res = await fetch('/queue/stats');
+                const stats = await res.json();
+                document.getElementById('approved-count').textContent = stats.approved;
+                document.getElementById('corrected-count').textContent = stats.corrected;
+            } catch (e) {
+                // stats are non-critical; leave placeholders on failure
+            }
+        }
+
+        async function loadQueue() {
+            try {
+                const res = await fetch('/queue/pending-category');
+                const tickets = await res.json();
+
+                const html = tickets.map(t => `
+                    <div class="ticket">
+                        <div class="ticket-header">
+                            <div>
+                                <div class="ticket-id">${t.ticket_id}</div>
+                                <span class="source">${t.source}</span>
+                            </div>
+                        </div>
+                        <div class="ticket-subject">${t.subject}</div>
+                        <div class="ticket-message">${t.message}...</div>
+
+                        <div class="prediction">
+                            <div class="prediction-label">AI Prediction</div>
+                            <div class="prediction-value">${t.predicted_category}</div>
+                            <div class="confidence">Confidence: ${(t.confidence*100).toFixed(1)}%</div>
+                        </div>
+
+                        <div class="actions">
+                            <button class="approve" onclick="approve('${t.ticket_id}')">Approve</button>
+                            <button class="edit" onclick="editCategory('${t.ticket_id}')">Edit Category</button>
+                        </div>
+                    </div>
+                `).join('');
+
+                document.getElementById('content').innerHTML = html || '<p style="text-align:center; padding:40px; color:#7f8c8d;">No pending tickets!</p>';
+                document.getElementById('pending-count').textContent = tickets.length;
+                loadStats();
+
+            } catch (e) {
+                document.getElementById('content').innerHTML = `<div class="loading">Error loading tickets: ${e.message}</div>`;
+            }
+        }
+
+        function showSuccess(message) {
+            const div = document.createElement('div');
+            div.className = 'success';
+            div.textContent = message;
+            document.body.appendChild(div);
+            setTimeout(() => div.remove(), 3000);
+        }
+
+        async function approve(ticketId) {
+            const res = await fetch(`/review/category/approve`, {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ticket_id: ticketId})
+            });
+            if (!res.ok) {
+                alert(`Approve failed: ${res.status} ${await res.text()}`);
+                return;
+            }
+            showSuccess('Approved!');
+            loadQueue();
+        }
+
+        async function editCategory(ticketId) {
+            const category = prompt('Select category:\n\n' + CATEGORIES.map((c, i) => `${i+1}. ${c}`).join('\n'));
+            if (category) {
+                const categoryNum = parseInt(category) - 1;
+                if (categoryNum >= 0 && categoryNum < CATEGORIES.length) {
+                    const res = await fetch(`/review/category/correct`, {
+                        method: 'POST',
+                        headers: {'Content-Type': 'application/json'},
+                        body: JSON.stringify({ticket_id: ticketId, category: CATEGORIES[categoryNum]})
+                    });
+                    if (!res.ok) {
+                        alert(`Correct failed: ${res.status} ${await res.text()}`);
+                        return;
+                    }
+                    showSuccess('Corrected!');
+                    loadQueue();
+                }
+            }
+        }
+
+        const PRIORITIES = ["Low", "Medium", "High", "Urgent"];
+
+        async function loadPriorityStats() {
+            try {
+                const res = await fetch('/queue/priority-stats');
+                const stats = await res.json();
+                document.getElementById('priority-approved-count').textContent = stats.approved;
+                document.getElementById('priority-corrected-count').textContent = stats.corrected;
+            } catch (e) {
+                // stats are non-critical; leave placeholders on failure
+            }
+        }
+
+        async function loadPriorityQueue() {
+            try {
+                const res = await fetch('/queue/pending-priority');
+                const tickets = await res.json();
+
+                const html = tickets.map(t => `
+                    <div class="ticket">
+                        <div class="ticket-header">
+                            <div>
+                                <div class="ticket-id">${t.ticket_id}</div>
+                                <span class="source">${t.source}</span>
+                            </div>
+                            <span class="priority-badge priority-${t.predicted_priority}">${t.predicted_priority}</span>
+                        </div>
+                        <div class="ticket-subject">${t.subject}</div>
+                        <div class="ticket-message">${t.message}...</div>
+
+                        <div class="prediction">
+                            <div class="prediction-label">AI Prediction</div>
+                            <div class="prediction-value">${t.predicted_priority}</div>
+                            <div class="confidence">Confidence: ${(t.confidence*100).toFixed(1)}%</div>
+                        </div>
+
+                        <div class="actions">
+                            <button class="approve" onclick="approvePriority('${t.ticket_id}')">Approve</button>
+                            <button class="edit" onclick="editPriority('${t.ticket_id}')">Edit Priority</button>
+                        </div>
+                    </div>
+                `).join('');
+
+                document.getElementById('priority-content').innerHTML = html || '<p style="text-align:center; padding:40px; color:#7f8c8d;">No pending priority predictions!</p>';
+                document.getElementById('priority-pending-count').textContent = tickets.length;
+                loadPriorityStats();
+
+            } catch (e) {
+                document.getElementById('priority-content').innerHTML = `<div class="loading">Error loading tickets: ${e.message}</div>`;
+            }
+        }
+
+        async function approvePriority(ticketId) {
+            const res = await fetch(`/review/priority/approve`, {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ticket_id: ticketId})
+            });
+            if (!res.ok) {
+                alert(`Approve failed: ${res.status} ${await res.text()}`);
+                return;
+            }
+            showSuccess('Approved!');
+            loadPriorityQueue();
+        }
+
+        async function editPriority(ticketId) {
+            const priority = prompt('Select priority:\n\n' + PRIORITIES.map((p, i) => `${i+1}. ${p}`).join('\n'));
+            if (priority) {
+                const priorityNum = parseInt(priority) - 1;
+                if (priorityNum >= 0 && priorityNum < PRIORITIES.length) {
+                    const res = await fetch(`/review/priority/correct`, {
+                        method: 'POST',
+                        headers: {'Content-Type': 'application/json'},
+                        body: JSON.stringify({ticket_id: ticketId, priority: PRIORITIES[priorityNum]})
+                    });
+                    if (!res.ok) {
+                        alert(`Correct failed: ${res.status} ${await res.text()}`);
+                        return;
+                    }
+                    showSuccess('Corrected!');
+                    loadPriorityQueue();
+                }
+            }
+        }
+
+        loadQueue();
+        loadPriorityQueue();
+        setInterval(loadQueue, 5000);
+        setInterval(loadPriorityQueue, 5000);
+    </script>
+</body>
+</html>
