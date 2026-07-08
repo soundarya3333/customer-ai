@@ -1,15 +1,4 @@
-"""
-Deterministic feature extraction for priority prediction.
 
-All features are computable from:
-  - the ticket text
-  - Bitext linguistic flags (if available)
-  - basic ticket metadata (category, intent, customer tier, source, SLA, age, repeats)
-
-Two lightweight ML models are loaded lazily and cached:
-  - VADER (lexicon-based sentiment)
-  - sentence-transformers/all-MiniLM-L6-v2 (semantic embeddings)
-"""
 import re
 from typing import Dict, List, Optional
 
