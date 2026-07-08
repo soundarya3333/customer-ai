@@ -134,3 +134,12 @@ flag_count	4	Bitext flags
 ticket_age_hours	18.3	Synthetic
 repeat_contact_count	3	Synthetic
 LABEL	High (2)	Deterministic formula
+
+
+DAG: process_new_tickets (every hour)
+  1. Pull new tickets from ingestion connectors (Zendesk, Freshdesk, Gmail, etc.)
+  2. Classify each ticket → category
+  3. Predict priority for each ticket
+  4. Store results in PostgreSQL
+  5. If priority >= High → flag for human review
+  6. (Future) RAG retrieval + LLM response generation

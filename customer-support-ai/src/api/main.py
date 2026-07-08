@@ -235,6 +235,42 @@ def predict_ticket_priority(ticket_id: str, overrides: TicketPriorityOverrides =
         db.close()
 
 
+@app.get("/queue/pending-combined")
+def pending_combined():
+    """Tickets that have at least one pending prediction (category or priority).
+    Returns both predictions side-by-side for the unified review dashboard."""
+    db = SessionLocal()
+    try:
+        tickets = db.query(Ticket).all()
+        result = []
+        for t in tickets:
+            cat = db.query(TicketClassification).filter_by(ticket_id=t.ticket_id).first()
+            pri = db.query(TicketPriority).filter_by(ticket_id=t.ticket_id).first()
+            if not cat and not pri:
+                continue
+            if cat and cat.status not in ("pending_review",) and pri and pri.status not in ("pending_review",):
+                continue
+            result.append({
+                "ticket_id": t.ticket_id,
+                "source": t.source,
+                "subject": t.subject,
+                "message": t.customer_message[:150],
+                "category": {
+                    "value": cat.predicted_category if cat else None,
+                    "confidence": cat.confidence if cat else None,
+                    "status": cat.status if cat else None,
+                } if cat else None,
+                "priority": {
+                    "value": pri.predicted_priority if pri else None,
+                    "confidence": pri.confidence if pri else None,
+                    "status": pri.status if pri else None,
+                } if pri else None,
+            })
+        return result
+    finally:
+        db.close()
+
+
 @app.get("/queue/pending-category")
 def pending_categories():
     """List all tickets awaiting review."""
@@ -422,3 +458,56 @@ def review_dashboard():
         with open(path) as f:
             return f.read()
     return "<h1>Dashboard not found</h1>"
+
+
+# ── Ingestion + list endpoints (used by Airflow DAG) ───────────────────
+
+class IngestRequest(BaseModel):
+    source: str
+    data: dict
+
+
+@app.post("/ingest")
+def ingest_ticket(req: IngestRequest):
+    """Normalize and insert a ticket from any supported source."""
+    from ingestion.normalizer import Normalizer
+
+    try:
+        normalized = Normalizer.normalize(req.source, req.data)
+    except Exception as e:
+        return {"error": str(e)}
+
+    db = SessionLocal()
+    try:
+        existing = db.query(Ticket).filter_by(ticket_id=normalized["ticket_id"]).first()
+        if existing:
+            return {"ticket_id": normalized["ticket_id"], "status": "already_exists"}
+
+        normalized["ticket_metadata"] = normalized.pop("metadata", {})
+        ticket = Ticket(**normalized)
+        db.add(ticket)
+        db.commit()
+        return {"ticket_id": normalized["ticket_id"], "status": "inserted"}
+    finally:
+        db.close()
+
+
+@app.get("/tickets")
+def list_tickets():
+    """Return all tickets in the DB as a flat list."""
+    db = SessionLocal()
+    try:
+        rows = db.query(Ticket).all()
+        return [
+            {
+                "ticket_id": t.ticket_id,
+                "source": t.source,
+                "subject": t.subject,
+                "customer_message": t.customer_message[:200],
+                "priority": t.priority,
+                "status": t.status,
+            }
+            for t in rows
+        ]
+    finally:
+        db.close()

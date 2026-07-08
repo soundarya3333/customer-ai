@@ -50,9 +50,10 @@ logs/
 .DS_Store
 Thumbs.db
 
-# MLFlow
+# MLflow
 mlruns/
 .mlflow
+mlflow/
 
 # DVC
 .dvc/

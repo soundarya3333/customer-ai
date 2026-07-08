@@ -1,6 +1,8 @@
 """
 Train a DistilBERT classifier for ticket category classification.
 Loads the prepared CSV, fine-tunes distilbert-base-uncased, saves model + metrics.
+
+Logs every run to MLflow (local file store at ./mlflow/).
 """
 import os
 import sys
@@ -10,6 +12,7 @@ import shutil
 import numpy as np
 import pandas as pd
 import torch
+import mlflow
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, f1_score, classification_report
 from transformers import (
@@ -30,6 +33,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../.
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
 TRAINING_DATA_DIR = os.path.join(PROJECT_ROOT, "training_data")
 MODEL_DIR = os.path.join(PROJECT_ROOT, "models", "category_classifier")
+MLFLOW_TRACKING_URI = os.path.join(PROJECT_ROOT, "mlflow")
 
 MODEL_NAME = "distilbert-base-uncased"
 # Bitext instructions are short (median 12 tokens, max ~23 in our data) — 256 was
@@ -256,6 +260,32 @@ def main():
     with open(metrics_path, "w") as f:
         json.dump(metrics, f, indent=2)
     print(f"    Saved metrics: {metrics_path}")
+
+    # ── MLflow logging ──────────────────────────────────────────────────
+    mlflow.set_tracking_uri("file:///" + MLFLOW_TRACKING_URI.replace("\\", "/"))
+    with mlflow.start_run(run_name="category_distilbert"):
+        mlflow.log_params({
+            "model_type": "DistilBERT",
+            "base_model": MODEL_NAME,
+            "num_labels": num_labels,
+            "num_train_samples": len(train_df),
+            "num_test_samples": len(test_df),
+            "max_length": MAX_LENGTH,
+            "batch_size": BATCH_SIZE,
+            "epochs": EPOCHS,
+            "learning_rate": LR,
+        })
+
+        mlflow.log_metrics({
+            "accuracy": float(eval_results["eval_accuracy"]),
+            "f1_macro": float(eval_results["eval_f1_macro"]),
+            "f1_weighted": float(eval_results["eval_f1_weighted"]),
+        })
+
+        mlflow.log_artifact(report_path)
+        mlflow.log_artifact(metrics_path)
+
+        print(f"    MLflow run: {mlflow.active_run().info.run_id}")
 
     print(f"\n{'=' * 65}")
     print(f"  DONE — Model saved to {MODEL_DIR}")

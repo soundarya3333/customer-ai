@@ -1,407 +1,802 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Category Classification Review</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Support AI — Review Dashboard</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f5f7fa;
-            padding: 20px;
-        }
-        .container { max-width: 1200px; margin: 0 auto; }
-        h1 { color: #2c3e50; margin-bottom: 20px; }
+        :root {
+            --bg-base:    #0d0f14;
+            --bg-surface: #151820;
+            --bg-card:    #1c1f2b;
+            --bg-card-hover: #222637;
+            --border:     #2a2e3f;
+            --border-accent: #3a3f58;
 
-        .nav-bar {
+            --text-primary:   #e8eaf0;
+            --text-secondary: #8b90a4;
+            --text-muted:     #555a70;
+
+            --accent-blue:   #4f8ef7;
+            --accent-blue-dim: #1e3a6e;
+            --accent-green:  #2ecc71;
+            --accent-orange: #f39c12;
+            --accent-red:    #e74c3c;
+            --accent-purple: #a78bfa;
+            --accent-purple-dim: #2d1f5e;
+
+            --radius: 8px;
+            --radius-lg: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Roboto, sans-serif;
+            background: var(--bg-base);
+            color: var(--text-primary);
+            min-height: 100vh;
+        }
+
+        /* ── Sidebar ── */
+        .sidebar {
+            position: fixed;
+            left: 0; top: 0; bottom: 0;
+            width: 220px;
+            background: var(--bg-surface);
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            z-index: 200;
+        }
+        .sidebar-logo {
+            padding: 24px 20px 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        .sidebar-logo .product-name {
+            font-size: 0.72em;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+        .sidebar-logo h2 { font-size: 1em; font-weight: 600; color: var(--text-primary); }
+
+        .sidebar-nav { padding: 16px 12px; flex: 1; }
+        .nav-section-label {
+            font-size: 0.68em;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            padding: 0 8px;
+            margin-bottom: 6px;
+            margin-top: 16px;
+        }
+        .nav-section-label:first-child { margin-top: 0; }
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            padding: 9px 10px;
+            border-radius: var(--radius);
+            color: var(--text-secondary);
+            font-size: 0.875em;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.15s, color 0.15s;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+        }
+        .nav-link:hover { background: var(--bg-card); color: var(--text-primary); }
+        .nav-link.active { background: var(--accent-blue-dim); color: var(--accent-blue); }
+        .nav-count {
+            margin-left: auto;
+            font-size: 0.78em;
+            background: var(--accent-blue-dim);
+            color: var(--accent-blue);
+            padding: 1px 7px;
+            border-radius: 10px;
+        }
+        .sidebar-footer {
+            padding: 14px 20px;
+            border-top: 1px solid var(--border);
+            font-size: 0.74em;
+            color: var(--text-muted);
+        }
+
+        /* ── Main ── */
+        .main { margin-left: 220px; min-height: 100vh; display: flex; flex-direction: column; }
+
+        .topbar {
             position: sticky;
             top: 0;
             z-index: 100;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-            padding: 12px 20px;
-            margin-bottom: 20px;
+            background: var(--bg-surface);
+            border-bottom: 1px solid var(--border);
+            padding: 14px 28px;
             display: flex;
-            gap: 20px;
+            align-items: center;
+            justify-content: space-between;
         }
-        .nav-bar a {
-            color: #3498db;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95em;
+        .topbar-title { font-size: 1em; font-weight: 600; color: var(--text-primary); }
+        .topbar-subtitle { font-size: 0.78em; color: var(--text-secondary); margin-top: 2px; }
+        .refresh-btn {
+            display: flex; align-items: center; gap: 7px;
+            padding: 8px 14px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            color: var(--text-secondary);
+            font-size: 0.82em; font-weight: 500;
+            cursor: pointer;
+            transition: all 0.15s;
         }
-        .nav-bar a:hover { text-decoration: underline; }
+        .refresh-btn:hover { background: var(--bg-card-hover); color: var(--text-primary); border-color: var(--border-accent); }
 
-        .stats {
+        /* ── Sections ── */
+        .section { display: none; padding: 22px 28px; }
+        .section.active { display: block; }
+
+        /* ── Stats ── */
+        .stats-row {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            margin-bottom: 30px;
+            gap: 12px;
+            margin-bottom: 22px;
         }
-        .stat-box {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        .stat-number { font-size: 2.5em; font-weight: bold; color: #3498db; }
-        .stat-label { color: #7f8c8d; margin-top: 5px; font-size: 0.9em; }
-
-        .tickets { display: grid; gap: 15px; }
-        .ticket {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #3498db;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .ticket-header {
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 18px 20px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            margin-bottom: 12px;
+            gap: 14px;
         }
-        .ticket-id { font-weight: bold; color: #2c3e50; }
-        .source {
-            display: inline-block;
-            padding: 4px 8px;
-            background: #ecf0f1;
-            border-radius: 3px;
-            font-size: 0.85em;
-            color: #7f8c8d;
-        }
-        .ticket-subject { font-size: 1.1em; font-weight: 500; color: #2c3e50; margin-bottom: 8px; }
-        .ticket-message { color: #7f8c8d; font-size: 0.95em; line-height: 1.4; margin-bottom: 12px; }
-
-        .prediction {
-            background: #ecf7fe;
-            border-left: 3px solid #3498db;
-            padding: 12px;
-            margin: 12px 0;
-            border-radius: 4px;
-        }
-        .prediction-label { color: #7f8c8d; font-size: 0.85em; }
-        .prediction-value {
+        .stat-icon {
+            width: 38px; height: 38px;
+            border-radius: var(--radius);
+            display: flex; align-items: center; justify-content: center;
             font-size: 1.1em;
-            font-weight: 600;
-            color: #3498db;
-            margin: 5px 0;
+            flex-shrink: 0;
         }
-        .confidence { color: #7f8c8d; font-size: 0.85em; }
+        .si-yellow { background: rgba(243,156,18,0.15); }
+        .si-green  { background: rgba(46,204,113,0.15); }
+        .si-blue   { background: rgba(79,142,247,0.15); }
+        .stat-number { font-size: 1.9em; font-weight: 700; line-height: 1; }
+        .stat-label  { font-size: 0.78em; color: var(--text-secondary); margin-top: 3px; }
 
-        .actions {
+        /* ── Ticket cards ── */
+        .tickets-grid { display: grid; gap: 14px; }
+        .ticket-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 20px;
+            transition: border-color 0.15s, background 0.15s;
+        }
+        .ticket-card:hover { border-color: var(--border-accent); background: var(--bg-card-hover); }
+
+        .ticket-card-header {
             display: flex;
-            gap: 10px;
-            margin-top: 15px;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            gap: 12px;
         }
-        button {
-            padding: 10px 16px;
-            border: none;
+        .ticket-meta { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
+        .ticket-id {
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            font-size: 0.75em;
+            color: var(--accent-blue);
+            background: var(--accent-blue-dim);
+            padding: 3px 8px;
             border-radius: 4px;
-            cursor: pointer;
-            font-weight: 500;
-            font-size: 0.9em;
-            transition: all 0.3s;
-        }
-        .approve {
-            background: #27ae60;
-            color: white;
-        }
-        .approve:hover { background: #229954; }
-
-        .edit {
-            background: #f39c12;
-            color: white;
-        }
-        .edit:hover { background: #d68910; }
-
-        .loading { text-align: center; padding: 40px; color: #7f8c8d; }
-
-        .section-title {
-            color: #2c3e50;
-            margin: 40px 0 20px 0;
-            padding-top: 20px;
-            border-top: 1px solid #dfe4ea;
-        }
-        .section-title:first-of-type { margin-top: 0; padding-top: 0; border-top: none; }
-
-        .priority-badge {
-            display: inline-block;
-            padding: 3px 10px;
-            border-radius: 12px;
-            font-size: 0.85em;
             font-weight: 600;
-            color: white;
         }
-        .priority-Low { background: #95a5a6; }
-        .priority-Medium { background: #3498db; }
-        .priority-High { background: #f39c12; }
-        .priority-Urgent { background: #e74c3c; }
-
-        .success {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #27ae60;
-            color: white;
-            padding: 15px 20px;
+        .source-badge {
+            font-size: 0.74em;
+            padding: 3px 8px;
             border-radius: 4px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            animation: slideIn 0.3s ease;
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
         }
-        @keyframes slideIn {
-            from { transform: translateX(400px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
+        .ticket-subject { font-size: 0.975em; font-weight: 600; color: var(--text-primary); margin-bottom: 5px; line-height: 1.4; }
+        .ticket-message { font-size: 0.84em; color: var(--text-secondary); line-height: 1.5; margin-bottom: 14px; }
+
+        /* ── Prediction pair ── */
+        .pred-pair {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 14px;
         }
+        .pred-box {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 12px 14px;
+            position: relative;
+        }
+        .pred-box.pred-cat { border-left: 3px solid var(--accent-blue); border-radius: 0 var(--radius) var(--radius) 0; }
+        .pred-box.pred-pri { border-left: 3px solid var(--accent-purple); border-radius: 0 var(--radius) var(--radius) 0; }
+        .pred-type-label {
+            font-size: 0.68em;
+            text-transform: uppercase;
+            letter-spacing: 0.09em;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .pred-type-dot {
+            width: 5px; height: 5px;
+            border-radius: 50%;
+            display: inline-block;
+            flex-shrink: 0;
+        }
+        .dot-cat { background: var(--accent-blue); }
+        .dot-pri { background: var(--accent-purple); }
+
+        .pred-value { font-size: 0.88em; font-weight: 600; color: var(--text-primary); margin-bottom: 6px; }
+        .pred-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+        }
+        .conf-bar-bg {
+            flex: 1;
+            height: 3px;
+            background: var(--border);
+            border-radius: 2px;
+        }
+        .conf-bar-fill-cat { height: 100%; border-radius: 2px; background: var(--accent-blue); }
+        .conf-bar-fill-pri { height: 100%; border-radius: 2px; background: var(--accent-purple); }
+        .conf-pct {
+            font-size: 0.78em;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .conf-pct-cat { color: var(--accent-blue); }
+        .conf-pct-pri { color: var(--accent-purple); }
+
+        /* ── Priority badges ── */
+        .priority-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 3px 9px;
+            border-radius: 20px;
+            font-size: 0.75em;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .priority-badge::before { content: ''; display: block; width: 5px; height: 5px; border-radius: 50%; }
+        .priority-Low    { background: rgba(108,117,125,0.18); color: #9ea7b0; }
+        .priority-Low::before    { background: #6c757d; }
+        .priority-Medium { background: rgba(79,142,247,0.18); color: #4f8ef7; }
+        .priority-Medium::before { background: #4f8ef7; }
+        .priority-High   { background: rgba(243,156,18,0.18); color: #f39c12; }
+        .priority-High::before   { background: #f39c12; }
+        .priority-Urgent { background: rgba(231,76,60,0.18); color: #e74c3c; }
+        .priority-Urgent::before { background: #e74c3c; }
+
+        .pred-null {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+            font-size: 0.78em;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* ── Actions ── */
+        .actions { display: flex; gap: 8px; flex-wrap: wrap; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 7px 13px;
+            border: none; border-radius: var(--radius);
+            cursor: pointer; font-weight: 500; font-size: 0.82em;
+            transition: all 0.15s;
+            font-family: inherit;
+        }
+        .btn-approve { background: rgba(46,204,113,0.15); color: var(--accent-green); border: 1px solid rgba(46,204,113,0.25); }
+        .btn-approve:hover { background: rgba(46,204,113,0.25); }
+        .btn-edit-cat { background: rgba(79,142,247,0.12); color: var(--accent-blue); border: 1px solid rgba(79,142,247,0.2); }
+        .btn-edit-cat:hover { background: rgba(79,142,247,0.22); }
+        .btn-edit-pri { background: rgba(167,139,250,0.12); color: var(--accent-purple); border: 1px solid rgba(167,139,250,0.2); }
+        .btn-edit-pri:hover { background: rgba(167,139,250,0.22); }
+
+        /* ── Empty / Loading ── */
+        .empty-state { text-align: center; padding: 55px 20px; color: var(--text-muted); }
+        .empty-icon { font-size: 2.2em; margin-bottom: 10px; }
+
+        /* ── Toast ── */
+        .toast {
+            position: fixed; bottom: 22px; right: 22px;
+            padding: 11px 17px; border-radius: var(--radius);
+            font-size: 0.84em; font-weight: 500;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            animation: slideUp 0.22s ease;
+            z-index: 9999;
+        }
+        .toast-success { background: #1a5c36; border: 1px solid var(--accent-green); color: var(--accent-green); }
+        .toast-error   { background: #5c1a1a; border: 1px solid var(--accent-red); color: #f87171; }
+        @keyframes slideUp {
+            from { transform: translateY(16px); opacity: 0; }
+            to   { transform: translateY(0); opacity: 1; }
+        }
+
+        /* ── Modal ── */
+        .modal-backdrop {
+            display: none;
+            position: fixed; inset: 0;
+            background: rgba(0,0,0,0.65);
+            z-index: 500;
+            align-items: center; justify-content: center;
+        }
+        .modal-backdrop.open { display: flex; }
+        .modal {
+            background: var(--bg-card);
+            border: 1px solid var(--border-accent);
+            border-radius: var(--radius-lg);
+            padding: 26px; width: 400px; max-width: 92vw;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+        .modal h3 { font-size: 0.95em; font-weight: 600; margin-bottom: 16px; color: var(--text-primary); }
+        .modal-options { display: grid; gap: 7px; max-height: 340px; overflow-y: auto; padding-right: 4px; }
+        .modal-option {
+            padding: 9px 13px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            background: var(--bg-surface);
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 0.84em;
+            text-align: left;
+            font-family: inherit;
+            transition: all 0.12s;
+        }
+        .modal-option:hover { border-color: var(--accent-blue); color: var(--text-primary); background: var(--accent-blue-dim); }
+        .modal-cancel {
+            margin-top: 12px; width: 100%; padding: 8px;
+            background: none; border: 1px solid var(--border);
+            border-radius: var(--radius); color: var(--text-secondary);
+            font-size: 0.82em; cursor: pointer; font-family: inherit;
+            transition: all 0.12s;
+        }
+        .modal-cancel:hover { background: var(--bg-surface); color: var(--text-primary); }
+
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--border-accent); }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="nav-bar">
-            <a href="#category-section">Category Review</a>
-            <a href="#priority-section">Priority Review</a>
+
+<nav class="sidebar">
+    <div class="sidebar-logo">
+        <div class="product-name">AI Platform</div>
+        <h2>Support Review</h2>
+    </div>
+    <div class="sidebar-nav">
+        <div class="nav-section-label">Review queues</div>
+        <button class="nav-link active" onclick="switchSection('combined', this)">
+            <span>📋</span> All Tickets
+            <span class="nav-count" id="nav-combined-count"></span>
+        </button>
+        <button class="nav-link" onclick="switchSection('category', this)">
+            <span>🏷</span> Category only
+            <span class="nav-count" id="nav-cat-count"></span>
+        </button>
+        <button class="nav-link" onclick="switchSection('priority', this)">
+            <span>⚡</span> Priority only
+            <span class="nav-count" id="nav-pri-count"></span>
+        </button>
+    </div>
+    <div class="sidebar-footer">Customer Support AI v0.1</div>
+</nav>
+
+<div class="main">
+    <div class="topbar">
+        <div>
+            <div class="topbar-title" id="topbar-title">All tickets — combined review</div>
+            <div class="topbar-subtitle" id="topbar-subtitle">Category and priority predictions shown side by side</div>
         </div>
-
-        <h1 class="section-title" id="category-section">Category Classification Review</h1>
-
-        <div class="stats">
-            <div class="stat-box">
-                <div class="stat-number" id="pending-count">-</div>
-                <div class="stat-label">Pending Review</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-number" id="approved-count">-</div>
-                <div class="stat-label">Approved</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-number" id="corrected-count">-</div>
-                <div class="stat-label">Corrected</div>
-            </div>
-        </div>
-
-        <div id="content" class="loading">Loading tickets...</div>
-
-        <h1 class="section-title" id="priority-section">Priority Prediction Review</h1>
-
-        <div class="stats">
-            <div class="stat-box">
-                <div class="stat-number" id="priority-pending-count">-</div>
-                <div class="stat-label">Pending Review</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-number" id="priority-approved-count">-</div>
-                <div class="stat-label">Approved</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-number" id="priority-corrected-count">-</div>
-                <div class="stat-label">Corrected</div>
-            </div>
-        </div>
-
-        <div id="priority-content" class="loading">Loading tickets...</div>
+        <button class="refresh-btn" onclick="refreshAll()">↻ Refresh</button>
     </div>
 
-    <script>
-        const CATEGORIES = [
-            "Account & Authentication",
-            "Billing & Payments",
-            "Orders & Shipping",
-            "Returns & Refunds",
-            "Product Defects & Quality Issues",
-            "Technical Support",
-            "Subscription & Account Management",
-            "Security & Fraud",
-            "Feature Requests",
-            "Customer Feedback",
-            "Complaints & Escalations",
-            "Sales & Pre-Sales Inquiries",
-            "General Inquiries",
-            "Compliance & Privacy Requests"
-        ];
+    <!-- Combined section -->
+    <section class="section active" id="section-combined">
+        <div class="stats-row">
+            <div class="stat-card">
+                <div class="stat-icon si-yellow">⏳</div>
+                <div><div class="stat-number" id="comb-pending">-</div><div class="stat-label">Pending review</div></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon si-green">✓</div>
+                <div><div class="stat-number" id="comb-approved">-</div><div class="stat-label">Approved</div></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon si-blue">✎</div>
+                <div><div class="stat-number" id="comb-corrected">-</div><div class="stat-label">Corrected</div></div>
+            </div>
+        </div>
+        <div class="tickets-grid" id="combined-content">
+            <div class="empty-state"><div class="empty-icon">⏳</div><p>Loading tickets…</p></div>
+        </div>
+    </section>
 
-        async function loadStats() {
-            try {
-                const res = await fetch('/queue/stats');
-                const stats = await res.json();
-                document.getElementById('approved-count').textContent = stats.approved;
-                document.getElementById('corrected-count').textContent = stats.corrected;
-            } catch (e) {
-                // stats are non-critical; leave placeholders on failure
-            }
+    <!-- Category-only section -->
+    <section class="section" id="section-category">
+        <div class="stats-row">
+            <div class="stat-card">
+                <div class="stat-icon si-yellow">⏳</div>
+                <div><div class="stat-number" id="cat-pending">-</div><div class="stat-label">Pending review</div></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon si-green">✓</div>
+                <div><div class="stat-number" id="cat-approved">-</div><div class="stat-label">Approved</div></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon si-blue">✎</div>
+                <div><div class="stat-number" id="cat-corrected">-</div><div class="stat-label">Corrected</div></div>
+            </div>
+        </div>
+        <div class="tickets-grid" id="cat-content">
+            <div class="empty-state"><div class="empty-icon">⏳</div><p>Loading…</p></div>
+        </div>
+    </section>
+
+    <!-- Priority-only section -->
+    <section class="section" id="section-priority">
+        <div class="stats-row">
+            <div class="stat-card">
+                <div class="stat-icon si-yellow">⏳</div>
+                <div><div class="stat-number" id="pri-pending">-</div><div class="stat-label">Pending review</div></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon si-green">✓</div>
+                <div><div class="stat-number" id="pri-approved">-</div><div class="stat-label">Approved</div></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon si-blue">✎</div>
+                <div><div class="stat-number" id="pri-corrected">-</div><div class="stat-label">Corrected</div></div>
+            </div>
+        </div>
+        <div class="tickets-grid" id="pri-content">
+            <div class="empty-state"><div class="empty-icon">⏳</div><p>Loading…</p></div>
+        </div>
+    </section>
+</div>
+
+<!-- Modal -->
+<div class="modal-backdrop" id="modal-backdrop" onclick="closeModal(event)">
+    <div class="modal">
+        <h3 id="modal-title">Select option</h3>
+        <div class="modal-options" id="modal-options"></div>
+        <button class="modal-cancel" onclick="closeModal()">Cancel</button>
+    </div>
+</div>
+
+<script>
+const CATEGORIES = [
+    "Account & Authentication","Billing & Payments","Orders & Shipping",
+    "Returns & Refunds","Product Defects & Quality Issues","Technical Support",
+    "Subscription & Account Management","Security & Fraud","Feature Requests",
+    "Customer Feedback","Complaints & Escalations","Sales & Pre-Sales Inquiries",
+    "General Inquiries","Compliance & Privacy Requests"
+];
+const PRIORITIES = ["Low","Medium","High","Urgent"];
+
+const SECTION_META = {
+    combined: { title: "All tickets — combined review", subtitle: "Category and priority predictions shown side by side" },
+    category: { title: "Category classification review", subtitle: "Review and approve AI-predicted ticket categories" },
+    priority: { title: "Priority prediction review", subtitle: "Review and approve AI-predicted ticket priorities" },
+};
+
+let modalResolve = null;
+
+// ── Navigation ──────────────────────────────────────────────────────
+function switchSection(name, btn) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+    document.getElementById(`section-${name}`).classList.add('active');
+    btn.classList.add('active');
+    document.getElementById('topbar-title').textContent = SECTION_META[name].title;
+    document.getElementById('topbar-subtitle').textContent = SECTION_META[name].subtitle;
+}
+
+// ── Modal ────────────────────────────────────────────────────────────
+function openModal(title, options) {
+    return new Promise(resolve => {
+        modalResolve = resolve;
+        document.getElementById('modal-title').textContent = title;
+        document.getElementById('modal-options').innerHTML = options.map(o =>
+            `<button class="modal-option" onclick="pickOption(${JSON.stringify(o)})">${o}</button>`
+        ).join('');
+        document.getElementById('modal-backdrop').classList.add('open');
+    });
+}
+function pickOption(value) { closeModal(); if (modalResolve) modalResolve(value); }
+function closeModal(e) {
+    if (e && e.target !== document.getElementById('modal-backdrop')) return;
+    document.getElementById('modal-backdrop').classList.remove('open');
+    if (modalResolve) { modalResolve(null); modalResolve = null; }
+}
+
+// ── Toast ────────────────────────────────────────────────────────────
+function showToast(msg, type = 'success') {
+    const el = document.createElement('div');
+    el.className = `toast toast-${type}`;
+    el.textContent = msg;
+    document.body.appendChild(el);
+    setTimeout(() => { el.style.opacity = '0'; el.style.transition = 'opacity 0.3s'; }, 2500);
+    setTimeout(() => el.remove(), 2900);
+}
+
+// ── Helpers ──────────────────────────────────────────────────────────
+function esc(s) {
+    return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function confBar(pct, cls) {
+    return `<div class="pred-footer">
+        <div class="conf-bar-bg"><div class="conf-bar-fill-${cls}" style="width:${pct.toFixed(1)}%"></div></div>
+        <span class="conf-pct conf-pct-${cls}">${pct.toFixed(1)}%</span>
+    </div>`;
+}
+function priColor(p) {
+    return p === 'Urgent' ? 'var(--accent-red)' : p === 'High' ? 'var(--accent-orange)' : p === 'Medium' ? 'var(--accent-blue)' : '#6c757d';
+}
+
+// ── Combined queue ────────────────────────────────────────────────────
+async function loadCombined() {
+    try {
+        const tickets = await fetch('/queue/pending-combined').then(r => r.json());
+        const el = document.getElementById('combined-content');
+        const count = tickets.length;
+        document.getElementById('comb-pending').textContent = count;
+        document.getElementById('nav-combined-count').textContent = count || '';
+
+        const [catStats, priStats] = await Promise.allSettled([
+            fetch('/queue/stats').then(r => r.json()),
+            fetch('/queue/priority-stats').then(r => r.json()),
+        ]);
+        const catApproved = (catStats.status === 'fulfilled' ? catStats.value.approved : 0)
+                          + (priStats.status === 'fulfilled' ? priStats.value.approved : 0);
+        const catCorrected = (catStats.status === 'fulfilled' ? catStats.value.corrected : 0)
+                           + (priStats.status === 'fulfilled' ? priStats.value.corrected : 0);
+        document.getElementById('comb-approved').textContent = catApproved;
+        document.getElementById('comb-corrected').textContent = catCorrected;
+
+        if (!tickets.length) {
+            el.innerHTML = `<div class="empty-state"><div class="empty-icon">✅</div><p>All caught up — no pending reviews.</p></div>`;
+            return;
         }
 
-        async function loadQueue() {
-            try {
-                const res = await fetch('/queue/pending-category');
-                const tickets = await res.json();
+        el.innerHTML = tickets.map(t => {
+            const catBox = t.category ? `
+                <div class="pred-box pred-cat">
+                    <div class="pred-type-label"><span class="pred-type-dot dot-cat"></span>Category</div>
+                    <div class="pred-value">${esc(t.category.value)}</div>
+                    ${confBar(t.category.confidence * 100, 'cat')}
+                </div>` : `<div class="pred-box pred-cat"><div class="pred-null">No prediction yet</div></div>`;
 
-                const html = tickets.map(t => `
-                    <div class="ticket">
-                        <div class="ticket-header">
-                            <div>
-                                <div class="ticket-id">${t.ticket_id}</div>
-                                <span class="source">${t.source}</span>
-                            </div>
+            const priColor_ = t.priority ? priColor(t.priority.value) : 'var(--accent-purple)';
+            const priBox = t.priority ? `
+                <div class="pred-box pred-pri" style="border-left-color:${priColor_}">
+                    <div class="pred-type-label"><span class="pred-type-dot dot-pri" style="background:${priColor_}"></span>Priority</div>
+                    <div class="pred-value" style="display:flex;align-items:center;gap:8px;">
+                        ${esc(t.priority.value)}
+                        <span class="priority-badge priority-${esc(t.priority.value)}">${esc(t.priority.value)}</span>
+                    </div>
+                    <div class="pred-footer">
+                        <div class="conf-bar-bg"><div class="conf-bar-fill-pri" style="width:${(t.priority.confidence*100).toFixed(1)}%;background:${priColor_}"></div></div>
+                        <span class="conf-pct" style="color:${priColor_}">${(t.priority.confidence*100).toFixed(1)}%</span>
+                    </div>
+                </div>` : `<div class="pred-box pred-pri"><div class="pred-null">No prediction yet</div></div>`;
+
+            const catActions = t.category && t.category.status === 'pending_review' ? `
+                <button class="btn btn-approve" onclick="approveCat('${esc(t.ticket_id)}')">✓ Approve category</button>
+                <button class="btn btn-edit-cat" onclick="editCat('${esc(t.ticket_id)}')">✎ Edit category</button>` : '';
+            const priActions = t.priority && t.priority.status === 'pending_review' ? `
+                <button class="btn btn-approve" onclick="approvePri('${esc(t.ticket_id)}')">✓ Approve priority</button>
+                <button class="btn btn-edit-pri" onclick="editPri('${esc(t.ticket_id)}')">✎ Edit priority</button>` : '';
+
+            return `
+            <div class="ticket-card" id="card-${esc(t.ticket_id)}">
+                <div class="ticket-card-header">
+                    <div class="ticket-meta">
+                        <span class="ticket-id">${esc(t.ticket_id)}</span>
+                        <span class="source-badge">${esc(t.source)}</span>
+                    </div>
+                    ${t.priority ? `<span class="priority-badge priority-${esc(t.priority.value)}">${esc(t.priority.value)}</span>` : ''}
+                </div>
+                <div class="ticket-subject">${esc(t.subject)}</div>
+                <div class="ticket-message">${esc(t.message)}…</div>
+                <div class="pred-pair">
+                    ${catBox}
+                    ${priBox}
+                </div>
+                <div class="actions">${catActions}${priActions}</div>
+            </div>`;
+        }).join('');
+    } catch (e) {
+        document.getElementById('combined-content').innerHTML = `<div class="empty-state"><p>Error: ${e.message}</p></div>`;
+    }
+}
+
+// ── Category-only queue ───────────────────────────────────────────────
+async function loadCategoryQueue() {
+    try {
+        const [tickets, stats] = await Promise.all([
+            fetch('/queue/pending-category').then(r => r.json()),
+            fetch('/queue/stats').then(r => r.json()),
+        ]);
+        document.getElementById('cat-pending').textContent = tickets.length;
+        document.getElementById('cat-approved').textContent = stats.approved;
+        document.getElementById('cat-corrected').textContent = stats.corrected;
+        document.getElementById('nav-cat-count').textContent = tickets.length || '';
+
+        const el = document.getElementById('cat-content');
+        if (!tickets.length) {
+            el.innerHTML = `<div class="empty-state"><div class="empty-icon">✅</div><p>No pending category reviews.</p></div>`;
+            return;
+        }
+        el.innerHTML = tickets.map(t => `
+            <div class="ticket-card" id="catcard-${esc(t.ticket_id)}">
+                <div class="ticket-card-header">
+                    <div class="ticket-meta"><span class="ticket-id">${esc(t.ticket_id)}</span><span class="source-badge">${esc(t.source)}</span></div>
+                </div>
+                <div class="ticket-subject">${esc(t.subject)}</div>
+                <div class="ticket-message">${esc(t.message)}…</div>
+                <div class="pred-pair" style="grid-template-columns:1fr">
+                    <div class="pred-box pred-cat">
+                        <div class="pred-type-label"><span class="pred-type-dot dot-cat"></span>Category prediction</div>
+                        <div class="pred-value">${esc(t.predicted_category)}</div>
+                        ${confBar(t.confidence * 100, 'cat')}
+                    </div>
+                </div>
+                <div class="actions">
+                    <button class="btn btn-approve" onclick="approveCatStandalone('${esc(t.ticket_id)}')">✓ Approve</button>
+                    <button class="btn btn-edit-cat" onclick="editCatStandalone('${esc(t.ticket_id)}')">✎ Edit category</button>
+                </div>
+            </div>`).join('');
+    } catch (e) {
+        document.getElementById('cat-content').innerHTML = `<div class="empty-state"><p>Error: ${e.message}</p></div>`;
+    }
+}
+
+// ── Priority-only queue ───────────────────────────────────────────────
+async function loadPriorityQueue() {
+    try {
+        const [tickets, stats] = await Promise.all([
+            fetch('/queue/pending-priority').then(r => r.json()),
+            fetch('/queue/priority-stats').then(r => r.json()),
+        ]);
+        document.getElementById('pri-pending').textContent = tickets.length;
+        document.getElementById('pri-approved').textContent = stats.approved;
+        document.getElementById('pri-corrected').textContent = stats.corrected;
+        document.getElementById('nav-pri-count').textContent = tickets.length || '';
+
+        const el = document.getElementById('pri-content');
+        if (!tickets.length) {
+            el.innerHTML = `<div class="empty-state"><div class="empty-icon">✅</div><p>No pending priority reviews.</p></div>`;
+            return;
+        }
+        el.innerHTML = tickets.map(t => {
+            const pc = priColor(t.predicted_priority);
+            return `
+            <div class="ticket-card" id="pricard-${esc(t.ticket_id)}">
+                <div class="ticket-card-header">
+                    <div class="ticket-meta"><span class="ticket-id">${esc(t.ticket_id)}</span><span class="source-badge">${esc(t.source)}</span></div>
+                    <span class="priority-badge priority-${esc(t.predicted_priority)}">${esc(t.predicted_priority)}</span>
+                </div>
+                <div class="ticket-subject">${esc(t.subject)}</div>
+                <div class="ticket-message">${esc(t.message)}…</div>
+                <div class="pred-pair" style="grid-template-columns:1fr">
+                    <div class="pred-box pred-pri" style="border-left-color:${pc}">
+                        <div class="pred-type-label"><span class="pred-type-dot dot-pri" style="background:${pc}"></span>Priority prediction</div>
+                        <div class="pred-value" style="display:flex;align-items:center;gap:8px;">
+                            ${esc(t.predicted_priority)}
+                            <span class="priority-badge priority-${esc(t.predicted_priority)}">${esc(t.predicted_priority)}</span>
                         </div>
-                        <div class="ticket-subject">${t.subject}</div>
-                        <div class="ticket-message">${t.message}...</div>
-
-                        <div class="prediction">
-                            <div class="prediction-label">AI Prediction</div>
-                            <div class="prediction-value">${t.predicted_category}</div>
-                            <div class="confidence">Confidence: ${(t.confidence*100).toFixed(1)}%</div>
-                        </div>
-
-                        <div class="actions">
-                            <button class="approve" onclick="approve('${t.ticket_id}')">Approve</button>
-                            <button class="edit" onclick="editCategory('${t.ticket_id}')">Edit Category</button>
+                        <div class="pred-footer">
+                            <div class="conf-bar-bg"><div class="conf-bar-fill-pri" style="width:${(t.confidence*100).toFixed(1)}%;background:${pc}"></div></div>
+                            <span class="conf-pct" style="color:${pc}">${(t.confidence*100).toFixed(1)}%</span>
                         </div>
                     </div>
-                `).join('');
+                </div>
+                <div class="actions">
+                    <button class="btn btn-approve" onclick="approvePriStandalone('${esc(t.ticket_id)}')">✓ Approve</button>
+                    <button class="btn btn-edit-pri" onclick="editPriStandalone('${esc(t.ticket_id)}')">✎ Edit priority</button>
+                </div>
+            </div>`;
+        }).join('');
+    } catch (e) {
+        document.getElementById('pri-content').innerHTML = `<div class="empty-state"><p>Error: ${e.message}</p></div>`;
+    }
+}
 
-                document.getElementById('content').innerHTML = html || '<p style="text-align:center; padding:40px; color:#7f8c8d;">No pending tickets!</p>';
-                document.getElementById('pending-count').textContent = tickets.length;
-                loadStats();
+// ── Combined actions ──────────────────────────────────────────────────
+async function approveCat(ticketId) {
+    const res = await fetch('/review/category/approve', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ticket_id: ticketId}) });
+    if (!res.ok) { showToast('Approve failed', 'error'); return; }
+    showToast('Category approved ✓');
+    loadCombined();
+}
+async function approvePri(ticketId) {
+    const res = await fetch('/review/priority/approve', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ticket_id: ticketId}) });
+    if (!res.ok) { showToast('Approve failed', 'error'); return; }
+    showToast('Priority approved ✓');
+    loadCombined();
+}
+async function editCat(ticketId) {
+    const choice = await openModal('Select correct category', CATEGORIES);
+    if (!choice) return;
+    const res = await fetch('/review/category/correct', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ticket_id: ticketId, category: choice}) });
+    if (!res.ok) { showToast('Correct failed', 'error'); return; }
+    showToast(`Category → ${choice}`);
+    loadCombined();
+}
+async function editPri(ticketId) {
+    const choice = await openModal('Select correct priority', PRIORITIES);
+    if (!choice) return;
+    const res = await fetch('/review/priority/correct', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ticket_id: ticketId, priority: choice}) });
+    if (!res.ok) { showToast('Correct failed', 'error'); return; }
+    showToast(`Priority → ${choice}`);
+    loadCombined();
+}
 
-            } catch (e) {
-                document.getElementById('content').innerHTML = `<div class="loading">Error loading tickets: ${e.message}</div>`;
-            }
-        }
+// Standalone category queue actions
+async function approveCatStandalone(ticketId) {
+    const res = await fetch('/review/category/approve', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ticket_id: ticketId}) });
+    if (!res.ok) { showToast('Approve failed', 'error'); return; }
+    showToast('Approved ✓'); loadCategoryQueue();
+}
+async function editCatStandalone(ticketId) {
+    const choice = await openModal('Select correct category', CATEGORIES);
+    if (!choice) return;
+    const res = await fetch('/review/category/correct', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ticket_id: ticketId, category: choice}) });
+    if (!res.ok) { showToast('Correct failed', 'error'); return; }
+    showToast(`Category → ${choice}`); loadCategoryQueue();
+}
 
-        function showSuccess(message) {
-            const div = document.createElement('div');
-            div.className = 'success';
-            div.textContent = message;
-            document.body.appendChild(div);
-            setTimeout(() => div.remove(), 3000);
-        }
+// Standalone priority queue actions
+async function approvePriStandalone(ticketId) {
+    const res = await fetch('/review/priority/approve', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ticket_id: ticketId}) });
+    if (!res.ok) { showToast('Approve failed', 'error'); return; }
+    showToast('Approved ✓'); loadPriorityQueue();
+}
+async function editPriStandalone(ticketId) {
+    const choice = await openModal('Select correct priority', PRIORITIES);
+    if (!choice) return;
+    const res = await fetch('/review/priority/correct', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ticket_id: ticketId, priority: choice}) });
+    if (!res.ok) { showToast('Correct failed', 'error'); return; }
+    showToast(`Priority → ${choice}`); loadPriorityQueue();
+}
 
-        async function approve(ticketId) {
-            const res = await fetch(`/review/category/approve`, {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({ticket_id: ticketId})
-            });
-            if (!res.ok) {
-                alert(`Approve failed: ${res.status} ${await res.text()}`);
-                return;
-            }
-            showSuccess('Approved!');
-            loadQueue();
-        }
+function refreshAll() {
+    loadCombined();
+    loadCategoryQueue();
+    loadPriorityQueue();
+    showToast('Refreshed');
+}
 
-        async function editCategory(ticketId) {
-            const category = prompt('Select category:\n\n' + CATEGORIES.map((c, i) => `${i+1}. ${c}`).join('\n'));
-            if (category) {
-                const categoryNum = parseInt(category) - 1;
-                if (categoryNum >= 0 && categoryNum < CATEGORIES.length) {
-                    const res = await fetch(`/review/category/correct`, {
-                        method: 'POST',
-                        headers: {'Content-Type': 'application/json'},
-                        body: JSON.stringify({ticket_id: ticketId, category: CATEGORIES[categoryNum]})
-                    });
-                    if (!res.ok) {
-                        alert(`Correct failed: ${res.status} ${await res.text()}`);
-                        return;
-                    }
-                    showSuccess('Corrected!');
-                    loadQueue();
-                }
-            }
-        }
-
-        const PRIORITIES = ["Low", "Medium", "High", "Urgent"];
-
-        async function loadPriorityStats() {
-            try {
-                const res = await fetch('/queue/priority-stats');
-                const stats = await res.json();
-                document.getElementById('priority-approved-count').textContent = stats.approved;
-                document.getElementById('priority-corrected-count').textContent = stats.corrected;
-            } catch (e) {
-                // stats are non-critical; leave placeholders on failure
-            }
-        }
-
-        async function loadPriorityQueue() {
-            try {
-                const res = await fetch('/queue/pending-priority');
-                const tickets = await res.json();
-
-                const html = tickets.map(t => `
-                    <div class="ticket">
-                        <div class="ticket-header">
-                            <div>
-                                <div class="ticket-id">${t.ticket_id}</div>
-                                <span class="source">${t.source}</span>
-                            </div>
-                            <span class="priority-badge priority-${t.predicted_priority}">${t.predicted_priority}</span>
-                        </div>
-                        <div class="ticket-subject">${t.subject}</div>
-                        <div class="ticket-message">${t.message}...</div>
-
-                        <div class="prediction">
-                            <div class="prediction-label">AI Prediction</div>
-                            <div class="prediction-value">${t.predicted_priority}</div>
-                            <div class="confidence">Confidence: ${(t.confidence*100).toFixed(1)}%</div>
-                        </div>
-
-                        <div class="actions">
-                            <button class="approve" onclick="approvePriority('${t.ticket_id}')">Approve</button>
-                            <button class="edit" onclick="editPriority('${t.ticket_id}')">Edit Priority</button>
-                        </div>
-                    </div>
-                `).join('');
-
-                document.getElementById('priority-content').innerHTML = html || '<p style="text-align:center; padding:40px; color:#7f8c8d;">No pending priority predictions!</p>';
-                document.getElementById('priority-pending-count').textContent = tickets.length;
-                loadPriorityStats();
-
-            } catch (e) {
-                document.getElementById('priority-content').innerHTML = `<div class="loading">Error loading tickets: ${e.message}</div>`;
-            }
-        }
-
-        async function approvePriority(ticketId) {
-            const res = await fetch(`/review/priority/approve`, {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({ticket_id: ticketId})
-            });
-            if (!res.ok) {
-                alert(`Approve failed: ${res.status} ${await res.text()}`);
-                return;
-            }
-            showSuccess('Approved!');
-            loadPriorityQueue();
-        }
-
-        async function editPriority(ticketId) {
-            const priority = prompt('Select priority:\n\n' + PRIORITIES.map((p, i) => `${i+1}. ${p}`).join('\n'));
-            if (priority) {
-                const priorityNum = parseInt(priority) - 1;
-                if (priorityNum >= 0 && priorityNum < PRIORITIES.length) {
-                    const res = await fetch(`/review/priority/correct`, {
-                        method: 'POST',
-                        headers: {'Content-Type': 'application/json'},
-                        body: JSON.stringify({ticket_id: ticketId, priority: PRIORITIES[priorityNum]})
-                    });
-                    if (!res.ok) {
-                        alert(`Correct failed: ${res.status} ${await res.text()}`);
-                        return;
-                    }
-                    showSuccess('Corrected!');
-                    loadPriorityQueue();
-                }
-            }
-        }
-
-        loadQueue();
-        loadPriorityQueue();
-        setInterval(loadQueue, 5000);
-        setInterval(loadPriorityQueue, 5000);
-    </script>
+// ── Init ──────────────────────────────────────────────────────────────
+loadCombined();
+loadCategoryQueue();
+loadPriorityQueue();
+setInterval(loadCombined, 30000);
+setInterval(loadCategoryQueue, 30000);
+setInterval(loadPriorityQueue, 30000);
+</script>
 </body>
 </html>
